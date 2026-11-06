@@ -360,7 +360,7 @@
       if (note && !covered) html += '<p class="ix-note">' + esc(note) + "</p>";
     }
     html += '<div class="ix-actions">' + bookBtn("Book a call about " + sys.name + " + " + a.name) + phoneLink() +
-      (framed || !navigator.clipboard ? "" : '<button type="button" class="ix-copy">Copy link to this page</button>') + "</div></div>";
+      (framed || !(navigator.share || navigator.clipboard) ? "" : '<button type="button" class="ix-copy"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 15V3"/><path d="m7 8 5-5 5 5"/></svg><span>Share</span></button>') + "</div></div>";
     return html;
   }
   /* ----- render ----- */
@@ -417,7 +417,10 @@
   root.addEventListener("click", function (e) {
     var b = e.target.closest(".ix-copy");
     if (!b) return;
-    navigator.clipboard.writeText(location.href.split("#")[0] + href(route)).then(function () { b.textContent = "Link copied"; });
+    var url = location.href.split("#")[0] + href(route);
+    /* phones open their own share menu; computers copy the link */
+    if (navigator.share) { navigator.share({ title: document.title, url: url }).catch(function () {}); return; }
+    navigator.clipboard.writeText(url).then(function () { b.querySelector("span").textContent = "Link copied"; });
   });
   render(false);
   /* ----- when inside an iframe, tell the parent page how tall the explorer is ----- */

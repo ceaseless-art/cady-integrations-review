@@ -140,8 +140,9 @@
 #cady-ix .ix-none{font-size:14px;color:var(--ix-muted);font-style:italic}
 #cady-ix .ix-note{font-size:14px;color:var(--ix-muted);font-style:italic;text-align:center;margin-bottom:20px}
 #cady-ix .ix-actions{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;justify-content:center;padding-top:22px;margin-top:4px;border-top:1.5px solid var(--ix-line)}
-#cady-ix .ix-copy{cursor:pointer;font-size:14px;font-weight:600;color:var(--ix-muted);border-bottom:2px solid var(--ix-line)}
-#cady-ix .ix-copy:hover{color:var(--ix-ink);border-bottom-color:var(--ix-yellow)}
+#cady-ix .ix-copy{display:inline-flex;align-items:center;gap:8px;cursor:pointer;height:48px;padding:0 20px;border-radius:12px;border:1.5px solid var(--ix-line-dark);background:var(--ix-white);font-size:15px;font-weight:600;color:var(--ix-ink);transition:border-color .2s,background .2s}
+#cady-ix .ix-copy:hover{border-color:var(--ix-yellow);background:var(--ix-cream)}
+#cady-ix .ix-copy svg{width:18px;height:18px}
 #cady-ix .ix-related{margin-top:34px}
 /* buttons */
 #cady-ix .ix-btn{display:inline-block;background:var(--ix-yellow);color:#000;font-size:18px;font-weight:600;line-height:1.7;padding:15px 45px;transition:background .2s;text-align:center}
