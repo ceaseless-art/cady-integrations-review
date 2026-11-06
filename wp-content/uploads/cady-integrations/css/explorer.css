@@ -74,9 +74,7 @@
 #cady-ix .ix-select:focus-within{outline:3px solid var(--ix-yellow);outline-offset:2px}
 #cady-ix .ix-sel-text{display:flex;align-items:center;height:100%;padding:0 40px 0 14px;font-size:15px;color:var(--ix-ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #cady-ix .ix-select select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px;-webkit-appearance:none;appearance:none}
-/* badges and legend */
-#cady-ix .ix-legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:16px;font-size:13px;color:var(--ix-muted)}
-#cady-ix .ix-legend li{display:flex;align-items:center;gap:8px}
+/* badges */
 #cady-ix .ix-badge{display:inline-flex;align-items:center;width:max-content;padding:2px 9px;font-size:12px;font-weight:600;line-height:1.6;white-space:nowrap;border:1.5px solid transparent}
 #cady-ix .ix-badge.t-native{background:var(--ix-yellow);color:var(--ix-ink)}
 #cady-ix .ix-badge.t-middleware{background:var(--ix-blue-tint);color:var(--ix-blue-dark);border-color:#B9DFF8}
@@ -199,12 +197,19 @@
 #cady-ix .ix-input::placeholder{color:#6B6B6B}
 #cady-ix .ix-search-icon{color:var(--ix-brown)}
 #cady-ix .ix-search-slot .ix-search{margin:4px 0 14px}
-/* X to clear a chosen phone system or app in the step bar */
-#cady-ix .ix-step{position:relative}
-#cady-ix .ix-step.has-x > a{padding-right:46px}
-#cady-ix .ix-step > a.ix-step-x{height:30px;padding:0;border-top:0;gap:0}
-#cady-ix .ix-step-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;line-height:1;color:var(--ix-muted);background:var(--ix-off);border:1px solid var(--ix-line);transition:background .2s var(--ix-ease),color .2s var(--ix-ease)}
-#cady-ix .ix-step-x:hover,#cady-ix .ix-step-x:focus-visible{background:var(--ix-yellow);border-color:var(--ix-yellow);color:var(--ix-ink)}
+/* X on each logo in step 3, to clear that choice */
+#cady-ix .ix-pair-x{position:absolute;top:-12px;right:-12px;z-index:2;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;line-height:1;color:var(--ix-ink);background:var(--ix-white);border:1px solid var(--ix-line-dark);box-shadow:0 4px 10px -4px rgba(27,27,27,.3);transition:background .2s var(--ix-ease),border-color .2s var(--ix-ease),transform .2s var(--ix-ease)}
+#cady-ix .ix-pair-x:hover,#cady-ix .ix-pair-x:focus-visible{background:var(--ix-yellow);border-color:var(--ix-yellow);transform:scale(1.08);outline:none}
+/* "What do the labels mean?" button and its pop-up */
+#cady-ix .ix-key{position:relative}
+#cady-ix .ix-key summary{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 16px;border-radius:999px;border:1px solid var(--ix-line);background:var(--ix-white);font-size:15px;font-weight:600;color:var(--ix-ink);cursor:pointer;list-style:none;transition:border-color .2s var(--ix-ease)}
+#cady-ix .ix-key summary::-webkit-details-marker{display:none}
+#cady-ix .ix-key summary:hover,#cady-ix .ix-key[open] summary{border-color:var(--ix-yellow)}
+#cady-ix .ix-key summary:focus-visible{outline:3px solid var(--ix-yellow);outline-offset:2px}
+#cady-ix .ix-key-i{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--ix-yellow);color:var(--ix-ink);font-size:13px;font-weight:700;font-style:italic;font-family:Georgia,serif}
+#cady-ix .ix-key-pop{position:absolute;right:0;top:calc(100% + 10px);z-index:20;width:360px;padding:18px 20px;background:var(--ix-white);border:1px solid var(--ix-line);border-radius:var(--ix-r);box-shadow:var(--ix-shadow);animation:ixIn .25s var(--ix-ease) both}
+#cady-ix .ix-key-pop ul{display:grid;gap:12px}
+#cady-ix .ix-key-pop li{display:grid;gap:4px;font-size:14px;line-height:1.45;color:var(--ix-text)}
 /* step 3 (a phone system + app pairing) shows only the pairing */
 #cady-ix.is-pair .ix-cta{display:none}
 @keyframes ixIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -223,8 +228,7 @@
   #cady-ix .ix-step-n{flex-basis:26px;width:26px;height:26px;font-size:13px}
   #cady-ix .ix-step-k{font-size:10px;letter-spacing:.8px}
   #cady-ix .ix-step-v{font-size:13px;white-space:normal}
-  #cady-ix .ix-step.has-x > a{padding-right:10px;padding-top:34px}
-  #cady-ix .ix-step > a.ix-step-x{top:8px;right:8px;transform:none;width:28px;height:28px;padding:0}
+  #cady-ix .ix-pair-x{top:-10px;right:-10px;width:30px;height:30px}
   #cady-ix .ix-input{height:54px;font-size:16px;padding:0 48px 0 50px}
   #cady-ix .ix-search{margin-bottom:26px}
   #cady-ix .ix-h{font-size:23px}
@@ -232,8 +236,9 @@
   #cady-ix .ix-filters{display:grid;grid-template-columns:1fr 1fr;width:100%}
   #cady-ix .ix-select{min-width:0;width:100%}
   #cady-ix .ix-filters .ix-select:last-child:nth-child(odd){grid-column:1/-1}
-  #cady-ix .ix-legend{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;font-size:12px}
-  #cady-ix .ix-legend li{flex-direction:column;align-items:flex-start;gap:4px}
+  #cady-ix .ix-key{width:100%}
+  #cady-ix .ix-key summary{width:100%;justify-content:center}
+  #cady-ix .ix-key-pop{left:0;right:0;width:auto}
   #cady-ix .ix-grid{grid-template-columns:1fr 1fr;gap:10px}
   #cady-ix .ix-tile{padding:12px;gap:10px}
   #cady-ix .ix-panel{padding:20px 16px 24px}

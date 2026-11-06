@@ -14,9 +14,9 @@
   var TYPES = [
     { id: "native", label: "Works directly", css: "t-native", short: "Connects straight to your phone system.",
       text: "Your phone system connects to this app directly, with nothing extra in between. Cady turns it on and sets it up. Some apps need a specific plan or carry a fee, and we'll tell you up front." },
-    { id: "middleware", label: "Works with an add-on", css: "t-middleware", short: "Needs a small connector app in between.",
+    { id: "middleware", label: "Works with an add-on", css: "t-middleware", short: "Uses a small connector app, which may cost extra.",
       text: "It connects through a separate connector app that sits between your phone system and this software. Cady sets it up and tells you about any extra cost first." },
-    { id: "custom", label: "Custom setup", css: "t-custom", short: "Can be connected with custom work.",
+    { id: "custom", label: "Custom setup", css: "t-custom", short: "Needs custom work. We quote it first.",
       text: "It can be connected, but it takes custom work. Cady plans it with you and quotes it before anything is built." },
     { id: "ask", label: "Ask us", css: "t-ask", short: "Not confirmed yet. We'll check for free.",
       text: "We haven't confirmed this one yet. Book a call and we'll find out for you, free of charge." }
@@ -156,10 +156,8 @@
     var v = route.view;
     var cur = v === "systems" || v === "app" ? 1 : v === "apps" ? 2 : 3;
     var steps = [
-      { n: 1, k: "Phone system", val: sys ? sys.name : (v === "apps" ? "All systems" : "Pick one"), done: !!sys, href: "#/",
-        clear: sys ? (app ? "#/apps/" + app.slug : "#/apps") : "", clearLabel: "Clear phone system" },
-      { n: 2, k: "App", val: app ? app.name : "Pick one", done: !!app, href: sys ? "#/" + sys.id : "#/apps",
-        clear: app ? (sys ? "#/" + sys.id : "#/apps") : "", clearLabel: "Clear app" },
+      { n: 1, k: "Phone system", val: sys ? sys.name : (v === "apps" ? "All systems" : "Pick one"), done: !!sys, href: "#/" },
+      { n: 2, k: "App", val: app ? app.name : "Pick one", done: !!app, href: sys ? "#/" + sys.id : "#/apps" },
       { n: 3, k: "How they work together", val: sys && app ? sys.name + " + " + app.name : "See the result", done: false, href: sys && app ? href({ view: "pair", sys: sys.id, app: app.slug }) : "" }
     ];
     $(".ix-steps").innerHTML = steps.map(function (s) {
@@ -167,8 +165,7 @@
       var cls = "ix-step" + (isCur ? " is-current" : "") + (isDone ? " is-done" : "") + (!s.done && !isCur ? " is-off" : "");
       var inner = '<span class="ix-step-n" aria-hidden="true">' + (isDone ? "&#10003;" : s.n) + '</span><span class="ix-step-t"><span class="ix-step-k">Step ' + s.n + '<span class="ix-step-kl"> &middot; ' + esc(s.k) + '</span></span><span class="ix-step-v">' + esc(s.val) + "</span></span>";
       var aria = isCur ? ' aria-current="step"' : "";
-      var x = s.clear ? '<a class="ix-step-x" href="' + s.clear + '" aria-label="' + s.clearLabel + '" title="' + s.clearLabel + '">&times;</a>' : "";
-      return '<li class="' + cls + (x ? " has-x" : "") + '">' + (s.href ? '<a href="' + s.href + '"' + aria + ">" + inner + "</a>" : "<span" + aria + ">" + inner + "</span>") + x + "</li>";
+      return '<li class="' + cls + '">' + (s.href ? '<a href="' + s.href + '"' + aria + ">" + inner + "</a>" : "<span" + aria + ">" + inner + "</span>") + "</li>";
     }).join("");
   }
   /* ----- step 1 ----- */
@@ -236,6 +233,10 @@
     return '<label class="ix-select ix-sort"><span class="ix-sr">Sort</span><span class="ix-sel-text" aria-hidden="true">' + cur[1] + '</span><select data-filter="sort">' +
       opts.map(function (o) { return '<option value="' + o[0] + '"' + (o[0] === cur[0] ? " selected" : "") + ">" + o[1] + "</option>"; }).join("") + "</select></label>";
   }
+  function labelKey() {
+    return '<details class="ix-key"><summary><span class="ix-key-i" aria-hidden="true">i</span>What do the labels mean?</summary>' +
+      '<div class="ix-key-pop"><ul>' + TYPES.map(function (t) { return "<li>" + badge(t.id) + "<span>" + esc(t.short) + "</span></li>"; }).join("") + "</ul></div></details>";
+  }
   function tile(a, sysId) {
     var foot = scope(sysId).map(function (s) {
       var t = a.systems[s.id];
@@ -266,8 +267,7 @@
       html += '<div class="ix-soon"><div><h3>' + esc(sys.name) + " integrations are coming soon</h3><p>" + esc(sys.blurb || "") +
         " Pick any app below and we'll tell you how it works with " + esc(sys.name) + '.</p></div><a class="ix-btn-line" href="' + esc(bookUrl) + '"' + bookAttr + ">Ask about " + esc(sys.name) + "</a></div>";
     }
-    html += '<div class="ix-toolbar"><div class="ix-filters">' + filters + "</div></div>";
-    if (!preview) html += '<ul class="ix-legend" aria-label="Connection types">' + TYPES.map(function (t) { return "<li>" + badge(t.id) + "<span>" + esc(t.short) + "</span></li>"; }).join("") + "</ul>";
+    html += '<div class="ix-toolbar"><div class="ix-filters">' + filters + "</div>" + (preview ? "" : labelKey()) + "</div>";
     html += '<div class="ix-search-slot"></div><p class="ix-status" aria-live="polite">Showing <strong>' + shown.length + "</strong> of " + list.length + (preview || !sys ? " apps" : " integrations for " + esc(sys.name)) +
       (q ? " matching &ldquo;" + esc(state.q.trim()) + "&rdquo;" : "") + "</p>";
     if (!shown.length) {
@@ -322,14 +322,15 @@
       '<div class="ix-actions" style="margin-top:26px">' + bookBtn("Book a call about " + a.name) + phoneLink() + "</div></div>" +
       related(a, "all", "More " + a.category + " apps");
   }
+  function clearX(to, label) { return '<a class="ix-pair-x" href="' + to + '" aria-label="' + label + '" title="' + label + '">&times;</a>'; }
   function viewPair(a, sys) {
     var rel = relation(a, sys);
     var det = a.details[sys.id] || {};
     var gets = det.gets || [], needs = det.needs || [];
     var html = crumbs([["Integrations", "#/"], [sys.name, "#/" + sys.id], [a.name, "#/apps/" + a.slug], [sys.name + " + " + a.name, ""]]) +
-      '<div class="ix-panel"><div class="ix-pair-visual"><div class="ix-pair-side"><span class="ix-frame">' + sysLogo(sys, "is-xl") + '</span><span class="ix-pair-name">' + esc(sys.name) + "</span></div>" +
+      '<div class="ix-panel"><div class="ix-pair-visual"><div class="ix-pair-side"><span class="ix-frame">' + sysLogo(sys, "is-xl") + clearX("#/apps/" + a.slug, "Clear phone system") + '</span><span class="ix-pair-name">' + esc(sys.name) + "</span></div>" +
       '<div class="ix-pair-link"><span class="ix-dots"></span>' + relBadge(rel) + '<span class="ix-dots"></span></div>' +
-      '<div class="ix-pair-side"><span class="ix-frame">' + logo(a.logo, a.name, "is-xl") + '</span><span class="ix-pair-name">' + esc(a.name) + "</span></div></div>" +
+      '<div class="ix-pair-side"><span class="ix-frame">' + logo(a.logo, a.name, "is-xl") + clearX("#/" + sys.id, "Clear app") + '</span><span class="ix-pair-name">' + esc(a.name) + "</span></div></div>" +
       '<p class="ix-kicker ix-center">Step 3 of 3</p>' +
       '<h3 class="ix-h ix-pair-title" tabindex="-1">' + esc(sys.name) + ' <span class="ix-plus">+</span> ' + esc(a.name) + "</h3>";
     if (systems.length > 1) {
@@ -404,6 +405,14 @@
     var t = e.target;
     if (t.hasAttribute("data-filter")) { state[t.getAttribute("data-filter")] = t.value; render(false); }
     else if (t.classList.contains("ix-intl-box")) { state.intl = t.checked; render(false); }
+  });
+  document.addEventListener("click", function (e) {
+    var k = $(".ix-key[open]");
+    if (k && !k.contains(e.target)) k.open = false;
+  });
+  root.addEventListener("keydown", function (e) {
+    var k = $(".ix-key[open]");
+    if (e.key === "Escape" && k) { k.open = false; k.querySelector("summary").focus(); }
   });
   root.addEventListener("click", function (e) {
     var b = e.target.closest(".ix-copy");
