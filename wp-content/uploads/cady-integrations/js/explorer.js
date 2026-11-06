@@ -59,7 +59,7 @@
   if (!appBySlug[startApp]) startApp = "";
   var startInd = params["ix-industry"] || W.industry || "";
   if (/^(1|true|yes)$/i.test(String(root.getAttribute("data-compact") || W.compact || ""))) root.classList.add("is-compact");
-  var state = { q: params["ix-q"] || "", cat: "", ind: inds.indexOf(startInd) > -1 ? startInd : "", type: "", intl: !S.hideInternational };
+  var state = { q: params["ix-q"] || "", cat: "", ind: inds.indexOf(startInd) > -1 ? startInd : "", type: "", sort: "az", intl: !S.hideInternational };
   /* ----- links ----- */
   var framed = window.self !== window.top;
   var tgt = framed ? ' target="_top"' : "";
@@ -156,8 +156,10 @@
     var v = route.view;
     var cur = v === "systems" || v === "app" ? 1 : v === "apps" ? 2 : 3;
     var steps = [
-      { n: 1, k: "Phone system", val: sys ? sys.name : (v === "apps" ? "All systems" : "Pick one"), done: !!sys, href: "#/" },
-      { n: 2, k: "App", val: app ? app.name : "Pick one", done: !!app, href: sys ? "#/" + sys.id : "#/apps" },
+      { n: 1, k: "Phone system", val: sys ? sys.name : (v === "apps" ? "All systems" : "Pick one"), done: !!sys, href: "#/",
+        clear: sys ? (app ? "#/apps/" + app.slug : "#/apps") : "", clearLabel: "Clear phone system" },
+      { n: 2, k: "App", val: app ? app.name : "Pick one", done: !!app, href: sys ? "#/" + sys.id : "#/apps",
+        clear: app ? (sys ? "#/" + sys.id : "#/apps") : "", clearLabel: "Clear app" },
       { n: 3, k: "How they work together", val: sys && app ? sys.name + " + " + app.name : "See the result", done: false, href: sys && app ? href({ view: "pair", sys: sys.id, app: app.slug }) : "" }
     ];
     $(".ix-steps").innerHTML = steps.map(function (s) {
@@ -165,7 +167,8 @@
       var cls = "ix-step" + (isCur ? " is-current" : "") + (isDone ? " is-done" : "") + (!s.done && !isCur ? " is-off" : "");
       var inner = '<span class="ix-step-n" aria-hidden="true">' + (isDone ? "&#10003;" : s.n) + '</span><span class="ix-step-t"><span class="ix-step-k">Step ' + s.n + '<span class="ix-step-kl"> &middot; ' + esc(s.k) + '</span></span><span class="ix-step-v">' + esc(s.val) + "</span></span>";
       var aria = isCur ? ' aria-current="step"' : "";
-      return '<li class="' + cls + '">' + (s.href ? '<a href="' + s.href + '"' + aria + ">" + inner + "</a>" : "<span" + aria + ">" + inner + "</span>") + "</li>";
+      var x = s.clear ? '<a class="ix-step-x" href="' + s.clear + '" aria-label="' + s.clearLabel + '" title="' + s.clearLabel + '">&times;</a>' : "";
+      return '<li class="' + cls + (x ? " has-x" : "") + '">' + (s.href ? '<a href="' + s.href + '"' + aria + ">" + inner + "</a>" : "<span" + aria + ">" + inner + "</span>") + x + "</li>";
     }).join("");
   }
   /* ----- step 1 ----- */
@@ -209,7 +212,11 @@
       if (n.indexOf(q) === 0) return -2;
       if (n.indexOf(q) > -1) return -1;
     }
-    return a.featured ? 0 : 1;
+    return 0;
+  }
+  function order(x, y) {
+    if (state.sort === "featured") return (y.featured - x.featured) || x.name.localeCompare(y.name);
+    return state.sort === "za" ? y.name.localeCompare(x.name) : x.name.localeCompare(y.name);
   }
   function select(key, label, allLabel, list, current, countFn) {
     var opts = '<option value="">' + esc(allLabel) + "</option>", shownText = allLabel, count = 1;
@@ -222,6 +229,12 @@
     });
     if (count < 2) return "";
     return '<label class="ix-select' + (current ? " is-set" : "") + '"><span class="ix-sr">' + esc(label) + '</span><span class="ix-sel-text" aria-hidden="true">' + esc(shownText) + '</span><select data-filter="' + key + '">' + opts + "</select></label>";
+  }
+  function sortMenu() {
+    var opts = [["az", "Sort: A to Z"], ["za", "Sort: Z to A"], ["featured", "Sort: Best-known first"]];
+    var cur = opts.filter(function (o) { return o[0] === state.sort; })[0] || opts[0];
+    return '<label class="ix-select ix-sort"><span class="ix-sr">Sort</span><span class="ix-sel-text" aria-hidden="true">' + cur[1] + '</span><select data-filter="sort">' +
+      opts.map(function (o) { return '<option value="' + o[0] + '"' + (o[0] === cur[0] ? " selected" : "") + ">" + o[1] + "</option>"; }).join("") + "</select></label>";
   }
   function tile(a, sysId) {
     var foot = scope(sysId).map(function (s) {
@@ -239,11 +252,12 @@
     var q = state.q.trim().toLowerCase();
     var list = pool(sysId);
     var shown = list.filter(function (a) { return passes(a, q, sysId); })
-      .sort(function (x, y) { return score(x, q) - score(y, q) || x.name.localeCompare(y.name); });
+      .sort(function (x, y) { return score(x, q) - score(y, q) || order(x, y); });
     var present = TYPES.filter(function (t) { return list.some(function (a) { return typesOf(a, sysId).indexOf(t.id) > -1; }); });
     var filters =
       select("cat", "Category", "All categories", cats.map(function (c) { return { value: c, label: c }; }), state.cat, function (c) { return list.filter(function (a) { return passes(a, q, sysId, "cat") && a.category === c; }).length; }) +
       select("ind", "Industry", "All industries", inds.map(function (c) { return { value: c, label: c }; }), state.ind, function (c) { return list.filter(function (a) { return passes(a, q, sysId, "ind") && a.industries.indexOf(c) > -1; }).length; }) +
+      sortMenu() +
       select("type", "Connection type", "Any connection", present.map(function (t) { return { value: t.id, label: t.label }; }), state.type, function (t) { return list.filter(function (a) { return passes(a, q, sysId, "type") && typesOf(a, sysId).indexOf(t) > -1; }).length; });
     var html = '<div class="ix-vh"><a class="ix-link ix-back" href="#/">&larr; Change phone system</a><p class="ix-kicker">Step 2 of 3</p>' +
       '<h3 class="ix-h" tabindex="-1">' + (sys && !preview ? "Pick an app that works with " + esc(sys.name) : "Pick your app") + "</h3>" +
@@ -254,7 +268,7 @@
     }
     html += '<div class="ix-toolbar"><div class="ix-filters">' + filters + "</div></div>";
     if (!preview) html += '<ul class="ix-legend" aria-label="Connection types">' + TYPES.map(function (t) { return "<li>" + badge(t.id) + "<span>" + esc(t.short) + "</span></li>"; }).join("") + "</ul>";
-    html += '<p class="ix-status" aria-live="polite">Showing <strong>' + shown.length + "</strong> of " + list.length + (preview || !sys ? " apps" : " integrations for " + esc(sys.name)) +
+    html += '<div class="ix-search-slot"></div><p class="ix-status" aria-live="polite">Showing <strong>' + shown.length + "</strong> of " + list.length + (preview || !sys ? " apps" : " integrations for " + esc(sys.name)) +
       (q ? " matching &ldquo;" + esc(state.q.trim()) + "&rdquo;" : "") + "</p>";
     if (!shown.length) {
       var hiddenIntl = !state.intl && q && apps.some(function (a) { return a.intl && matchQ(a, q); });
@@ -345,8 +359,7 @@
       if (note && !covered) html += '<p class="ix-note">' + esc(note) + "</p>";
     }
     html += '<div class="ix-actions">' + bookBtn("Book a call about " + sys.name + " + " + a.name) + phoneLink() +
-      (framed || !navigator.clipboard ? "" : '<button type="button" class="ix-copy">Copy link to this page</button>') + "</div></div>" +
-      related(a, sys.id, previewing(sys.id) ? "More " + a.category + " apps" : "More " + a.category + " apps that work with " + sys.name);
+      (framed || !navigator.clipboard ? "" : '<button type="button" class="ix-copy">Copy link to this page</button>') + "</div></div>";
     return html;
   }
   /* ----- render ----- */
@@ -359,8 +372,16 @@
     else if (v === "apps") html = viewApps();
     else html = viewSystems();
     var view = $(".ix-view");
+    var box = $(".ix-search"), typing = document.activeElement === input;
     view.innerHTML = html;
+    /* on the app list the search sits right above the results count; elsewhere it stays above the view */
+    var slot = $(".ix-search-slot");
+    if (slot) slot.appendChild(box); else view.parentNode.insertBefore(box, view);
+    if (typing && document.activeElement !== input) { var end = input.value.length; input.focus({ preventScroll: true }); try { input.setSelectionRange(end, end); } catch (e) {} }
     $(".ix-clear").hidden = !state.q;
+    /* step 3 shows only the pairing: the page around it can hide extra sections (see landing.css) */
+    root.classList.toggle("is-pair", v === "pair");
+    document.documentElement.setAttribute("data-cady-ix-view", v);
     if (fromNav) {
       view.classList.remove("ix-anim"); void view.offsetWidth; view.classList.add("ix-anim");
       if (root.getBoundingClientRect().top < -10) root.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });

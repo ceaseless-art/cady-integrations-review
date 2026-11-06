@@ -105,6 +105,9 @@
   :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-hero-grid,:is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-why-grid{grid-template-columns:minmax(0,1fr);gap:40px}
   :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-steps,:is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-cards{grid-template-columns:1fr}
 }
+:is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-how-actions{justify-content:center;margin:34px 0 0}
+/* when the explorer is showing a phone system + app pairing (step 3), hide the Why Cady section */
+html[data-cady-ix-view="pair"] :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-why{display:none}
 @media (max-width:640px){
   :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-in{padding:0 16px}
   :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6,#cady-lp-7) .lp-section{padding:52px 0}

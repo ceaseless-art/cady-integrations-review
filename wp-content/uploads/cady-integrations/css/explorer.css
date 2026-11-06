@@ -193,6 +193,20 @@
 #cady-ix .ix-switch a,#cady-ix .ix-switch .is-on,#cady-ix .ix-chip{border-radius:999px}
 #cady-ix .ix-switch a{border:1px solid var(--ix-line);transition:border-color .2s var(--ix-ease)}
 #cady-ix .ix-crumbs a,#cady-ix .ix-link,#cady-ix .ix-syscard-go,#cady-ix .ix-workcard-go{border-bottom-width:2px;transition:border-color .2s var(--ix-ease)}
+/* search: easy to spot, and sits above the results count on the app list */
+#cady-ix .ix-input{border:2px solid var(--ix-yellow);background:var(--ix-white);box-shadow:0 8px 22px -14px rgba(229,167,16,.9)}
+#cady-ix .ix-input:focus{border-color:var(--ix-gold)}
+#cady-ix .ix-input::placeholder{color:#6B6B6B}
+#cady-ix .ix-search-icon{color:var(--ix-brown)}
+#cady-ix .ix-search-slot .ix-search{margin:4px 0 14px}
+/* X to clear a chosen phone system or app in the step bar */
+#cady-ix .ix-step{position:relative}
+#cady-ix .ix-step.has-x > a{padding-right:46px}
+#cady-ix .ix-step > a.ix-step-x{height:30px;padding:0;border-top:0;gap:0}
+#cady-ix .ix-step-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:20px;line-height:1;color:var(--ix-muted);background:var(--ix-off);border:1px solid var(--ix-line);transition:background .2s var(--ix-ease),color .2s var(--ix-ease)}
+#cady-ix .ix-step-x:hover,#cady-ix .ix-step-x:focus-visible{background:var(--ix-yellow);border-color:var(--ix-yellow);color:var(--ix-ink)}
+/* step 3 (a phone system + app pairing) shows only the pairing */
+#cady-ix.is-pair .ix-cta{display:none}
 @keyframes ixIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 #cady-ix .ix-view.ix-anim > *{animation:ixIn .4s var(--ix-ease) both}
 #cady-ix .ix-view.ix-anim .ix-grid > li,#cady-ix .ix-view.ix-anim .ix-syscards > *,#cady-ix .ix-view.ix-anim .ix-works > *{animation:ixIn .45s var(--ix-ease) both}
@@ -209,6 +223,8 @@
   #cady-ix .ix-step-n{flex-basis:26px;width:26px;height:26px;font-size:13px}
   #cady-ix .ix-step-k{font-size:10px;letter-spacing:.8px}
   #cady-ix .ix-step-v{font-size:13px;white-space:normal}
+  #cady-ix .ix-step.has-x > a{padding-right:10px;padding-top:34px}
+  #cady-ix .ix-step > a.ix-step-x{top:8px;right:8px;transform:none;width:28px;height:28px;padding:0}
   #cady-ix .ix-input{height:54px;font-size:16px;padding:0 48px 0 50px}
   #cady-ix .ix-search{margin-bottom:26px}
   #cady-ix .ix-h{font-size:23px}
