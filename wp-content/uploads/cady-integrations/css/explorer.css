@@ -242,6 +242,7 @@
   #cady-ix .ix-key-pop{left:0;right:0;width:auto}
   #cady-ix .ix-grid{grid-template-columns:1fr 1fr;gap:10px}
   #cady-ix .ix-tile{padding:12px;gap:10px}
+  #cady-ix .ix-tile .ix-badge{font-size:11px;padding:2px 8px;max-width:100%}
   #cady-ix .ix-panel{padding:20px 16px 24px}
   #cady-ix .ix-apphead{flex-direction:column;align-items:flex-start;gap:20px}
   #cady-ix .ix-apphead .ix-h{font-size:27px}

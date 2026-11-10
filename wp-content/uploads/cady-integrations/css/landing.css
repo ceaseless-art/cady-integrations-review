@@ -108,6 +108,10 @@
 }
 :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-key{display:grid;gap:10px;padding:0 0 22px}
 :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-key li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+/* FAQ centered on the page; answers stay left-aligned so they read easily */
+:is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-faq-in{text-align:center}
+:is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-faq-in .lp-h2{margin-left:auto;margin-right:auto}
+:is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-faq-list{margin-left:auto;margin-right:auto;text-align:left}
 :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-how-actions{justify-content:center;margin:34px 0 0}
 /* when the explorer is showing a phone system + app pairing (step 3), hide the Why Cady section */
 html[data-cady-ix-view="pair"] :is(#cady-lp,#cady-lp-1,#cady-lp-2,#cady-lp-3,#cady-lp-4,#cady-lp-5,#cady-lp-6) .lp-why{display:none}
