@@ -1,5 +1,7 @@
 # Adding or changing an integration
 
+**If the page is connected to the Cady Integrations List Google Sheet (`sheetUrl` is set), make changes in the sheet instead.** Its How to use tab covers everything. This guide is for editing the backup list in the file, or for a site that doesn't use the sheet.
+
 Everything you edit lives in **`js/integrations-data.js`** in the uploaded `cady-integrations` folder. (In the single-file preview, `integration-explorer.html`, it's Part 1 at the top.) Don't change the other CSS or JS files. Logos are separate image files in `images/logos/`.
 
 ## Add an integration

@@ -430,6 +430,72 @@
     }).observe(root);
   }
   }
+  /* ----- Google Sheet: if settings.sheetUrl is set, the integration list comes from the sheet.
+     If the sheet can't be reached in time or has no usable rows, the list in this file is used instead. ----- */
+  function parseCsv(text) {
+    var rows = [], row = [], cell = "", q = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+        else cell += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(cell); cell = ""; }
+      else if (c === "\n" || c === "\r") {
+        if (c === "\r" && text[i + 1] === "\n") i++;
+        row.push(cell); rows.push(row); row = []; cell = "";
+      } else cell += c;
+    }
+    if (cell || row.length) { row.push(cell); rows.push(row); }
+    return rows;
+  }
+  function fromSheet(text, D) {
+    var rows = parseCsv(text);
+    var key = function (h) { return String(h).toLowerCase().replace(/[^a-z0-9]/g, ""); };
+    var col = {};
+    (rows[0] || []).forEach(function (h, i) { if (!(key(h) in col)) col[key(h)] = i; });
+    if (!("name" in col)) return null;
+    var yes = function (v) { return /^(true|yes|y|x|1)$/i.test(String(v || "").trim()); };
+    var lines = function (v) { return String(v || "").split(/\n/).map(function (x) { return x.trim(); }).filter(Boolean); };
+    var sysCols = (D.systems || []).map(function (s) {
+      var n = key(s.name), id = key(s.id);
+      var pick = function (suffix) { return col[n + suffix] !== undefined ? col[n + suffix] : col[id + suffix]; };
+      return { id: s.id, type: pick(""), note: pick("note"), gets: pick("whatyouget"), needs: pick("whatyouneed") };
+    });
+    var out = [];
+    rows.slice(1).forEach(function (r) {
+      var get = function (k) { var i = col[k]; return i === undefined ? "" : String(r[i] || "").trim(); };
+      var name = get("name");
+      if (!name || yes(get("hidefrompage"))) return;
+      var it = { name: name, category: get("category"), desc: get("description"), aka: get("searchwords"), logo: get("logo"),
+        featured: yes(get("featured")), international: yes(get("international")), added: get("dateadded"), systems: {}, details: {} };
+      var ind = get("industries");
+      if (ind) it.industries = ind.split(/\s*,\s*/).filter(Boolean);
+      sysCols.forEach(function (sc) {
+        var t = sc.type === undefined ? "" : String(r[sc.type] || "").trim();
+        if (t) it.systems[sc.id] = t;
+        var d = {};
+        if (sc.note !== undefined && String(r[sc.note] || "").trim()) d.note = String(r[sc.note]).trim();
+        if (sc.gets !== undefined && lines(r[sc.gets]).length) d.gets = lines(r[sc.gets]);
+        if (sc.needs !== undefined && lines(r[sc.needs]).length) d.needs = lines(r[sc.needs]);
+        if (d.note || d.gets || d.needs) it.details[sc.id] = d;
+      });
+      out.push(it);
+    });
+    return out.length ? out : null;
+  }
+  function start() {
+    var D = window.CADY_IX_DATA, url = D && D.settings && D.settings.sheetUrl;
+    if (!url || !window.fetch) return init();
+    var done = false;
+    var finish = function () { if (!done) { done = true; init(); } };
+    /* don't hold the explorer back for long if Google is slow */
+    setTimeout(finish, 4000);
+    fetch(url, { cache: "no-store" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (text) {
+      var list = fromSheet(text, D);
+      if (list && !done) D.integrations = list;
+    }).catch(function () {}).then(finish);
+  }
   /* wait for the whole page so a per-page setting (window.CADY_IX) and the logos below are picked up */
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();
