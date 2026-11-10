@@ -12,6 +12,20 @@ The integrations page shows whatever is in **`integrations.csv`** in the `cady-i
 
 Open `integrations.csv` in Excel, make changes, then **File > Save As > CSV UTF-8** and upload it the same way. Keep the column names exactly as they are.
 
+## With Claude or another AI assistant
+
+`integrations.csv` is plain text, so an AI assistant can read and edit it directly.
+
+1. Download the current `integrations.csv` from the site, or from the team page's **Download updated file** button before making changes.
+2. Give the assistant the file, this guide, and what you want changed. You can paste this in:
+
+> Here is integrations.csv, the list behind Cady's integrations page, and GUIDE.md, which explains each column. Please [add Pipedrive / mark Zendesk as hidden / update the HubSpot description...]. Rules: keep the header row and the column order exactly as they are. Only set the Wildix or Mitel column when there is a source link that confirms it, and put that link in the Source column. Write descriptions in your own words, about 100 characters. Use TRUE or FALSE for Featured, International and Hide from page. Use YYYY-MM-DD for Date added, and set it to today for new apps that should go live. To remove an app, set Hide from page to TRUE instead of deleting the row. Give me back the complete file as integrations.csv, and list what you changed.
+
+3. Read the list of changes it gives back. Open the returned file in Excel if you want to look it over.
+4. Upload the returned file over `integrations.csv` the usual way, then search for the change on the public page.
+
+An assistant working in this project folder (for example Claude Code) can do the same thing on `src/data.html` and the build. See **Developers** below.
+
 ## The columns
 
 | Column | What to put |

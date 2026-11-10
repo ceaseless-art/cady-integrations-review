@@ -72,6 +72,8 @@ To change the list:
 
 The file also opens in Excel if someone prefers that: one row per app, `TRUE` / `FALSE` for the tick boxes, and a **Date added** column showing when each app went on the page. Save it as **CSV UTF-8** and upload it the same way. Keep the column names as they are.
 
+An AI assistant such as Claude can also edit the file: GUIDE.md has a ready-to-paste request and the rules it should follow.
+
 Don't upload it through the Media Library: it renames files that already exist, so the page would keep reading the old one.
 
 If `integrations.csv` is missing or can't be read, the page uses the backup list in `js/integrations-data.js`, so it never shows up empty. That backup is a snapshot from setup and isn't updated when the CSV changes.
