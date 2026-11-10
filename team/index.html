@@ -9,12 +9,8 @@
 </head>
 <body>
 <div id="review-banner">Preview of the private team page &middot; on cadybt.com only logged-in staff will see it</div>
+<script>window.CADY_TEAM = { assetBase: "../wp-content/uploads/cady-integrations/" };</script>
 <!-- Cady integrations TEAM PAGE: paste into a Divi Code module on a page set to Private. See README.md, section 6. -->
-<script>
-/* Connection to the Google Sheet. endpoint = the Apps Script web app URL; key = the same phrase as KEY in the Apps Script.
-   While endpoint is "", the page runs in demo mode and nothing is saved. */
-window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrations/" };
-</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&amp;display=swap">
 <script src="../wp-content/uploads/cady-integrations/js/integrations-data.js"></script>
 <script src="../wp-content/uploads/cady-integrations/js/logos.js"></script>
@@ -28,6 +24,7 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
 #cady-team h1{font-size:32px;line-height:1.2;font-weight:700;color:var(--t-ink);margin:6px 0 8px}
 #cady-team .t-lede{color:var(--t-muted);max-width:70ch}
 #cady-team .t-banner{margin-top:18px;padding:10px 14px;border-radius:10px;background:var(--t-cream);border:1.5px solid #F3D88A;color:var(--t-ink);font-size:14px}
+#cady-team .t-banner.is-dirty{background:#FFF1C2;border-color:var(--t-yellow);font-weight:600}
 #cady-team .t-banner.is-error{background:#FEF3F2;border-color:#FDA29B;color:var(--t-red)}
 #cady-team .t-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:26px 0 12px}
 #cady-team .t-search{flex:1 1 320px;display:flex;align-items:center;gap:8px;height:48px;padding:0 14px;background:var(--t-white);border:2px solid var(--t-yellow);border-radius:999px;box-shadow:0 6px 16px -10px rgba(27,27,27,.35)}
@@ -111,7 +108,7 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
   <div class="t-wrap">
     <p class="t-eyebrow">Team only</p>
     <h1>Integrations list</h1>
-    <p class="t-lede">Add, edit or hide the apps on the integrations page. Hiding takes an app off the page without deleting it. Changes reach the public page within about 5 minutes.</p>
+    <p class="t-lede">Add, edit or hide the apps on the integrations page. Hiding takes an app off the page without deleting it. When you're done, download the updated file and upload it over <strong>integrations.csv</strong> in the cady-integrations folder. Changes go live as soon as it's uploaded.</p>
     <div class="t-banner" hidden></div>
     <div class="t-bar">
       <label class="t-search"><span aria-hidden="true">&#128269;</span><input type="search" placeholder="Search by name, category or search words" aria-label="Search integrations"></label>
@@ -125,6 +122,7 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
         <option value="new">Newest first</option>
       </select>
       <button type="button" class="t-btn is-primary" data-act="add"><span class="t-btn-plus" aria-hidden="true">+</span> Add integration</button>
+      <button type="button" class="t-btn" data-act="download">Download updated file</button>
     </div>
     <p class="t-count"></p>
     <div class="t-list" role="table" aria-label="Integrations"></div>
@@ -145,19 +143,60 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
   var CFG = window.CADY_TEAM || {};
   var D = window.CADY_IX_DATA || {};
   var LOGOS = window.CADY_IX_LOGOS || {};
-  var demo = !!CFG.demo || !CFG.endpoint;
   var SYSTEMS = (D.systems || []).filter(function (s) { return s.status !== "hidden"; });
   var CATS = D.categories || [];
   var INDS = D.industries || [];
   var TYPES = [["", "Not confirmed (shows \"Ask us\")"], ["Direct", "Direct: works directly"], ["Add-on", "Add-on: works with an add-on"], ["Custom", "Custom: custom setup"], ["Ask", "Ask: ask us"]];
-  var rows = [], editing = null, state = { q: "", status: "", sort: "az" };
+  var FILE = CFG.listUrl || (CFG.assetBase || "../wp-content/uploads/cady-integrations/") + ((D.settings && D.settings.listFile) || "integrations.csv");
+  var BASE_HEADERS = ["Name", "Category"].concat(SYSTEMS.map(function (s) { return s.name; }), ["Description", "Industries", "Featured", "International", "Hide from page", "Logo", "Search words"],
+    [].concat.apply([], SYSTEMS.map(function (s) { return [s.name + " note", s.name + ": what you get", s.name + ": what you need"]; })), ["Date added", "Source"]);
+  var headers = BASE_HEADERS.slice();
+  var rows = [], editing = null, changes = 0, state = { q: "", status: "", sort: "az" };
 
   function $(s) { return root.querySelector(s); }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function yes(v) { return v === true || /^(true|yes|1)$/i.test(String(v || "")); }
-  function banner(msg, isError) { var b = $(".t-banner"); b.hidden = !msg; b.textContent = msg || ""; b.classList.toggle("is-error", !!isError); }
+  function banner(msg, isError, isDirty) { var b = $(".t-banner"); b.hidden = !msg; b.textContent = msg || ""; b.classList.toggle("is-error", !!isError); b.classList.toggle("is-dirty", !!isDirty); }
 
-  /* ----- talking to the sheet (or a demo copy in this browser) ----- */
+  /* ----- reading and writing integrations.csv ----- */
+  function parseCsv(text) {
+    text = text.replace(/^\ufeff/, "");
+    var out = [], row = [], cell = "", q = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (q) {
+        if (c === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+        else cell += c;
+      } else if (c === '"') q = true;
+      else if (c === ",") { row.push(cell); cell = ""; }
+      else if (c === "\n" || c === "\r") {
+        if (c === "\r" && text[i + 1] === "\n") i++;
+        row.push(cell); out.push(row); row = []; cell = "";
+      } else cell += c;
+    }
+    if (cell || row.length) { row.push(cell); out.push(row); }
+    return out;
+  }
+  /* Excel may save dates as 11/10/2026; keep them as 2026-11-10 */
+  function isoDate(v) {
+    var m = String(v || "").trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+    return m ? m[3] + "-" + ("0" + m[1]).slice(-2) + "-" + ("0" + m[2]).slice(-2) : String(v || "").trim();
+  }
+  function fromCsvText(text) {
+    var t = parseCsv(text), h = (t[0] || []).map(function (x) { return String(x).trim(); });
+    if (h.indexOf("Name") < 0) return null;
+    headers = h.concat(BASE_HEADERS.filter(function (k) { return h.indexOf(k) < 0; }));
+    var list = [];
+    t.slice(1).forEach(function (r) {
+      if (!String(r[h.indexOf("Name")] || "").trim()) return;
+      var o = {};
+      headers.forEach(function (k) { var i = h.indexOf(k); o[k] = i < 0 ? "" : String(r[i] == null ? "" : r[i]); });
+      ["Featured", "International", "Hide from page"].forEach(function (k) { o[k] = yes(o[k]); });
+      o["Date added"] = isoDate(o["Date added"]);
+      list.push({ id: list.length + 1, data: o });
+    });
+    return list;
+  }
   function fromBuiltIn() {
     var T = { direct: "Direct", native: "Direct", "add-on": "Add-on", addon: "Add-on", middleware: "Add-on", custom: "Custom", ask: "Ask" };
     return (D.integrations || []).map(function (it, i) {
@@ -171,40 +210,39 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
         o[s.name + ": what you get"] = (d.gets || []).join("\n");
         o[s.name + ": what you need"] = (d.needs || []).join("\n");
       });
-      return { row: i + 2, data: o };
+      return { id: i + 1, data: o };
     });
   }
-  var demoRows = null;
+  function toCsv() {
+    var q = function (v) {
+      v = v === true ? "TRUE" : v === false ? "FALSE" : String(v == null ? "" : v);
+      return /[",\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+    };
+    var sorted = rows.slice().sort(function (a, b) { return String(a.data["Name"]).localeCompare(String(b.data["Name"])); });
+    /* the BOM tells Excel the file is UTF-8, so accented names open correctly */
+    return "\ufeff" + [headers.map(q).join(",")].concat(sorted.map(function (r) { return headers.map(function (k) { return q(r.data[k]); }).join(","); })).join("\r\n") + "\r\n";
+  }
+  function download() {
+    var url = URL.createObjectURL(new Blob([toCsv()], { type: "text/csv;charset=utf-8" }));
+    var a = document.createElement("a");
+    a.href = url; a.download = "integrations.csv";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    changes = 0;
+    banner("Downloaded integrations.csv. Upload it over the old integrations.csv in /wp-content/uploads/cady-integrations/ to make the changes live.");
+  }
+  function changed(msg) {
+    changes++;
+    banner(msg + " " + changes + (changes === 1 ? " change" : " changes") + " not live yet: click Download updated file, then upload it.", false, true);
+  }
   function today() { var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
-  function api(action, payload) {
-    if (demo) {
-      return new Promise(function (resolve) {
-        if (!demoRows) demoRows = fromBuiltIn();
-        if (action === "add") {
-          var d = payload.data;
-          if (!yes(d["Hide from page"]) && !d["Date added"]) d["Date added"] = today();
-          demoRows.push({ row: demoRows.length + 2, data: d });
-        } else if (action === "update") {
-          var r = demoRows.filter(function (x) { return x.row === payload.row; })[0];
-          Object.keys(payload.data).forEach(function (k) { r.data[k] = payload.data[k]; });
-          if (!yes(r.data["Hide from page"]) && !r.data["Date added"]) r.data["Date added"] = today();
-        }
-        setTimeout(function () { resolve({ rows: JSON.parse(JSON.stringify(demoRows)) }); }, 150);
-      });
-    }
-    var req = action === "list"
-      ? fetch(CFG.endpoint + (CFG.endpoint.indexOf("?") > -1 ? "&" : "?") + "key=" + encodeURIComponent(CFG.key || ""), { cache: "no-store" })
-      /* text/plain keeps the browser from sending a preflight request, which Google's web apps don't answer */
-      : fetch(CFG.endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(Object.assign({ key: CFG.key || "", action: action }, payload)) });
-    return req.then(function (r) { return r.json(); }).then(function (res) {
-      if (res.error) throw new Error(res.error);
-      return res;
-    });
-  }
+  function stampDate(d) { if (!yes(d["Hide from page"]) && !d["Date added"]) d["Date added"] = today(); }
   function load() {
-    banner(demo ? "Demo mode: this page isn't connected to the sheet yet, so changes only last until you refresh." : "Loading the list…");
-    return api("list").then(function (res) { rows = res.rows; if (!demo) banner(""); render(); })
-      .catch(function (e) { banner("Couldn't load the list: " + e.message + " Check the connection settings, then refresh.", true); });
+    banner("Loading the list…");
+    fetch(FILE, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); })
+      .then(function (text) { var list = fromCsvText(text); if (!list) throw "bad"; rows = list; banner(""); })
+      .catch(function () { rows = fromBuiltIn(); banner("Couldn't find integrations.csv on the site, so this shows the backup list. Download the file and upload it to the cady-integrations folder to set it up.", true); })
+      .then(render);
   }
 
   /* ----- the list ----- */
@@ -249,7 +287,7 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
     if (!list.length) { $(".t-list").innerHTML = head + '<div class="t-empty">No integrations match. Try another search, or add it with the + button.</div>'; return; }
     $(".t-list").innerHTML = head + list.map(function (r) {
       var d = r.data, hidden = yes(d["Hide from page"]);
-      return '<div class="t-row' + (hidden ? " is-hidden" : "") + '" role="row" data-row="' + r.row + '">' +
+      return '<div class="t-row' + (hidden ? " is-hidden" : "") + '" role="row" data-row="' + r.id + '">' +
         '<div class="t-name">' + logoHtml(d) + "<span>" + esc(d["Name"]) + "</span></div>" +
         '<div class="t-cell"><span class="t-k">Category</span>' + esc(d["Category"]) + "</div>" +
         SYSTEMS.slice(0, 2).map(function (s) { return '<div class="t-cell"><span class="t-k">' + esc(s.name) + "</span>" + badge(d[s.name]) + "</div>"; }).join("") +
@@ -329,19 +367,21 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
     e.preventDefault();
     var d = collect(), err = problem(d);
     if (err) { $(".t-error").textContent = err; return; }
-    var btn = $('.t-panel [type="submit"]');
-    btn.disabled = true; btn.textContent = "Saving…";
-    var req = editing ? api("update", { row: editing.row, name: editing.data["Name"], data: d }) : api("add", { data: d });
-    req.then(function (res) { rows = res.rows; closePanel(); render(); banner(demo ? "Demo mode: saved in this browser only." : "Saved. The public page updates within about 5 minutes."); })
-      .catch(function (x) { $(".t-error").textContent = x.message; })
-      .then(function () { btn.disabled = false; btn.textContent = "Save"; });
+    stampDate(d);
+    if (editing) { Object.keys(d).forEach(function (k) { editing.data[k] = d[k]; }); }
+    else {
+      headers.forEach(function (k) { if (!(k in d)) d[k] = ""; });
+      rows.push({ id: rows.reduce(function (m, r) { return Math.max(m, r.id); }, 0) + 1, data: d });
+    }
+    var name = d["Name"], wasEdit = !!editing;
+    closePanel(); render();
+    changed((wasEdit ? "Saved changes to " : "Added ") + name + ".");
   }
-  function toggle(r, btn) {
-    var hide = !yes(r.data["Hide from page"]);
-    btn.disabled = true; btn.textContent = "Saving…";
-    api("update", { row: r.row, name: r.data["Name"], data: { "Hide from page": hide } })
-      .then(function (res) { rows = res.rows; render(); banner((hide ? "Hidden: " : "Showing again: ") + r.data["Name"] + (demo ? " (demo, not saved)." : ". The public page updates within about 5 minutes.")); })
-      .catch(function (x) { banner(x.message, true); render(); });
+  function toggle(r) {
+    r.data["Hide from page"] = !yes(r.data["Hide from page"]);
+    stampDate(r.data);
+    render();
+    changed((r.data["Hide from page"] ? "Hidden: " : "Showing again: ") + r.data["Name"] + ".");
   }
 
   /* ----- events ----- */
@@ -352,11 +392,12 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
     if (!b) return;
     var act = b.getAttribute("data-act");
     if (act === "add") return openPanel(null);
+    if (act === "download") return download();
     if (act === "close") return closePanel();
-    var rowEl = b.closest("[data-row]"), r = rowEl && rows.filter(function (x) { return x.row === +rowEl.getAttribute("data-row"); })[0];
+    var rowEl = b.closest("[data-row]"), r = rowEl && rows.filter(function (x) { return x.id === +rowEl.getAttribute("data-row"); })[0];
     if (!r) return;
     if (act === "edit") openPanel(r);
-    if (act === "toggle") toggle(r, b);
+    if (act === "toggle") toggle(r);
   });
   $(".t-overlay").addEventListener("click", function (e) { if (e.target === e.currentTarget) closePanel(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !$(".t-overlay").hidden) closePanel(); });
@@ -364,6 +405,7 @@ window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrat
   $(".t-panel").addEventListener("input", function (e) {
     if (e.target.name === "Logo" || e.target.name === "Name") $(".t-logo-prev").innerHTML = logoHtml({ "Logo": $('.t-form [name="Logo"]').value, "Name": $('.t-form [name="Name"]').value });
   });
+  window.addEventListener("beforeunload", function (e) { if (changes) { e.preventDefault(); e.returnValue = ""; } });
   load();
 })();
 </script>

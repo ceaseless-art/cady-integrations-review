@@ -1,55 +1,50 @@
 # Adding or changing an integration
 
-**If the page is connected to the Cady Integrations List Google Sheet (`sheetUrl` is set), make changes in the sheet instead.** Its How to use tab covers everything. This guide is for editing the backup list in the file, or for a site that doesn't use the sheet.
+The integrations page shows whatever is in **`integrations.csv`** in the `cady-integrations` folder (`/wp-content/uploads/cady-integrations/integrations.csv`).
 
-Everything you edit lives in **`js/integrations-data.js`** in the uploaded `cady-integrations` folder. (In the single-file preview, `integration-explorer.html`, it's Part 1 at the top.) Don't change the other CSS or JS files. Logos are separate image files in `images/logos/`.
+## The easy way: the team page
 
-## Add an integration
+1. Open the private team page on the website (README section 6).
+2. Search for an app, or click **+ Add integration**. Use **Edit** to change one and **Hide** to take one off the page. Nothing is ever deleted.
+3. Click **Download updated file**, then upload `integrations.csv` over the old copy using SFTP or the host's file manager. It's live straight away.
 
-1. Download `js/integrations-data.js` from `/wp-content/uploads/cady-integrations/` (SFTP or the host's file manager) and open it in a text editor.
-2. Find the `integrations: [` list and the category comment it belongs under, such as `/* ---------- CRM & Sales ---------- */`.
-3. Copy an existing entry and paste it below. Change the details:
+## In Excel
 
-```js
-{ name: "Pipedrive", category: "CRM & Sales", systems: { wildix: "Middleware", mitel: "Direct" },
-  desc: "See who's calling from your Pipedrive contacts and jump straight to their deal.",
-  aka: "pipe drive", logo: "" },
-```
+Open `integrations.csv` in Excel, make changes, then **File > Save As > CSV UTF-8** and upload it the same way. Keep the column names exactly as they are.
 
-4. Make sure every entry **except the last one** ends with `},`. A missing comma is the most common mistake, and it stops the explorer from loading.
-5. Save, upload it over the old copy, then open the page (refresh, and clear any caching plugin) and search for the new name to check it.
+## The columns
 
-## The fields
-
-| Field | What to put |
+| Column | What to put |
 |---|---|
-| `name` | The app name customers know. |
-| `category` | Exactly one of the names in the `categories` list, spelled the same way. |
-| `industries` | Optional. Industries the app is made for, e.g. `industries: ["Legal"]`, using names from the `industries` list. Leave it out for general apps; they show for every industry under "Works for any business". |
-| `systems` | Each phone system, then how it connects: `"Direct"`, `"Add-on"`, `"Custom"` or `"Ask"`. **Only add a system if a source confirms it.** Leave a system out and the explorer shows "Ask us" for it. |
-| `desc` | One plain-English sentence on what it does for the business. Write it yourself; don't paste vendor text. |
-| `note` | Optional caveat for one phone system, placed inside that system's `details`, e.g. `details: { wildix: { note: "Per-user monthly add-on fee applies.", gets: [...], needs: [...] } }`. |
-| `featured: true` | Optional. Shows the app first. Use it for names US buyers recognize. |
-| `international: true` | Optional. Hides the app until the visitor ticks "Include international listings". |
-| `logo` | Optional. Either the name of a logo listed in `js/logos.js` (e.g. `"salesforce"`), or a full image URL, e.g. a square PNG or SVG uploaded to `images/logos/` or the Media Library. Leave `""` for a lettered tile. |
-| `aka` | Optional extra search words, separated by spaces, e.g. `"help desk tickets"`. |
-| `details` | Optional, but it's what fills the pairing view. For each phone system, a short "What you get" list and "What you need" list, e.g. `details: { wildix: { gets: ["Caller pop-ups", "Click to call"], needs: ["A Pipedrive account"] } }`. Only list what a source confirms. |
+| Name | The app name customers know. |
+| Category | One of: CRM & Sales, Productivity & Collaboration, Contact Center & Analytics, Hospitality, Healthcare & Nurse Call, Paging & Emergency Notification, Door Phones & Intercoms, Headsets & Devices, Other. A misspelled category shows as Other. |
+| Wildix / Mitel | How the app connects to that phone system: `Direct`, `Add-on`, `Custom` or `Ask`. **Only fill this in when a source confirms it.** Leave it blank and the page shows "Ask us" for that system. |
+| Description | One plain sentence on what it does for the business, about 100 characters. Write it yourself rather than copying the vendor's text. |
+| Industries | Optional. Industries the app is made for, separated by commas: Healthcare, Finance, Hotels & Hospitality, Education & Government, Manufacturing & Warehousing, Legal, IT & Managed Services, Field Service & Trades, Recruiting & Staffing, Retail, Automotive. Leave blank for general apps. |
+| Featured | `TRUE` for names US buyers recognize. They come first when visitors sort by best-known. |
+| International | `TRUE` for apps sold mainly outside the US. They stay hidden until a visitor chooses to see them. |
+| Hide from page | `TRUE` takes the app off the page without deleting the row. |
+| Logo | A full image link (a square PNG or SVG uploaded to the Media Library works), or the name of a logo already in `images/logos/`. Leave blank for initials. |
+| Search words | Optional extra words people might search for, separated by spaces. |
+| Wildix note / Mitel note | Optional short caveat for that phone system, such as an extra fee. |
+| What you get / What you need | Optional. Fills in the detail page for that pairing. One item per line (in Excel, Alt+Enter inside the cell, or Option+Cmd+Enter on a Mac). |
+| Date added | The date the app went on the page, as `2026-11-10`. The team page fills it in automatically. Apps already on the list at setup show 2026-11-10. |
+| Source | Link to the page that confirms the integration. For the team's records only; not shown on the page. |
 
-## Common changes
+## Things still set in `js/integrations-data.js`
 
-- **Mitel data arrives:** add `mitel: "Direct"` (or the right type) to existing entries, add a `mitel: { gets: [...], needs: [...] }` block to their `details`, add new Mitel-only entries, then change Mitel's `status` from `"coming-soon"` to `"live"` in the `systems` list.
-- **Launch System 3 or 4:** in the `systems` list, change `name` to the real name and `status` to `"live"`. Keep the `id` short and lowercase (e.g. `"ringcentral"`) and use that same id inside entries' `systems`.
-- **Remove an integration:** delete its whole `{ ... },` block.
-- **Add a category or industry:** add its name to the `categories` or `industries` list where you want it to appear in the filter.
-- **Change phone number, contact page or booking link:** edit `phone`, `contactUrl` or `bookingUrl` in `settings`. Every "Book a call" button uses `bookingUrl`. While it's empty, the buttons are placeholders and don't go anywhere.
-- **Rebuild after editing (developers):** source files live in `src/`. Run `python3 build.py dist` to regenerate the single-file previews and the `dist/cady-integrations/` handoff folder.
+These change rarely. Edit the file in a text editor and upload it over the old copy.
 
-## Text rules
+- **Phone number, contact page, booking link:** `phone`, `contactUrl`, `bookingUrl` under `settings`.
+- **A new category or industry:** add its name to the `categories` or `industries` list where it should appear in the filters.
+- **A new phone system:** in the `systems` list, change `System 3` to the real name and `status` to `"live"`. Then add four columns to `integrations.csv` named after it, e.g. `RingCentral`, `RingCentral note`, `RingCentral: what you get`, `RingCentral: what you need`. The team page picks them up automatically.
 
-- Put text inside straight double quotes `"..."`. If the text needs a double quote, use single quotes inside it instead.
-- Apostrophes are fine: `"you're"`.
-- Keep descriptions to about 100 characters so cards stay even.
+The `integrations` list in that file is only a backup, used if `integrations.csv` can't be loaded. It doesn't need updating.
 
-## If the explorer disappears after an edit
+## If the explorer disappears after editing `integrations-data.js`
 
-That almost always means a missing comma, quote or bracket. Undo your last change (Divi keeps revision history), or paste your edited entry into a free JavaScript checker such as jshint.com to find the line.
+That almost always means a missing comma, quote or bracket. Upload the previous copy again, or paste the file into a free JavaScript checker such as jshint.com to find the line.
+
+## Developers
+
+Source files live in `src/`. `python3 build.py dist` rebuilds the handoff folder, including a fresh `integrations.csv` from the backup list in `src/data.html`. Once Cady has edited the live CSV, download it from the site before rebuilding, or the rebuilt copy will be older than theirs.

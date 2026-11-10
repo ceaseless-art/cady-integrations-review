@@ -1,0 +1,713 @@
+﻿Name,Category,Wildix,Mitel,Description,Industries,Featured,International,Hide from page,Logo,Search words,Wildix note,Wildix: what you get,Wildix: what you need,Mitel note,Mitel: what you get,Mitel: what you need,Date added,Source
+Salesforce,CRM & Sales,Direct,Direct,"Click to call, caller pop-ups and call history inside Salesforce, in both Classic and Lightning.",,TRUE,FALSE,FALSE,salesforce,sfdc lightning classic sales cloud,Per-user monthly add-on fee applies.,"One-click dialing and a dialpad inside Salesforce
+Pop-up on incoming and outgoing calls opens the matching contact
+Create a new contact for an unknown number from the pop-up
+Call history, plus automated calling for sales outreach (Lightning)","A Salesforce license with Classic or Lightning access
+Wildix UC-Business license or higher
+A current Wildix system version
+Per-user monthly add-on fee from Wildix",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+HubSpot,CRM & Sales,Direct,,"Dial from any HubSpot contact, see who's calling in a pop-up, and log calls and meetings automatically.",,TRUE,FALSE,FALSE,hubspot,hub spot marketing,,"Call any HubSpot contact or company with one click
+Pop-up on every call shows the contact, with call controls
+Calls and conferences with HubSpot contacts logged automatically",A HubSpot account,,,,2026-11-10,
+Microsoft Dynamics 365 CRM,CRM & Sales,Add-on,Direct,Recognizes callers from your Dynamics 365 records and opens their details as the phone rings.,,TRUE,FALSE,FALSE,dynamics-365,dynamics crm d365 microsoft,Connects through the TelephoneIntegration add-on from mscrm-addons.com.,"Looks up callers in Dynamics 365 and shows who they are
+Automatic pop-up on incoming and outgoing calls
+Dial from any number field, search or the command bar
+Call activities, and new records like leads or cases, created for you","Dynamics 365 (online or on-premises)
+The TelephoneIntegration add-on from mscrm-addons.com
+Wildix's Windows phone driver (TAPI) on each computer",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Zoho CRM,CRM & Sales,Direct,Direct,"Caller pop-ups, one-click dialing, follow-up tasks and automatic call logging inside Zoho CRM.",,TRUE,FALSE,FALSE,zoho-crm,zoho phonebridge,,"Pop-up with caller and call details on incoming calls
+Place calls from Zoho CRM with one click
+Schedule a follow-up activity when the call ends
+Calls logged automatically","A Zoho CRM account
+Wildix UC-Business license or higher
+A current Wildix system version",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Zoho Bigin,CRM & Sales,Direct,,"See caller details on incoming calls, dial with a click, and save call notes straight to Bigin.",,TRUE,FALSE,FALSE,zoho-bigin,bigin zoho,Requires a paid Zoho plan.,"Pop-up with the contact's details on incoming calls
+Dial from Bigin with one click
+Calls logged automatically
+Add a description, tags and notes with attachments after the call","A paid Zoho PhoneBridge account (Standard, Professional or Enterprise)
+Wildix UC-Business license or higher
+A current Wildix system version",,,,2026-11-10,
+Gong,CRM & Sales,Direct,,"Sends sales calls to Gong for recording and analysis, so managers can coach reps and see what wins deals.",,TRUE,FALSE,FALSE,gong,gong.io revenue intelligence coaching,,"x-bees calls and conferences recorded and sent to Gong automatically
+See which sales behaviors and objection handling work
+Track team performance and coach reps with real data
+Insight on how to move deals forward","A Gong account
+x-bees SuperBee plan",,,,2026-11-10,
+Zendesk,CRM & Sales,Direct,Direct,Call from inside Zendesk tickets. Call details and recordings land on the ticket automatically.,,TRUE,FALSE,FALSE,zendesk,help desk helpdesk support tickets,,"Click to dial from Zendesk tickets and user profiles
+Hold, transfer and record calls without leaving Zendesk
+Caller lookup, past interactions, and linking calls to tickets
+Call details and a playable recording added to the ticket","An up-to-date web browser such as Chrome or Firefox
+A Zendesk account",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Zoho Desk,CRM & Sales,Add-on,Direct,"Caller pop-ups, click to call, and every call logged to the customer's Zoho Desk record.",,TRUE,FALSE,FALSE,zoho-desk,help desk helpdesk support tickets zoho,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the customer's details on incoming and outgoing calls
+Click to call from Zoho Desk, your browser or other apps
+Every call logged to the record, even from unknown callers
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Zoho Desk account",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+SugarCRM,CRM & Sales,Direct,Direct,"Shows the customer's name on your desk phone from your Sugar database, with automated outbound dialing.",,FALSE,FALSE,FALSE,sugarcrm,sugar crm,,"Customer names from Sugar shown on Wildix phone displays
+Automated dialing from imported lists, passed to your call center
+Customer, ticket or lead pop-ups based on the number
+Click any phone number in Sugar to call it","A SugarCRM account
+Advanced features are built by a Wildix integration partner",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Datto Autotask PSA,CRM & Sales,Direct,,Click to call from Autotask and see the caller's account pop up on incoming and outgoing calls.,IT & Managed Services,FALSE,FALSE,FALSE,datto-autotask-psa,autotask psa msp kaseya help desk ticketing,,"Click to call from the Autotask contact page
+Pop-up on incoming and outgoing calls
+Caller name and history shown in the Wildix app","An Autotask account, with an API user created
+Google Chrome and Wildix's WIService helper installed
+Wildix UC-Business license",,,,2026-11-10,
+Solve360,CRM & Sales,Direct,,Connects your phones to Solve360 so calls tie back to the right contact and activity.,,FALSE,FALSE,FALSE,solve360,solve crm,,Caller's Solve360 contact record opens automatically on calls,A Solve360 account,,,,2026-11-10,
+Act!,CRM & Sales,Add-on,,"Caller pop-ups from Act!, click to call, plus call notes and 90-day call history.",,FALSE,FALSE,FALSE,act,act crm,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the contact's details on incoming and outgoing calls
+Click to call from your browser or other apps
+Your own custom Act! fields shown in the pop-up
+Call notes and 90-day call history; cloud or self-hosted Act!","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+An Act! account (cloud or self-hosted)",,,,2026-11-10,
+Pipedrive,CRM & Sales,Add-on,,"Caller pop-ups, click to call, and every call logged to the right Pipedrive contact.",,FALSE,FALSE,FALSE,pipedrive,pipe drive,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the contact's details on incoming and outgoing calls
+Click to call, plus search Pipedrive contacts anytime
+Every call logged to the right Pipedrive contact
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Pipedrive account",,,,2026-11-10,
+Bullhorn,CRM & Sales,Add-on,,"Recruiters see the candidate or client as the phone rings, with click to call and call notes.",Recruiting & Staffing,FALSE,FALSE,FALSE,bullhorn,recruiting staffing ats,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with candidate or client details on every call
+Click to call, plus search Bullhorn contacts anytime
+Flip through results when a number matches several records
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Bullhorn account",,,,2026-11-10,
+ConnectWise,CRM & Sales,Add-on,,"Caller pop-ups, click to call, and calls logged in ConnectWise so techs can help faster.",IT & Managed Services,FALSE,FALSE,FALSE,connectwise,connectwise manage psa msp help desk,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
+Click to call, plus search ConnectWise contacts anytime
+Every call logged to the client's record
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A ConnectWise account",,,,2026-11-10,
+HaloPSA,CRM & Sales,Add-on,,"Caller pop-ups, click to call, and calls logged to the client's record in HaloPSA.",IT & Managed Services,FALSE,FALSE,FALSE,halopsa,halo psa msp help desk ticketing,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
+Click to call, plus search HaloPSA contacts anytime
+Every call logged to the client's record
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A HaloPSA account",,,,2026-11-10,
+Freshdesk,CRM & Sales,Add-on,Direct,"Customer pop-ups from Freshdesk, click to call, plus call notes and 90-day call history.",,FALSE,FALSE,FALSE,freshdesk,freshworks help desk helpdesk support tickets,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the customer's details on incoming and outgoing calls
+Click to call from Freshdesk, your browser or other apps
+Your own custom Freshdesk fields shown in the pop-up
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Freshdesk account",,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Freshservice,CRM & Sales,Add-on,,"IT teams see who's calling from Freshservice, with click to call and call notes.",IT & Managed Services,FALSE,FALSE,FALSE,freshservice,freshworks it service desk itsm help desk,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the caller's details on incoming and outgoing calls
+Click to call from Freshservice, your browser or other apps
+Custom fields shown, with multiple matches easy to browse
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Freshservice account",,,,2026-11-10,
+ServiceNow,CRM & Sales,Add-on,Direct,"Caller pop-ups from ServiceNow, click to call, plus call notes and 90-day call history.",IT & Managed Services,FALSE,FALSE,FALSE,servicenow,service now itsm help desk,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the caller's details on incoming and outgoing calls
+Click to call from ServiceNow, your browser or other apps
+Custom fields shown, with multiple matches easy to browse
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A ServiceNow account",,"Click to dial from inside ServiceNow
+Handle SMS, chat and email alongside calls
+An agent panel inside the ServiceNow screen","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Odoo by SOZIAS,CRM & Sales,Direct,,"Opens the caller's Odoo record on incoming calls, with click to call and full call history.",,FALSE,TRUE,FALSE,odoo-by-sozias,odoo erp,,"Caller's Odoo contact page pops up on incoming calls
+Click to call from the Odoo contact page
+One button opens the contact's call history
+Call logs with direction, duration, users and recording","Odoo version 12 or later with the CRM module turned on
+Wildix Chrome extension and WIService helper installed
+Wildix UC-Business or UC-Premium license
+Yearly fee paid to SOZIAS",,,,2026-11-10,
+Odoo4Wisp,CRM & Sales,Direct,,"Caller ID pop-ups, click to call and call history for internet providers running Odoo.",,FALSE,TRUE,FALSE,odoo4wisp,odoo wisp isp,,"Incoming call pop-up with caller ID and a link to the client profile
+Click to call from the client's profile
+Route incoming calls to the right extension
+Call history for every extension, exportable to a file",Wildix UC-Basic plan,,,,2026-11-10,
+Sellsy,CRM & Sales,Direct,,Click to call from Sellsy and jump straight to the caller's record.,,FALSE,TRUE,FALSE,sellsy,,,"Call contacts with one click from Sellsy
+Matching contact is found and its page opened for you","Wildix UC-Essential license or higher
+A current Wildix system version",,,,2026-11-10,
+Codial,CRM & Sales,Direct,,Dial from Codial and open the matching contact automatically on calls.,,FALSE,TRUE,FALSE,codial,,,"Call contacts with one click from Codial
+Matching contact is found and its page opened for you","Wildix UC-Business license or higher for each user
+A current Wildix system version",,,,2026-11-10,
+Karlia,CRM & Sales,Direct,,"Click to call from Karlia, with the caller's contact opened for you.",,FALSE,TRUE,FALSE,karlia,,,"Start calls with one click from Karlia
+Matching contact is found and its page opened for you","Wildix UC-Essential license or higher for each user
+Wildix Integration Service installed",,,,2026-11-10,
+Incwo,CRM & Sales,Direct,,"Click to call from Incwo, with automatic lookup of existing contacts.",,FALSE,TRUE,FALSE,incwo,,,"Start calls with one click from Incwo
+Matching contact is found and its page opened for you","Wildix UC-Essential license or higher for each user
+An Incwo license with API access
+A current Wildix system version",,,,2026-11-10,
+Axonaut,CRM & Sales,Direct,,Click to call and automatic contact lookup for teams using the Axonaut CRM.,,FALSE,TRUE,FALSE,axonaut,,,"Click to call from Axonaut
+Recognizes callers who are already in your Axonaut database","Access to Wildix's Collaboration app
+The latest version of Google Chrome",,,,2026-11-10,
+B.COM CRM,CRM & Sales,Direct,,Make calls from B.COM CRM and tie phone activity to sales and support records.,,FALSE,TRUE,FALSE,b-com-crm,bcom,,"Sales reps place calls with Wildix while working in the CRM
+Phone features tied to sales requests and support cases
+Run phone-based sales campaigns alongside email and social",An up-to-date web browser,,,,2026-11-10,
+eflowCRM,CRM & Sales,Direct,,Links calls to leads and deals for car dealerships using eflowCRM.,Automotive,FALSE,TRUE,FALSE,eflowcrm,automotive dealership,,"Incoming calls tied to CRM activities and new leads
+Place outgoing calls straight from CRM workflows
+Monitor other users' call activity
+Call history for each deal and each customer",Chrome or Firefox,,,,2026-11-10,
+RadarClienti,CRM & Sales,Direct,,Connects phone calls to the RadarClienti marketing and CRM platform.,,FALSE,TRUE,FALSE,radarclienti,,,"Click to call and incoming call pop-ups
+Customer record opens on calls
+Chat, plus document storage and sharing
+Wildix Kite web chat built in",,,,,2026-11-10,
+VTECRM,CRM & Sales,Direct,,Ties calls to customer records in VTECRM.,,FALSE,TRUE,FALSE,vtecrm,vte,,"Click to call and incoming call pop-ups
+Call history inside the CRM
+Set your availability status from VTECRM
+Wildix's Collaboration app built into the CRM home page",,,,,2026-11-10,
+vtenext,CRM & Sales,Direct,,Ties calls to customer records in the vtenext CRM.,,FALSE,TRUE,FALSE,vtenext,vte,,"Click to call and incoming call pop-ups
+Call history inside the CRM
+Set your availability status from vtenext
+Wildix's Collaboration app built into the CRM home page",,,,,2026-11-10,
+Web CRM One 2.0,CRM & Sales,Direct,,Connects calls to customer records in Web CRM One.,,FALSE,TRUE,FALSE,,,,Listed by Wildix as a compatible web-based CRM,,,,,2026-11-10,
+Microsoft Outlook & Office 365,Productivity & Collaboration,Direct,,"Import contacts, click to call from Outlook, see who's calling, and route calls by your calendar.",,TRUE,FALSE,FALSE,outlook,microsoft 365 m365 o365 office outlook calendar,,"Import contacts from Outlook, Exchange or Office 365
+Click to call from Outlook; see caller names from your contacts
+Calendar sync shows colleagues when you're busy and routes calls
+Set up Wildix conferences from Outlook",Wildix's Windows phone driver (TAPI) for click to call,,,,2026-11-10,
+Microsoft Teams,Productivity & Collaboration,Direct,,"Make and take business calls right inside Microsoft Teams, using your Wildix phone system.",,TRUE,FALSE,FALSE,teams,teams4wildix ms teams microsoft 365,Listed by Wildix as teams4Wildix.,"Make and take internal and external calls inside Teams
+Queues, voicemail, transfers, phone menus and fax/SMS in Teams
+Control your Wildix desk phone, wireless handset or mobile app
+No extra Microsoft calling licenses needed for the standard setup","Wildix UC-Essential, UC-Business or UC-Premium license per Teams user
+Wildix's built-in CLASSOUND calling service turned on
+A current Wildix system version
+Teams dialpad calling needs extra Microsoft licenses and a fee",,,,2026-11-10,
+Microsoft Exchange,Productivity & Collaboration,Direct,,"Click to call from Exchange, sync the company directory, and set call handling from your calendar.",,TRUE,FALSE,FALSE,exchange,exchange server email calendar,,"Click to call from Exchange, with calls handled by Wildix
+Import and sync the company directory
+Call handling adjusts automatically to your Outlook calendar",A Microsoft Exchange server,,,,2026-11-10,
+Google Workspace & Chrome,Productivity & Collaboration,Direct,,"Sign in with Google, import contacts, click to call from Chrome, and sync meetings with Google Calendar.",,TRUE,FALSE,FALSE,google-workspace,google gmail calendar chromebook android g suite,,"Sign in with your Google account
+Import users and contacts from Google
+Click to call from Chrome, plus a Chrome extension and app
+Conference scheduling synced with Google Calendar",A Google account,,,,2026-11-10,
+Calendly,Productivity & Collaboration,Direct,,Customers book a time through Calendly and the meeting runs on Wildix video conferencing.,,TRUE,FALSE,FALSE,calendly,scheduling booking appointments,,"Add a Wildix video meeting room link to Calendly bookings
+Guests get the meeting link in their booking confirmation","A Calendly account
+Wildix UC-Business license or higher",,,,2026-11-10,
+WhatsApp Business,Productivity & Collaboration,Direct,,Answer and start WhatsApp chats with customers from the same app your team uses for calls.,,FALSE,FALSE,FALSE,whatsapp-business,whatsapp messaging chat text,Works with the Wildix x-bees platform.,"Reply to incoming WhatsApp chats from x-bees
+Start WhatsApp chats and use message templates in x-bees
+Send customers to one agent or a group of agents","x-bees Standard plan or higher
+A Wildix CLASSOUND phone number
+A verified WhatsApp Business Manager account",,,,2026-11-10,
+Citrix,Productivity & Collaboration,Direct,,Run the Wildix calling app inside Citrix virtual desktops so remote staff can call securely.,,FALSE,FALSE,FALSE,citrix,virtual desktop vdi remote,,"Calls, chat, presence and headset support inside Citrix desktops
+Fax printer, chat conferences and screen sharing
+Shared phonebooks, receptionist console and encryption
+Free, certified by Wildix","Wildix Collaboration desktop app installed
+Google Chrome",,,,2026-11-10,
+IBM Notes & Connections,Productivity & Collaboration,Direct,,"Click to call, click to chat and colleague presence from IBM Notes and Connections.",,FALSE,FALSE,FALSE,ibm-notes-connections,domino lotus,,"Click to call and click to chat from Notes and Connections
+See colleagues' availability status in Notes and Connections
+Import contacts and users from Domino into Wildix",IBM Domino with Notes or Connections,,,,2026-11-10,
+Kerio Connect,Productivity & Collaboration,Direct,,Click to call from the Kerio Connect email and calendar client.,,FALSE,FALSE,FALSE,,email,,Click to call from the Kerio Connect client,,,,,2026-11-10,
+Monday.com,Productivity & Collaboration,Add-on,,"Caller pop-ups from your monday.com boards, hotkey dialing, and calls logged automatically.",,FALSE,FALSE,FALSE,monday-com,monday work management,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with details from your monday.com boards on calls
+Select a number and press a hotkey to dial it
+Every call logged to the right record
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A monday.com account",,,,2026-11-10,
+Zapier,Productivity & Collaboration,Add-on,,"Use call events, like an answered call, to trigger actions in thousands of other apps.",,FALSE,FALSE,FALSE,zapier,automation workflow zaps,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Use call events, like an answered call, to trigger Zaps
+Connect your phone system to over 3,000 apps
+Example: write call details to a Google Sheet automatically
+Example: create a new contact after a call","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Zapier account",,,,2026-11-10,
+Microsoft Power Automate,Productivity & Collaboration,Add-on,,"Build automated workflows that start from phone events, like logging an answered call.",,FALSE,FALSE,FALSE,microsoft-power-automate,power automate flow automation microsoft,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Start flows from call events, like an answered call
+Connect your phone system to hundreds of apps
+Example: write call details to a spreadsheet automatically
+Example: create a new contact after a call","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Microsoft Power Automate account",,,,2026-11-10,
+WebAppointment,Productivity & Collaboration,Direct,,Booking platform that recognizes incoming callers so staff can schedule them faster.,,FALSE,TRUE,FALSE,,appointments booking scheduling,,"Detects incoming callers and lets staff answer from the platform
+Look up contacts while booking the appointment
+Calendars open automatically by agent, service and time slot
+Online booking form for customers, plus data and stats exports",A web browser and internet connection,,,,2026-11-10,
+Microsoft Power BI,Contact Center & Analytics,Direct,,"Bring call, meeting and chat data into Power BI to build your own reports and dashboards.",,TRUE,FALSE,FALSE,power-bi,power bi reporting dashboards analytics microsoft,,"Bring call records, meetings and chat activity into Power BI
+Schedule CSV or Excel exports to keep data in sync
+Live updates pulled through Wildix's data connection
+Compare phone metrics with data from your other systems","Power BI
+Wildix UC-Premium, x-bees SuperBee or x-hoppers SuperHopper + AI
+A current Wildix system version
+Node.js for some setups",,,,2026-11-10,
+Genesys Cloud CX,Contact Center & Analytics,Direct,,"Connects your phone system with Genesys Cloud for call routing, agent status and statistics.",,FALSE,FALSE,FALSE,genesys-cloud-cx,genesys contact center call center,,"Click to call
+Monitor the status of every connected agent
+Statistics on calls and other communications
+Calls analyzed, prioritized and sent to the right agent","A current version of Genesys Cloud CX
+Wildix UC-Business or UC-Premium license
+A current Wildix system version",,,,2026-11-10,
+Dubber,Contact Center & Analytics,Direct,,"Records every call for compliance and adds AI insight like sentiment, keywords and summaries.",,FALSE,FALSE,FALSE,dubber,call recording compliance ai,,"Every call recorded in the cloud, with no hardware
+Replay and search recordings from the web portal or mobile app
+Supports compliance rules such as PCI DSS, GDPR and HIPAA
+Optional AI transcripts, sentiment scoring and keyword alerts",A Dubber subscription,,,,2026-11-10,
+Hansen CASH+,Contact Center & Analytics,Direct,,"Call accounting and recording with live dashboards, alerts and scheduled reports.",,FALSE,FALSE,FALSE,hansen-cash-plus,hansen software call accounting call recording reports,,"Detailed call reports, exportable to CSV or PDF
+Custom live dashboards and alerts on specific triggers
+Reports scheduled and delivered automatically
+Recordings archived off the phone system and searchable long-term","A CASH+ Call Recording and/or Call Reports purchase
+Hosted or on-premises installation, set up with Hansen's help",,,,2026-11-10,
+Feelingstream,Contact Center & Analytics,Direct,,Turns recorded calls into searchable transcripts and insight on what customers are saying.,,FALSE,TRUE,FALSE,feelingstream,speech analytics transcription,,"Call recordings turned into text by speech recognition
+Insight drawn from high-quality recordings of customer calls","An active Feelingstream account
+Wildix UC-Business license for each user",,,,2026-11-10,
+PayGuard,Contact Center & Analytics,Direct,,"Take card payments over the phone securely, keeping card numbers out of your team's hands.",,FALSE,TRUE,FALSE,payguard,pci payments credit card,,"Take compliant card payments over the phone and web chat
+Agent-assisted or fully automated payment options
+Recurring and future payments, plus refunds
+User limits, permissions and multiple currencies",A PayGuard service (developed by Fusion Telecom),,,,2026-11-10,
+SoftTrain Cloud,Contact Center & Analytics,Direct,,"Pauses call recording automatically while sensitive details are taken, then resumes it.",,FALSE,TRUE,FALSE,softtrain-cloud,pci call recording pause,,"Recording pauses automatically while sensitive data is typed
+Recording resumes once the form entry is done
+Each pause and resume is logged",SoftTrain Cloud's Chrome extension,,,,2026-11-10,
+RAMP,Contact Center & Analytics,Direct,,"Secure archive for searching, playing and managing call recordings, with access controls.",,FALSE,TRUE,FALSE,ramp,call recording archive cotu,,"Wildix recordings pulled into secure, encrypted cloud storage
+Search, play or download recordings using Wildix call details
+Per-user permissions, two-step login and audit logs
+GDPR deletion that keeps call details but removes personal data","A RAMP subscription from COTU
+Admin access to the Wildix system for setup",,,,2026-11-10,
+MyWallboards,Contact Center & Analytics,Direct,,Live wallboards that show call queues and team performance on office screens.,,FALSE,TRUE,FALSE,,wallboard dashboard queue,,"Live view of inbound and outbound calls and user availability
+Custom dashboards per team, queue or person, rotated on screens
+Talk time, answer time, abandon rate and calls waiting
+Branding and user permissions you control","Extra fee for MyWallboards
+A Wildix Business user license for the connection
+A current Wildix system version",,,,2026-11-10,
+Kiamo,Contact Center & Analytics,Direct,,Adds Kiamo's multichannel contact center software on top of your Wildix phones.,,FALSE,TRUE,FALSE,kiamo,call center,,Kiamo contact center servers work with Wildix over a phone line link,Kiamo contact center software,,,,2026-11-10,
+Interact by ISICOM,Contact Center & Analytics,Direct,,Contact center software for managing customer calls and other channels in one place.,,FALSE,TRUE,FALSE,interact-by-isicom,isicom call center,,"Click to call, transfers, pause and resume, and conference calls
+Pop-up on Windows when calls arrive
+Request history, shared directory and personal statistics
+Internal chat and presence for agents using ISICOM's toolbar",InterACT contact center software from ISICOM,,,,2026-11-10,
+IPscape,Contact Center & Analytics,Direct,,"Cloud contact center for voice, email and web chat that works alongside Wildix.",,FALSE,TRUE,FALSE,ipscape,call center omnichannel,,"IPscape contact center tools for Wildix users
+The two systems connect over a phone line link","An IPscape account, set up through partner COTU",,,,2026-11-10,
+Contatta,Contact Center & Analytics,Direct,,"Browser-based contact center with call queues, phone menus and chat, using Wildix for calls.",,FALSE,TRUE,FALSE,,call center acd ivr,,"Web-based contact center with call distribution and phone menus
+Audio and video calls in the browser on PC, tablet or phone
+Web calls, live chat, email and call-me-back requests
+Connects to popular CRMs","A Windows server to run Contatta
+Windows agent PCs with Chrome, Firefox or Internet Explorer",,,,2026-11-10,
+Tempest,Contact Center & Analytics,Direct,,Voice-driven automated attendant and phone menus that connect to your Wildix system.,,FALSE,TRUE,FALSE,tempest,ivr auto attendant speech,,"Automated attendant that understands spoken requests
+Classic touch-tone phone menus as well
+Visual call-flow designer, with speech in 26 languages
+Statistics and dashboards on the web",A Windows PC or server to run Tempest,,,,2026-11-10,
+Oracle Hospitality OPERA,Hospitality,Direct,,"Syncs check-ins, check-outs, room status and call billing between OPERA and your hotel phones.",Hotels & Hospitality,FALSE,FALSE,FALSE,oracle-hospitality-opera,oracle opera pms hotel fias,,"Wildix is validated by Oracle as compatible with OPERA
+Connects through Oracle's standard hotel phone interface (FIAS)
+Works with OPERA Cloud and OPERA PMS",Oracle Hospitality OPERA (Cloud or on-premises),,,,2026-11-10,
+Oracle MICROS Fidelio,Hospitality,Direct,,"Links reservations, check-ins, wake-up calls and room charges between Fidelio and your phones.",Hotels & Hospitality,FALSE,FALSE,FALSE,oracle-micros-fidelio,fias fidelio micros pms hotel oracle,,"Check-in and check-out, with outgoing calls blocked from the room
+Wake-up calls scheduled for one or more days and rooms
+Staff post minibar charges and room status from their phones
+Live call tracking per room, billed at checkout","Fidelio Suite 6, 7 or 8, or OPERA PMS (not Fidelio Xpress)",,,,2026-11-10,
+CHAR PMSLink,Hospitality,Add-on,,"Connects your phones to more than 100 hotel management systems for billing, wake-ups and room status.",Hotels & Hospitality,FALSE,FALSE,FALSE,char-pmslink,pms hotel middleware char,CHAR's PMSLink software sits between your hotel system and the phones.,"Call billing and wake-up calls set up from your hotel system
+Check-in and check-out, plus room status updates
+Minibar charges and door lock events shared
+Certified with over 100 hotel management systems","CHAR PMSLink, installed on-site or in the cloud",,,,2026-11-10,
+AEI Communications,Hospitality,Direct,,"Guest-room phones built for hotels, with guest service keys and the room number on display.",Hotels & Hospitality,FALSE,FALSE,FALSE,aei-communications,hotel phones guest room speakerphone,,"Single-line speakerphone designed for guest rooms
+Up to six programmable guest service keys
+Room number and message-waiting light on the base
+Web-based setup and automatic provisioning",AEI SGR-9106-S phones,,,,2026-11-10,
+Jazzware,Hospitality,Direct,Direct,"Connects hotel phones to your property management system for guest setup, call charges and reporting.",Hotels & Hospitality,FALSE,FALSE,FALSE,,pms hotel,,"Live call data exchanged with your hotel management system
+Automatic guest setup and identity checks
+Call accounting and reporting
+Central user and service management, in multiple languages",Wildix UC-Essential license or higher per user,,"Links your hotel management system to guest-room phones
+Guest phone setup driven by check-in data","Mitel MiVoice Business (9.1 SP2+)
+Jazzware RT1000 Edge",2026-11-10,
+protel,Hospitality,Direct,,"Check-in and check-out, wake-up calls, minibar charges and call billing synced with protel.",Hotels & Hospitality,FALSE,TRUE,FALSE,protel,pms hotel,,"Check-in and check-out, with calls blocked from vacant rooms
+Guests set wake-up calls from the room phone
+Housekeepers post minibar charges from their phones
+Live per-room call stats, billing and room status updates",protel Air or protel On-Premise,,,,2026-11-10,
+Guestline,Hospitality,Direct,,Links Guestline's hotel management system to your guest-room phones.,Hotels & Hospitality,FALSE,TRUE,FALSE,guestline,rezlynx pms hotel,,"Guest check-in and check-out synced with Guestline
+Calls blocked from vacant rooms after checkout
+Mark rooms clean or dirty by dialing a code on any phone",Guestline Rezlynx PMS,,,,2026-11-10,
+HotSoft 8,Hospitality,Direct,,"Check-in, check-out and vacant-room call blocking synced with Hoist Group's HotSoft.",Hotels & Hospitality,FALSE,TRUE,FALSE,,hoist pms hotel,,"Check-in and check-out, with calls barred from vacant rooms
+Wake-up calls
+List of calls made from each room, with call billing
+Housekeeping room status (clean or dirty)",HotSoft 8 from Hoist Group,,,,2026-11-10,
+ASA HOTEL,Hospitality,Direct,,Connects ASA's hotel software to your guest-room phones.,Hotels & Hospitality,FALSE,TRUE,FALSE,asa-hotel,pms hotel,,ASA HOTEL offers a live connection to the hotel phone system,ASA HOTEL software,,,,2026-11-10,
+Direct Holiday,Hospitality,Direct,,Connects the Direct Holiday hotel management system to your phones.,Hotels & Hospitality,FALSE,TRUE,FALSE,direct-holiday,pms hotel tecnosoft,,"Check-in and check-out synced with your phones
+Wake-up calls for every room, for one or more days
+Calls made per room, with call billing
+Housekeeping room status and minibar charges",Direct Holiday PMS from TecnoSoft,,,,2026-11-10,
+Nuconga,Hospitality,Direct,,Connects the Nuconga hotel management system to your phones.,Hotels & Hospitality,FALSE,TRUE,FALSE,nuconga,pms hotel,,"Check-in and check-out, with call blocking for the room
+Wake-up calls for every room, for one or more days
+Minibar service
+Calls made per room, with call billing",Nuconga or Web Hotel PMS from Evols,,,,2026-11-10,
+Wi-Fi Hotel by Nexis,Hospitality,Direct,,Guest Wi-Fi management for hotels that works alongside your Wildix system.,Hotels & Hospitality,FALSE,TRUE,FALSE,wi-fi-hotel-by-nexis,wifi internet,,"Cloud-based guest Wi-Fi access and marketing for hotels
+Connects with major hotel management and CRM systems",A Wi-Fi Hotel subscription from Nexis,,,,2026-11-10,
+Ascom,Healthcare & Nurse Call,Direct,Direct,Rugged wireless handsets for hospitals that work as part of your phone system.,Healthcare,FALSE,FALSE,FALSE,ascom,dect hospital wireless phones,,"Ascom wireless handsets register directly to the phone system
+Calls, hold and transfers on the handset
+Three-way and conference calls
+Free, certified by Wildix","Supported Ascom handsets (such as Myco 2, i62, d63, d81)
+A current Wildix system version",,"Ascom i62 and Myco handsets work on Mitel
+Alerts, secure chat and voice calls in one place
+Task management for critical incidents","Mitel MX-ONE, MiVoice Business, MiVoice Office 400 or MiVoice 5000
+Ascom i62 or Myco devices",2026-11-10,
+BridgeTree Digital Care,Healthcare & Nurse Call,Direct,,Lets patients and care-home residents see schedules and reach caregivers from a Wildix video phone.,Healthcare,FALSE,FALSE,FALSE,bridgetree-digital-care,care home patient,,"Residents see care schedules and caregivers on a Wildix Vision phone
+Messages and reminders between residents, staff and family
+Family portal to view daily activities and add events
+Phone and video calls with loved ones over Wildix","A BridgeTree subscription
+Wildix Vision phones recommended for residents",,,,2026-11-10,
+Televic Healthcare,Healthcare & Nurse Call,Direct,,"Sends nurse call alarms to caregivers' wireless phones, showing the room and the type of alarm.",Healthcare,FALSE,TRUE,FALSE,,nurse call hospital,,"Room alarms go to caregivers' Wildix wireless phones
+The phone shows the room and the type of alarm
+Every alarm and call is logged for authorized review
+Option to forward all nurse calls to a set mobile number","A Televic nurse call system
+Wildix W-AIR wireless phones",,,,2026-11-10,
+BTicino,Healthcare & Nurse Call,Direct,,Nurse call system for hospitals and care homes that alerts caregivers on their phones.,Healthcare,FALSE,TRUE,FALSE,bticino,legrand nurse call,,"Alarms ring caregivers' wireless phones, set by scenario
+Patient calls shown on the wireless phone display
+Alarms forwarded to mobile phones or sent as text alerts
+Free, certified by Wildix","A BTicino nurse call system
+Wildix UC-Business license
+A current Wildix system version",,,,2026-11-10,
+Schrack Seconet,Healthcare & Nurse Call,Direct,,Bedside nurse call terminals that double as patient phones and forward alarms to staff.,Healthcare,FALSE,TRUE,FALSE,schrack-seconet,visocall nurse call hospital,,"Bedside nurse call terminal also works as the patient's phone
+Department, room and bed shown on staff phones
+Two-way talk between patient and caregiver
+Flexible forwarding to desk, wireless or mobile phones","Schrack Seconet VISOCALL IP system
+Matching Schrack Seconet and Wildix licenses",,,,2026-11-10,
+Singlewire InformaCast,Paging & Emergency Notification,Direct,,"Trigger mass alerts from Wildix phones and push voice, text and on-screen messages everywhere at once.","Healthcare, Education & Government, Manufacturing & Warehousing",TRUE,FALSE,FALSE,singlewire,informacast mass notification emergency alert,,"Mass alerts by voice, text and on-screen messages
+Start an alert from Wildix phones and apps
+Live or pre-recorded announcements to many devices at once
+Encrypted, secure alert delivery","An active InformaCast Fusion subscription
+A Fusion server (virtual or hardware)
+Multicast support on your local network
+A current Wildix system version",,,,2026-11-10,
+Algo,Paging & Emergency Notification,Direct,,"Overhead paging, bells, loud ringers, visual alerts and intercoms that work with your phones.","Healthcare, Education & Government, Manufacturing & Warehousing",TRUE,FALSE,FALSE,algo,paging speakers bells strobe intercom,,"Algo speakers, paging adapters and intercoms join the phone system
+One-way paging and talk-back paging
+Video from Algo intercoms on Wildix phones and apps
+Free, certified by Wildix","Algo devices (such as 8301, 8201, 8188 or 8039)",,,,2026-11-10,
+CyberData,Paging & Emergency Notification,Direct,,"Paging speakers, emergency call stations and intercoms that register directly to your phone system.","Healthcare, Education & Government, Manufacturing & Warehousing",FALSE,FALSE,FALSE,cyberdata,paging speakers intercom emergency,,"Paging, intercom and emergency devices join the phone system
+Door access control from your phone
+Audio streaming to paging speakers
+Wide range of supported speakers, strobes and call buttons","Supported CyberData devices on current firmware
+Wildix WIService helper and Chrome extension
+A current Wildix system version",,,,2026-11-10,
+Poltys DCC,Paging & Emergency Notification,Direct,,"Delivers emergency calls and alerts, with the caller's location, to staff on Wildix wireless phones.",Healthcare,FALSE,FALSE,FALSE,poltys-dcc,emergency alarm,,"Emergency calls delivered to caregivers' wireless phones
+Alerts show alarm type and location
+Alarm priority set by ringtone and color
+Locate staff across the facility","Wildix UC-Business license or higher
+Wildix W-AIR Med or LifeSaver handsets
+A current Wildix system version",,,,2026-11-10,
+JNL Technologies,Paging & Emergency Notification,Direct,,"Sends emergency calls and alarm notifications to staff on Wildix wireless phones, with location.",Healthcare,FALSE,FALSE,FALSE,jnl-technologies,emergency alarm,,"Nurse call and wander alerts sent to caregivers' wireless phones
+Alerts include alarm details and location
+Two-way talk and built-in phonebooks for faster response
+Response times tracked from logged events","Wildix UC-Business license or higher
+Wildix W-AIR Med or LifeSaver handsets
+A current Wildix system version",,,,2026-11-10,
+NewVoice,Paging & Emergency Notification,Direct,Direct,Routes emergency alarms and staff location alerts to Wildix wireless phones.,Healthcare,FALSE,TRUE,FALSE,newvoice,emergency alarm,,"Alarms show patient name, room and alarm type on the handset
+Alarm priority set by ringtone and color
+Built-in staff safety alarms and staff location
+Response times tracked from logged events","Wildix UC-Business license or higher
+Wildix W-AIR Med or LifeSaver handsets
+A current Wildix system version",,"Fire and disaster mass alerting
+Alarms to phones, PCs and IP loudspeakers
+Automatic or manual alarm triggering","Mitel MX-ONE (6.3 SP2+)
+New Voice MobiCall",2026-11-10,
+ATT+,Paging & Emergency Notification,Direct,,Alarm server that sends emergency alerts and staff locations to Wildix wireless phones.,Healthcare,FALSE,TRUE,FALSE,att-plus,emergency alarm,,"Alarms from many systems sent to caregivers' wireless phones
+Alerts include alarm details and location
+Two-way talk and built-in phonebooks
+Built-in staff safety alarms and event tracking","Wildix UC-Business license or higher
+Wildix W-AIR Med or LifeSaver handsets
+A current Wildix system version",,,,2026-11-10,
+2N,Door Phones & Intercoms,Direct,,"See and talk to visitors on your desk phone, then open the door from it.",,FALSE,FALSE,FALSE,2n,door phone intercom helios access control,,"Video from the door shown on your Wildix desk phone
+Talk to visitors and open the door from your phone
+No extra hardware needed
+Free, certified by Wildix","A 2N Helios IP door intercom
+A current web browser",,,,2026-11-10,
+Mobotix,Door Phones & Intercoms,Direct,,"Video door station that streams to your desk phone, browser or mobile app.",,FALSE,FALSE,FALSE,mobotix,door phone intercom camera,,"Door video and audio on Wildix phones, browser or mobile app
+Open the door from your phone
+Free, certified by Wildix","A Mobotix T25 door station
+A current Wildix system version
+Google Chrome",,,,2026-11-10,
+Baudisch Intercom,Door Phones & Intercoms,Direct,,Video door stations that ring your phones and let you see who's there.,,FALSE,TRUE,FALSE,baudisch-intercom,door phone intercom,,"Door video shown on Wildix Vision and SuperVision phones
+Talk to visitors and control door access
+Modular stations with cameras, keypads and card readers
+Free, certified by Wildix","A Baudisch IP door station
+A current Wildix system version",,,,2026-11-10,
+Castel,Door Phones & Intercoms,Direct,,Audio and video door intercoms with keypads and access readers.,,FALSE,TRUE,FALSE,castel,door phone intercom xellip,,"Audio and video from Castel door intercoms on your phones
+Control door access from the phone system
+Models with keypads, name displays and access readers","A Castel XELLIP intercom
+Wildix UC-Basic plan
+A current web browser",,,,2026-11-10,
+Telecom Behnke,Door Phones & Intercoms,Direct,,Door intercoms with cameras that send video to your phones.,,FALSE,TRUE,FALSE,telecom-behnke,door phone intercom,,"Door camera video on Wildix phones, browser or mobile
+See who's at the door and open it remotely
+Stations with cameras, motion sensors or card readers",A Behnke IP intercom station,,,,2026-11-10,
+TEMA,Door Phones & Intercoms,Direct,,Audio and video door phone with a built-in door opener control.,,FALSE,TRUE,FALSE,tema,door phone intercom,,"Audio and video door phone that calls a user or group
+Built-in relays to control the door opener
+Stream door video to a PC or smartphone
+Supports multicast paging","A TEMA AA-540C, AA-550C or AA-560C door phone",,,,2026-11-10,
+Jabra,Headsets & Devices,Direct,,"Wired and Bluetooth headsets that work with Wildix phones and apps, many with answer and hang-up buttons.",,TRUE,FALSE,FALSE,jabra,headset gn,,"Headsets tested with most Wildix desk phones, handsets and apps
+Answer and hang up from the headset button on supported models
+Take calls from the headset even when away from your PC
+Jabra Dial 550 USB handset works with the Wildix web phone",A compatible Jabra model (see Wildix's compatibility list),,,,2026-11-10,
+Poly,Headsets & Devices,Direct,Direct,"Poly headsets tested with Wildix phones and apps, many with answer and hang-up buttons.",,TRUE,FALSE,FALSE,poly,plantronics polycom headset hp,,"Headsets tested with most Wildix desk phones, handsets and apps
+Answer and hang up from the headset button on supported models
+Wildix-certified Savi 400 wireless and Voyager Legend UC headsets
+Voyager Legend UC handles PC and mobile calls on one headset",A compatible Poly model (see Wildix's compatibility list),,HP Poly headsets tested with Mitel's OpenScape UC apps,Mitel OpenScape UC application or desktop app,2026-11-10,
+EPOS,Headsets & Devices,Direct,,Business headsets and speakerphones with call controls that work in your Wildix apps.,,FALSE,FALSE,FALSE,epos,headset speakerphone,,"Pick up calls with the headset button
+Mute and volume control from the headset on supported models
+USB headsets supported
+Free, certified by Wildix","Current EPOS firmware
+The Wildix Chrome extension
+A current Wildix system version",,,,2026-11-10,
+Sennheiser,Headsets & Devices,Direct,,Wired and wireless office headsets that work with your Wildix phones and apps.,,FALSE,FALSE,FALSE,sennheiser,headset,,"Headsets tested with most Wildix desk phones, handsets and apps
+Answer and hang up from the headset on supported models
+Wireless, Bluetooth and corded office models
+Noise-canceling microphones and HD voice",A compatible Sennheiser model (see Wildix's compatibility list),,,,2026-11-10,
+Kuando Busylight,Headsets & Devices,Direct,,"A desk light that shows colleagues when you're on a call, busy or free.",,FALSE,FALSE,FALSE,kuando-busylight,presence light busy indicator,,"Colored light shows if you're free, on a call or busy
+Status syncs automatically with the Wildix Collaboration app
+Plug-and-play over USB","A Kuando Busylight (Alpha or Omega)
+A current web browser on Mac, Windows or Linux",,,,2026-11-10,
+Axtel,Headsets & Devices,Direct,,Call center and office headsets that work with Wildix devices.,,FALSE,TRUE,FALSE,,headset,,"Axtel USB headsets certified as compatible with Wildix
+Inline remote to control volume and calls on some models",A compatible Axtel model (see Wildix's compatibility list),,,,2026-11-10,
+JPL,Headsets & Devices,Direct,,Wired and wireless headsets that work with most Wildix phones.,,FALSE,TRUE,FALSE,jpl,headset,,"Corded and wireless headsets that work with most Wildix devices
+Answer and hang up from the headset on supported models
+Wildix web phone support on Mac and Windows over USB",A compatible JPL model and adapter cable,,,,2026-11-10,
+Plathosys USB Handsets,Headsets & Devices,Direct,,"USB handsets for calling from your computer, including hearing-aid compatible models.",,FALSE,TRUE,FALSE,plathosys-usb-handsets,horst platz cornette handset hearing aid,,"USB handset for calling through the Wildix Collaboration app
+Wideband audio with on-hook and off-hook control
+Hearing-aid compatible, with acoustic shock protection
+CT 220 PRO can also connect a headset or speaker",A Plathosys CT 220 PRO or CT 400 PRO handset,,,,2026-11-10,
+First Orion,Other,Direct,,Shows your business name on customers' mobile phones and helps keep your numbers from being flagged as spam.,,FALSE,FALSE,FALSE,first-orion,branded caller id cnam spam likely,,"Your business name, up to 32 characters, on customers' mobiles
+Helps keep your numbers from being flagged as spam
+Verified caller status to boost answer rates
+Works on T-Mobile, Verizon, AT&T and Boost Mobile","x-bees Basic plan, or Wildix UC-Essential license or higher
+A Wildix CLASSOUND phone number",,,,2026-11-10,
+SAP Business One,Other,Direct,,Click to call from SAP Business One.,,FALSE,FALSE,FALSE,sap-business-one,sap erp b1,,"Click to call from SAP Business One
+Pop-up on incoming and outgoing calls
+Opens the matching contact or business partner automatically
+Create a new contact from the pop-up","SAP Business One Starter Package or Professional license
+Wildix's Windows phone driver (TAPI) installed
+A current Wildix system version",,,,2026-11-10,
+Microsoft Dynamics 365 Business Central,Other,Add-on,,"Caller pop-ups from Business Central, click to call, plus call notes and 90-day call history.",,TRUE,FALSE,FALSE,dynamics-365-business-central,dynamics business central erp nav microsoft d365,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the contact's details on incoming and outgoing calls
+Click to call from Business Central, your browser or other apps
+Custom fields shown, with multiple matches easy to browse
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Dynamics 365 Business Central account",,,,2026-11-10,
+Oracle NetSuite,Other,Add-on,,"Caller pop-ups, hotkey dialing, and every call logged to the right NetSuite record.",,FALSE,FALSE,FALSE,oracle-netsuite,netsuite erp,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the customer's details on incoming and outgoing calls
+Select a number and press a hotkey to dial it
+Every call logged to the right NetSuite record
+Call notes, 90-day call history and anytime contact search","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+An Oracle NetSuite account",,,,2026-11-10,
+Clio,Other,Add-on,,"Client pop-ups, click to call, and every call logged to the client's record in Clio.",Legal,FALSE,FALSE,FALSE,,legal law firm practice management,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
+Click to call, plus search Clio contacts anytime
+Every call logged to the client's record
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Clio account",,,,2026-11-10,
+Smokeball,Other,Add-on,,"Client pop-ups, click to call, and every call logged to the matter's client in Smokeball.",Legal,FALSE,FALSE,FALSE,smokeball,legal law firm practice management,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
+Click to call from Smokeball, your browser or other apps
+Every call logged to the client's record
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Smokeball account",,,,2026-11-10,
+Filevine,Other,Add-on,,"Client pop-ups, click to call, and calls logged in Filevine so staff find the right case fast.",Legal,FALSE,FALSE,FALSE,filevine,legal law firm case management,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
+Click to call, plus search Filevine contacts anytime
+Every call logged to the client's record
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Filevine account",,,,2026-11-10,
+Service Fusion,Other,Add-on,,"Customer pop-ups from Service Fusion, hotkey dialing, plus call notes and call history.",Field Service & Trades,FALSE,FALSE,FALSE,service-fusion,field service hvac plumbing dispatch,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the customer's details on incoming and outgoing calls
+Select a number and press a hotkey to dial it
+Search Service Fusion contacts anytime, even off a call
+Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A Service Fusion account",,,,2026-11-10,
+FieldPulse,Other,Add-on,,"Customer pop-ups, hotkey dialing, and every call logged in FieldPulse.",Field Service & Trades,FALSE,FALSE,FALSE,fieldpulse,field service contractor dispatch,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the customer's details on incoming and outgoing calls
+Select a number and press a hotkey to dial it
+Every call logged to the right FieldPulse record
+Call notes, 90-day call history and anytime contact search","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
+A FieldPulse account",,,,2026-11-10,
+Veesion,Other,Direct,,Sends theft alerts from Veesion's store video monitoring to staff through Wildix.,Retail,FALSE,TRUE,FALSE,veesion,retail theft video surveillance,,"Theft alerts from Veesion's AI cameras sent to staff headsets
+Alerts can also play over the store PA system
+Staff can step in quickly when a theft is suspected","Veesion software
+Wildix x-hoppers retail headsets
+A current Wildix system version",,,,2026-11-10,
+Audio Productions,Other,Direct,,"Professionally recorded greetings, phone menu prompts and on-hold messages, ready for your system.",,FALSE,TRUE,FALSE,audio-productions,on hold messages greeting ivr voice,,"Welcome, phone menu, on-hold and voicemail messages
+Professional voice actors or realistic AI voices
+Scripts written or proofread by their team before recording
+Formatted for Wildix, with updates whenever you need",An Audio Productions order (all-inclusive price),,,,2026-11-10,
+Callbix,Other,Direct,,Sends an automatic text or WhatsApp reply when a call can't be answered.,,FALSE,TRUE,FALSE,callbix,missed call sms,Italian phone numbers only.,"Missed callers get a text or WhatsApp message automatically
+Branded page collects the caller's details and reason for calling
+Fewer interruptions without losing business opportunities","Italian phone numbers only (for now)
+A Callbix account",,,,2026-11-10,
+Lexor by Septeo,Other,Direct,,"Opens the client's file on calls, syncs contacts and logs calls for law firms using Lexor.",Legal,FALSE,TRUE,FALSE,lexor-by-septeo,legal law firm,,"Recognizes the contact during a call and opens their page
+Phonebook synced with Lexor
+Calls logged automatically",Wildix UC-Essential license or higher,,,,2026-11-10,
+Horus,Other,Direct,,"Click to call from Horus, with the caller's contact opened for you.",,FALSE,TRUE,FALSE,,,,"Start calls with one click from Horus
+Matching contact is found and its page opened for you",Wildix UC-Essential license or higher,,,,2026-11-10,
+Infinity Zucchetti,Other,Direct,,Click to call and caller pop-ups inside the Zucchetti Infinity business suite.,,FALSE,TRUE,FALSE,,erp,,"Click to call from Infinity Zucchetti
+Call pop-ups inside the suite",Zucchetti Infinity,,,,2026-11-10,
+Trend.Net,Other,Direct,,Business management software for small companies that ties in Wildix calling and messaging.,,FALSE,TRUE,FALSE,trend-net,erp,,"Wildix collaboration built into the Trend.Net business suite
+Built-in messaging and fax-to-email
+Communication tracking and analysis",A Windows server and Windows client PCs,,,,2026-11-10,
+TConsole,Other,Direct,,"Accessible operator console for blind and low-vision receptionists, with speech and braille support.",,FALSE,TRUE,FALSE,,accessibility attendant console blind,,"Operator console certified for blind and low-vision staff
+Reads call information aloud with text to speech
+Works with a braille display to answer, hold and park calls
+Large-print mode, call lists, queue indicator and directories",A Windows PC meeting TConsole's minimum specs,,,,2026-11-10,
+SMS Sender,Other,Direct,,Sends scheduled text messages to contact lists pulled from your database.,,FALSE,TRUE,FALSE,,sms text,,"Send text messages to a contact list from any database
+Schedule messages for a set time
+Email report of which texts were delivered and which failed
+Runs in the background on Windows","A Windows PC
+A license from StarSystem IT (free trial available)",,,,2026-11-10,
+KPNQwest,Other,Direct,,Phone line and data provider whose service works with Wildix.,,FALSE,TRUE,FALSE,,carrier sip trunk,,"Listed by Wildix as a supported phone line provider
+Also offers SMS, email and fax messaging services",A KPNQwest Italia service contract,,,,2026-11-10,
+Messagenet,Other,Direct,,"Phone line, fax and text messaging provider whose service works with Wildix.",,FALSE,TRUE,FALSE,messagenet,carrier sip trunk fax,,"Listed by Wildix as a supported phone line provider
+Phone numbers in 20 countries, with number transfer
+Virtual fax by email and SMS sending",A Messagenet account,,,,2026-11-10,
+Timenet,Other,Direct,,Phone line and internet provider whose service works with Wildix.,,FALSE,TRUE,FALSE,timenet,carrier sip trunk,,"Listed by Wildix as a supported phone line provider
+Business phone and internet service through partners",A Timenet service contract,,,,2026-11-10,
+TWT,Other,Direct,,Phone line and data provider whose service works with Wildix.,,FALSE,TRUE,FALSE,twt,carrier sip trunk,,"Listed by Wildix as a supported phone line provider
+Also offers fiber, data center and cloud services",A TWT service contract,,,,2026-11-10,
+Zoom Workplace,Productivity & Collaboration,,Direct,"Zoom meetings, team chat and more, certified with Mitel's OpenScape (formerly Unify) phone systems.",,TRUE,FALSE,FALSE,zoom-workplace,zoom video meetings openscape unify,,,,,"Video meetings and team chat
+Mail, calendar and scheduling
+Whiteboards and video messages
+Room and workspace booking","Mitel OpenScape 4000, OpenScape Voice or OpenScape SBC",2026-11-10,
+Oracle CX Sales,CRM & Sales,,Direct,"Agents call, text, chat and email from a panel inside Oracle's CRM, with caller pop-ups and call logging.",,FALSE,FALSE,FALSE,oracle-hospitality-opera,oracle engagement cloud crm b2b,,,,,"Caller ID and a screen pop with the matching record
+Click to dial, with calls logged automatically
+Handle SMS, chat and email from the same panel
+Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
+Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
+Jack Henry (Xperience & Episys),Contact Center & Analytics,,Direct,Pops a bank or credit union caller's account details on screen for agents as the call arrives.,Finance,FALSE,FALSE,FALSE,,bank credit union core banking symxchange screen pop,,,,,"Caller's name, member ID and dialed number on screen
+Last account type and balance at answer
+Agents can greet callers by name","Mitel MiContact Center Business 9.x
+Jack Henry SymXchange 2019 or later",2026-11-10,
+Fiserv DNA,Contact Center & Analytics,,Direct,Pops the caller's account details from Fiserv DNA on screen for agents as the call arrives.,Finance,FALSE,FALSE,FALSE,,bank credit union core banking screen pop,,,,,"Caller's name and account numbers on screen
+Last account type and balance at answer
+Agents can greet callers by name","Mitel MiContact Center Business 9.x
+Fiserv DNA",2026-11-10,
+Talkative,Contact Center & Analytics,,Direct,"Adds chatbots, web chat, video, SMS and WhatsApp to your Mitel contact center, all in one agent screen.",,FALSE,FALSE,FALSE,talkative,chat whatsapp sms omnichannel chatbot video,,,,,"AI chatbots and web chat with live translation
+Video chat and co-browsing
+SMS, WhatsApp and Facebook Messenger
+AI agent assist and interaction summaries","Mitel MiContact Center Business or Enterprise 9.0 or later
+A Talkative subscription",2026-11-10,
+Airmeez,Contact Center & Analytics,,Direct,AI virtual assistant and phone menus that handle inbound and outbound calls before they reach your team.,,FALSE,FALSE,FALSE,airmeez,ivr ai virtual assistant auto attendant,,,,,"AI virtual assistant and phone menus
+No-code drag-and-drop builder
+Callbacks and post-call surveys
+HIPAA and PCI compliant",An Airmeez subscription,2026-11-10,
+PolyAI,Contact Center & Analytics,,Direct,"Natural-sounding voice assistants that verify callers, answer routine questions and book appointments around the clock.",,FALSE,FALSE,FALSE,polyai,ai voice assistant ivr,,,,,"24/7 voice assistant with natural conversation
+Caller identification and verification
+Appointment booking and outbound confirmations","Mitel MiVoice Business 10.4
+A PolyAI subscription",2026-11-10,
+Ignite Preview Dialer,Contact Center & Analytics,,Direct,Prompts idle contact center agents to make outbound calls from campaigns you design.,,FALSE,FALSE,FALSE,,outbound dialer campaigns,,,,,"Web-based outbound campaign design
+Agents accept, decline or requeue each call
+Campaign reporting","Mitel MiContact Center Business 9.x
+Voice agent and Ignite Preview Dialer licenses",2026-11-10,
+MiContact Center Screen Pop Workflow,Contact Center & Analytics,,Direct,"Lets callers verify themselves in the phone menu, so agents get the right record and can greet them by name.","Healthcare, Finance",FALSE,FALSE,FALSE,,ivr self service authentication ehr crm,,,,,"Callers enter an account number, ID or PIN first
+Checks the details against your database or software
+Pairs with Mitel's screen pop integrations",Mitel MiContact Center Business 9.x or later,2026-11-10,
+Neverfail for MiContact Center,Contact Center & Analytics,,Direct,Mitel's team sets up a backup contact center server so calls keep flowing if the main one fails.,,FALSE,FALSE,FALSE,,failover backup resilience disaster recovery,,,,,"A resilient contact center server
+Phone menus keep working during a failover
+Setup and failover testing included","Mitel MiContact Center Business 9.x
+Mitel MiVoice Business 9.x",2026-11-10,
+Brightmetrics,Contact Center & Analytics,,Direct,Custom reports and real-time analytics for Mitel phone systems and contact centers.,,FALSE,FALSE,FALSE,brightmetrics,reporting analytics dashboards,,,,,"Build custom reports quickly
+Detailed interaction data
+Scheduled reports and forecasting
+Agent scorecards for coaching","Mitel MiVoice Business, MiVoice Connect or MiContact Center Business",2026-11-10,
+OpenIQ Workforce Optimization,Contact Center & Analytics,,Direct,"Compliance call recording, quality scoring and AI analytics such as transcription and sentiment.",,FALSE,FALSE,FALSE,openiq-workforce-optimization,call recording quality assurance wfo,,,,,"Compliance call recording with encryption
+Quality assurance scoring
+AI transcription, translation and sentiment
+Imports older recordings from Mitel's recorder","Mitel MiVoice Business, MiVoice Border Gateway or MiCollab
+OpenIQ 5.0 or later",2026-11-10,
+DVSAnalytics Encore,Contact Center & Analytics,,Direct,"Voice and screen recording with live monitoring, for coaching and quality checks.",,FALSE,FALSE,FALSE,dvsanalytics-encore,call recording screen recording quality,,,,,"Voice and screen recording
+Live monitoring and agent status
+Search, replay and add voice comments
+Encryption and on-demand scrubbing","Mitel MiVoice Business or MiVoice Connect
+DVSAnalytics Encore 6.05 or later",2026-11-10,
+Enghouse Call Recorder,Contact Center & Analytics,,Direct,"Compliance and on-demand call recording, with PCI DSS support.",,FALSE,FALSE,FALSE,enghouse-call-recorder,call recording compliance pci,,,,,"Always-on or on-demand call recording
+PCI DSS support
+Flexible administration and security controls","Mitel MiVoice Business 8.0 SP1 or later
+Enghouse QMS Call Recorder 7.x",2026-11-10,
+Red Box Quantify,Contact Center & Analytics,,Direct,Call recording with open access to your voice data for analytics and AI tools.,,FALSE,FALSE,FALSE,red-box-quantify,call recording voice analytics,,,,,"Voice and screen recording
+Search, replay and real-time monitoring
+Transcription and voice analytics
+Compliance and quality tools",Mitel MiVoice Business 9.0 SP2,2026-11-10,
+MosaicVoice,Contact Center & Analytics,,Direct,"Records and analyzes every call, with real-time agent guidance and automated quality scoring.",,FALSE,FALSE,FALSE,mosaicvoice,ai agent assist call recording qa,,,,,"Call recording and secure storage
+Real-time AI agent assist
+Automatic redaction of card and health data
+AI call summaries and quality scoring",Mitel MiVoice Business 10.5 SP1 or Mitel CX 2.1,2026-11-10,
+Callation Call Reporting,Contact Center & Analytics,,Direct,"Call reports, dashboards and alerts, with cradle-to-grave call search.",,FALSE,FALSE,FALSE,callation-call-reporting,call accounting reporting dashboards,,,,,"Custom dashboards you can share
+Cradle-to-grave call search
+Scheduled reports and event alerts
+Role-based access to call data","Mitel MiVoice Business 8.0 SP3 or later
+Optional: Mitel Open Integration Gateway for data sync",2026-11-10,
+Komutel Komand,Contact Center & Analytics,,Direct,"Web-based operator console for receptionists to manage queues, transfers and contacts.",,FALSE,FALSE,FALSE,,operator console receptionist attendant,,,,,"Live status of colleagues across the organization
+Queue monitoring and quick transfers
+Shared contact directory with notes",Mitel MiVoice Business 9.1,2026-11-10,
+IDgo,Contact Center & Analytics,,Direct,"Verifies callers through their trusted mobile device, without security questions or passcodes.",,FALSE,FALSE,FALSE,idgo,authentication caller verification fraud,,,,,"No security questions or one-time codes
+No app for the caller to install
+Protection against caller ID spoofing and SIM swaps","Mitel MiVoice Business 10.5 SP1, Mitel CX 2.1 or Workflow Studio",2026-11-10,
+Typewise,Contact Center & Analytics,,Direct,"AI agents that triage requests, draft replies and summarize conversations for support teams.",,FALSE,FALSE,FALSE,typewise,ai agent assist support automation,,,,,"AI triage of customer requests
+Suggested replies grounded in your knowledge base
+Automatic conversation summaries
+Hands off to a person when needed","Mitel MiVoice Business 10.5 SP1 or Mitel CX 2.1
+Typewise browser extension",2026-11-10,
+Tollring iCall Suite,Contact Center & Analytics,,Direct,"Cloud call analytics, dashboards, wallboards and call recording for MiVoice Business.",,FALSE,TRUE,FALSE,tollring-icall-suite,analytics wallboard call recording,,,,,"Ready-made reports and dashboards
+Live wallboards
+Secure call recording and evaluation
+Compliance dashboard","Mitel MiVoice Business 10.x
+iCall Suite v4",2026-11-10,
+Telia ACE,Contact Center & Analytics,,Direct,Cloud contact center with AI virtual agents and every channel in one web app.,,FALSE,TRUE,FALSE,telia-ace,contact center omnichannel ai,,,,,"All channels in one web app
+AI virtual agents and agent assist
+Shared knowledge base",Mitel MX-ONE 7.3 SP1 or later,2026-11-10,
+Liaison Vocale ELLO!,Contact Center & Analytics,,Direct,"Speech-recognition switchboard that routes inbound, outbound and internal calls.",,FALSE,TRUE,FALSE,liaison-vocale-ello,speech recognition auto attendant ivr,,,,,"Automatic speech recognition
+Multilingual
+Scales from small to large organizations",Mitel MiVoice Office 400 or MiVoice 5000,2026-11-10,
+Puzzel WFM,Contact Center & Analytics,,Direct,"Contact center forecasting and scheduling, with agent self-scheduling and shift swaps.",,FALSE,TRUE,FALSE,,workforce management scheduling,,,,,"Multi-channel forecasting and scheduling
+Agent self-scheduling and shift trading
+Custom dashboards",,2026-11-10,
+Whispeak,Contact Center & Analytics,,Direct,"Voice biometrics that verify callers by their voice, shortening authentication.",,FALSE,TRUE,FALSE,whispeak,voice biometrics authentication,,,,,"Verifies callers by voice
+Shorter authentication on every call
+Helps fight fraud",Mitel Workflow Studio,2026-11-10,
+TigerTMS iPortal,Hospitality,,Direct,"A branded guest web portal hotels share by QR code, with click-to-call to hotel departments.",Hotels & Hospitality,FALSE,FALSE,FALSE,tigertms-iportal,hotel guest portal qr,,,,,"Guests call hotel departments from their own phone
+Promote amenities and take reservations
+Folio check and express check-out
+Multi-property management","Mitel MiVoice Business
+TigerTMS iPortal",2026-11-10,
+Nevotek VIP Connect,Hospitality,,Direct,"Connects your hotel management system to Mitel phones for billing, wake-up calls, room status and minibar.",Hotels & Hospitality,FALSE,FALSE,FALSE,,pms hotel,,,,,"Hotel management system integration and call billing
+Wake-up calls and do-not-disturb
+Room status updates and minibar posting
+Hospitality voicemail and call reporting","Mitel MiVoice Business
+Nevotek VIP Connect",2026-11-10,
+Ennovatech HotLync,Hospitality,,Direct,"Guest request tracking, staff dispatch and automatic wake-up calls for hotels.",Hotels & Hospitality,FALSE,FALSE,FALSE,ennovatech-hotlync,hotel guest requests housekeeping,,,,,"Guest request and work-order management
+Automatic wake-up calls
+Staff mobile app and team alarms
+Housekeeping, minibar and lost-and-found tracking","Mitel MiVoice Business 9.3
+Ennovatech HotLync 3.02",2026-11-10,
+Micrometrics El8,Hospitality,,Direct,"Voice AI that answers routine guest calls and requests, passing complex ones to staff.",Hotels & Hospitality,FALSE,FALSE,FALSE,micrometrics-el8,hotel voice ai guest requests,,,,,"Answers and resolves routine guest calls
+Escalates complex requests to live staff
+Request tracking and service recovery",Mitel MiVoice Business 10.5 SP1,2026-11-10,
+SuitePad,Hospitality,,Direct,"In-room hotel tablet that replaces the room phone for orders, requests and messages.",Hotels & Hospitality,FALSE,TRUE,FALSE,suitepad,hotel in-room tablet,,,,,"Replaces the in-room phone
+Room service and housekeeping requests
+Digital guest directory
+Messages to the front desk",Mitel MiVoice Business 10.5,2026-11-10,
+AMTELCO 1Call Genesis,Healthcare & Nurse Call,,Direct,Hospital operator and on-call scheduling platform that connects with electronic health records.,Healthcare,FALSE,FALSE,FALSE,,hospital operator on-call ehr,,,,,"Web-based operator console
+On-call and staff scheduling
+Encrypted secure messaging
+Connects with electronic health records","Mitel MiVoice Business 10
+Mitel 69xx or 53xx MiNET phones",2026-11-10,
+Spok Console,Healthcare & Nurse Call,,Direct,"Hospital operator console with on-call schedules, directory lookups and emergency procedures.",Healthcare,FALSE,FALSE,FALSE,spok-console,hospital operator console,,,,,"Configurable operator displays
+On-call calendars and scheduling
+Directory and speed dials
+Emergency procedures",,2026-11-10,
+AlwinPro Care,Healthcare & Nurse Call,,Direct,"Patient phone, TV and internet billing for hospitals, with one number per patient for the whole stay.",Healthcare,FALSE,TRUE,FALSE,alwinpro-care,patient billing hospital,,,,,"Prepaid or postpaid patient billing
+Phone access tied to the patient's balance
+One phone number for the whole stay
+Connects to hospital information systems","Mitel MiVoice Business 9.0 SP1 or later
+AlwinPro Care 14.1 or later",2026-11-10,
+MWS Smart TAMAT,Healthcare & Nurse Call,,Direct,Routes alarms to the right care staff and helps locate patients and lone workers.,Healthcare,FALSE,TRUE,FALSE,,alarm nurse call lone worker,,,,,"Sends alarms to the right care staff
+Helps locate disoriented patients
+Lone-worker safety",Mitel MiVoice Office 400 or MiVoice 5000 with SIP-DECT,2026-11-10,
+Guardian Telecom HFI,Paging & Emergency Notification,,Direct,"Rugged, weatherproof emergency phones with one-button calling for harsh sites.",Manufacturing & Warehousing,FALSE,FALSE,FALSE,,emergency phone rugged industrial,,,,,"Emergency push button rings set numbers
+Keypad models for manual dialing
+Stainless steel, corrosion-resistant
+Remote programming",Mitel MiVoice Business 9.2 SP1,2026-11-10,
+F24 Alarming,Paging & Emergency Notification,,Direct,"Sends alerts and emergency notifications by phone, text and email, with escalation and confirmation.",,FALSE,TRUE,FALSE,,alarm mass notification emergency,,,,,"Alerts by voice, text and email
+Receipt confirmation and automatic escalation
+Shift and duty plans
+Silent alarms and lone-worker safety","F24 Alarming, Mitel Edition
+Mitel MiVoice Business, MX-ONE, MiVoice 5000, MiVoice Office 400 or SIP-DECT",2026-11-10,
+Beralarm Alarm Server,Paging & Emergency Notification,,Direct,"Alarm server that filters, escalates and sends alarms to DECT handsets and desk phones.",,FALSE,TRUE,FALSE,beralarm-alarm-server,alarm server dect,,,,,"Intelligent alarm filtering
+Automatic acknowledgment and escalation
+Alarms on DECT handsets and desk phones",Mitel MiVoice Office 400,2026-11-10,
+tetronik DAKS,Paging & Emergency Notification,,Direct,"Alerting and emergency notification platform for healthcare and government, on Mitel DECT phones.",,FALSE,TRUE,FALSE,tetronik-daks,alerting emergency notification dect,,,,,"Round-the-clock alerting
+Emergency team mobilization with confirmation
+Broadcasts to groups",Mitel MiVoice Office 400 with SIP-DECT,2026-11-10,
+Visns Studio,Other,,Direct,"Voice commands to dial, answer and hang up, for staff wearing protective gear.","Manufacturing & Warehousing, Healthcare",FALSE,FALSE,FALSE,visns-studio,voice commands hands free ppe,,,,,"Dial, answer and hang up by voice
+Built on Mitel CloudLink
+Works with Mitel phones on MiVoice Business","Mitel MiVoice Business 9.4 SP1
+Mitel CloudLink",2026-11-10,
+Intelocate,Other,,Direct,Turns inbound calls and messages into tracked tasks for operations teams.,,FALSE,FALSE,FALSE,intelocate,tasks tickets operations,,,,,"Automatic task creation from calls
+Smart routing and escalation
+Real-time status tracking
+Reporting and audit trail",Mitel Workflow Studio,2026-11-10,
+Zendelity Command Center,Other,,Direct,"Turns alerts and procedures into guided, tracked tasks for frontline teams.",,FALSE,FALSE,FALSE,,frontline tasks sop operations,,,,,"Guided step-by-step procedures
+Real-time task visibility
+Escalations by email, SMS and voice
+Audit-ready reporting",Mitel Workflow Studio,2026-11-10,

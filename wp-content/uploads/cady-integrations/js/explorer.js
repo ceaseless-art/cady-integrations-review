@@ -430,9 +430,10 @@
     }).observe(root);
   }
   }
-  /* ----- Google Sheet: if settings.sheetUrl is set, the integration list comes from the sheet.
-     If the sheet can't be reached in time or has no usable rows, the list in this file is used instead. ----- */
+  /* ----- integrations.csv: the integration list is read from this file in the cady-integrations folder.
+     If the file can't be loaded or has no usable rows, the backup list in integrations-data.js is used. ----- */
   function parseCsv(text) {
+    text = text.replace(/^\ufeff/, "");
     var rows = [], row = [], cell = "", q = false;
     for (var i = 0; i < text.length; i++) {
       var c = text[i];
@@ -449,7 +450,7 @@
     if (cell || row.length) { row.push(cell); rows.push(row); }
     return rows;
   }
-  function fromSheet(text, D) {
+  function fromCsv(text, D) {
     var rows = parseCsv(text);
     var key = function (h) { return String(h).toLowerCase().replace(/[^a-z0-9]/g, ""); };
     var col = {};
@@ -485,14 +486,17 @@
     return out.length ? out : null;
   }
   function start() {
-    var D = window.CADY_IX_DATA, url = D && D.settings && D.settings.sheetUrl;
-    if (!url || !window.fetch) return init();
+    var D = window.CADY_IX_DATA, S = (D && D.settings) || {};
+    var file = S.listFile === undefined ? "integrations.csv" : S.listFile;
+    if (!D || !file || !window.fetch) return init();
+    var url = /^(https?:|\/)/.test(file) ? file : (S.assetBase || SCRIPT_BASE) + file;
     var done = false;
     var finish = function () { if (!done) { done = true; init(); } };
-    /* don't hold the explorer back for long if Google is slow */
-    setTimeout(finish, 4000);
-    fetch(url, { cache: "no-store" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (text) {
-      var list = fromSheet(text, D);
+    /* never hold the explorer back for long */
+    setTimeout(finish, 3000);
+    /* no-cache: always check for a newly uploaded file */
+    fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (text) {
+      var list = fromCsv(text, D);
       if (list && !done) D.integrations = list;
     }).catch(function () {}).then(finish);
   }
