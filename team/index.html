@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Integrations list (team page preview) | Cady Business Technologies</title>
+<style>html,body{margin:0;background:#FAF9F6}#review-banner{background:#FEBA12;color:#1B1B1B;font:600 13px/1.4 Poppins,Arial,sans-serif;text-align:center;padding:8px 12px}</style>
+</head>
+<body>
+<div id="review-banner">Preview of the private team page &middot; on cadybt.com only logged-in staff will see it</div>
+<!-- Cady integrations TEAM PAGE: paste into a Divi Code module on a page set to Private. See README.md, section 6. -->
+<script>
+/* Connection to the Google Sheet. endpoint = the Apps Script web app URL; key = the same phrase as KEY in the Apps Script.
+   While endpoint is "", the page runs in demo mode and nothing is saved. */
+window.CADY_TEAM = { demo: true, assetBase: "../wp-content/uploads/cady-integrations/" };
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&amp;display=swap">
+<script src="../wp-content/uploads/cady-integrations/js/integrations-data.js"></script>
+<script src="../wp-content/uploads/cady-integrations/js/logos.js"></script>
+<style>
+#cady-team{--t-yellow:#FEBA12;--t-ink:#1B1B1B;--t-text:#4B4B4B;--t-muted:#6B6B6B;--t-line:#E6E3DC;--t-line-dark:#D3CEC2;--t-off:#FAF9F6;--t-white:#fff;--t-cream:#FFF8E1;--t-blue:#075D9C;--t-blue-tint:#E7F4FD;--t-red:#B42318;
+  font-family:Poppins,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;font-weight:500;color:var(--t-text);background:var(--t-off);text-align:left;-webkit-font-smoothing:antialiased}
+#cady-team *,#cady-team *::before,#cady-team *::after{box-sizing:border-box;margin:0;padding:0}
+#cady-team button,#cady-team input,#cady-team select,#cady-team textarea{font:inherit;color:inherit}
+#cady-team .t-wrap{max-width:1200px;margin:0 auto;padding:40px 24px 64px}
+#cady-team .t-eyebrow{font-size:13px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#896201}
+#cady-team h1{font-size:32px;line-height:1.2;font-weight:700;color:var(--t-ink);margin:6px 0 8px}
+#cady-team .t-lede{color:var(--t-muted);max-width:70ch}
+#cady-team .t-banner{margin-top:18px;padding:10px 14px;border-radius:10px;background:var(--t-cream);border:1.5px solid #F3D88A;color:var(--t-ink);font-size:14px}
+#cady-team .t-banner.is-error{background:#FEF3F2;border-color:#FDA29B;color:var(--t-red)}
+#cady-team .t-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:26px 0 12px}
+#cady-team .t-search{flex:1 1 320px;display:flex;align-items:center;gap:8px;height:48px;padding:0 14px;background:var(--t-white);border:2px solid var(--t-yellow);border-radius:999px;box-shadow:0 6px 16px -10px rgba(27,27,27,.35)}
+#cady-team .t-search input{flex:1;min-width:0;border:0;outline:0;background:transparent;height:100%}
+#cady-team .t-select{height:48px;padding:0 14px;border:1.5px solid var(--t-line-dark);border-radius:999px;background:var(--t-white);cursor:pointer}
+#cady-team .t-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 22px;border-radius:999px;border:1.5px solid var(--t-ink);background:var(--t-white);color:var(--t-ink);font-weight:600;cursor:pointer;white-space:nowrap}
+#cady-team .t-btn:hover{background:var(--t-off)}
+#cady-team .t-btn.is-primary{background:var(--t-yellow);border-color:var(--t-yellow)}
+#cady-team .t-btn.is-primary:hover{background:#E5A710;border-color:#E5A710}
+#cady-team .t-btn[disabled]{opacity:.5;cursor:default}
+#cady-team .t-btn-plus{font-size:22px;line-height:1;font-weight:500}
+#cady-team .t-count{font-size:14px;color:var(--t-muted);margin-bottom:10px}
+#cady-team .t-list{background:var(--t-white);border:1.5px solid var(--t-line);border-radius:14px;overflow:hidden}
+#cady-team .t-row{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1.6fr) minmax(0,1fr) minmax(0,1fr) 110px 96px 150px;gap:14px;align-items:center;padding:12px 18px;border-top:1.5px solid var(--t-line)}
+#cady-team .t-row:first-child{border-top:0}
+#cady-team .t-row.is-head{background:var(--t-off);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--t-muted);padding-top:10px;padding-bottom:10px}
+#cady-team .t-row.is-hidden .t-name,#cady-team .t-row.is-hidden .t-logo{opacity:.55}
+#cady-team .t-name{display:flex;align-items:center;gap:12px;min-width:0;font-weight:600;color:var(--t-ink)}
+#cady-team .t-name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#cady-team .t-logo{flex:0 0 36px;width:36px;height:36px;border:1.5px solid var(--t-line);border-radius:8px;background:var(--t-white);display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:12px;font-weight:700;color:var(--t-muted)}
+#cady-team .t-logo img{max-width:80%;max-height:80%;object-fit:contain}
+#cady-team .t-cell{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}
+#cady-team .t-k{display:none}
+#cady-team .t-badge{display:inline-block;padding:1px 10px;border-radius:999px;font-size:12px;font-weight:600;border:1.5px solid transparent;white-space:nowrap}
+#cady-team .t-badge.b-direct{background:var(--t-yellow);color:var(--t-ink)}
+#cady-team .t-badge.b-addon{background:var(--t-blue-tint);color:var(--t-blue);border-color:#B9DFF8}
+#cady-team .t-badge.b-custom{background:var(--t-ink);color:var(--t-white)}
+#cady-team .t-badge.b-ask{background:var(--t-white);color:var(--t-muted);border:1.5px dashed var(--t-line-dark)}
+#cady-team .t-badge.b-none{color:var(--t-muted);padding-left:0}
+#cady-team .t-status{font-size:13px;font-weight:600}
+#cady-team .t-status.is-live{color:#067647}
+#cady-team .t-status.is-hidden{color:var(--t-muted)}
+#cady-team .t-actions{display:flex;gap:6px;justify-content:flex-end}
+#cady-team .t-actions button{height:34px;padding:0 12px;border-radius:999px;border:1.5px solid var(--t-line-dark);background:var(--t-white);font-size:13px;font-weight:600;color:var(--t-ink);cursor:pointer}
+#cady-team .t-actions button:hover{border-color:var(--t-ink)}
+#cady-team .t-actions button[disabled]{opacity:.5;cursor:default}
+#cady-team .t-empty{padding:40px 18px;text-align:center;color:var(--t-muted)}
+/* editor */
+#cady-team .t-overlay{position:fixed;inset:0;z-index:100000;background:rgba(27,27,27,.45);display:flex;justify-content:flex-end}
+#cady-team .t-overlay[hidden]{display:none}
+#cady-team .t-panel{width:min(640px,100%);height:100%;background:var(--t-white);display:flex;flex-direction:column;box-shadow:-18px 0 40px -20px rgba(27,27,27,.5)}
+#cady-team .t-panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;border-bottom:1.5px solid var(--t-line)}
+#cady-team .t-panel-head h2{font-size:20px;font-weight:700;color:var(--t-ink)}
+#cady-team .t-x{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--t-line-dark);background:var(--t-white);font-size:22px;line-height:1;cursor:pointer}
+#cady-team .t-x:hover{border-color:var(--t-ink)}
+#cady-team .t-form{flex:1;overflow:auto;padding:20px 24px 28px}
+#cady-team .t-group{border-top:1.5px solid var(--t-line);padding-top:16px;margin-top:18px}
+#cady-team .t-group:first-child{border-top:0;padding-top:0;margin-top:0}
+#cady-team .t-group-h{font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#896201;margin-bottom:10px}
+#cady-team .t-field{display:block;margin-bottom:14px}
+#cady-team .t-label{display:block;font-size:14px;font-weight:600;color:var(--t-ink);margin-bottom:5px}
+#cady-team .t-hint{display:block;font-size:13px;color:var(--t-muted);margin-top:4px;font-weight:500}
+#cady-team .t-input,#cady-team .t-form select,#cady-team .t-form textarea{width:100%;min-height:44px;padding:9px 12px;border:1.5px solid var(--t-line-dark);border-radius:10px;background:var(--t-white)}
+#cady-team .t-form textarea{min-height:84px;resize:vertical}
+#cady-team .t-input:focus,#cady-team .t-form select:focus,#cady-team .t-form textarea:focus{outline:2px solid var(--t-yellow);outline-offset:1px;border-color:var(--t-ink)}
+#cady-team .t-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#cady-team .t-checks{display:flex;flex-wrap:wrap;gap:8px 18px}
+#cady-team .t-check{display:inline-flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}
+#cady-team .t-check input{width:18px;height:18px;accent-color:var(--t-ink)}
+#cady-team .t-logo-row{display:flex;gap:12px;align-items:center}
+#cady-team .t-logo-row .t-logo{flex:0 0 48px;width:48px;height:48px}
+#cady-team .t-error{color:var(--t-red);font-size:14px;font-weight:600}
+#cady-team .t-panel-foot{display:flex;align-items:center;gap:10px;padding:14px 24px;border-top:1.5px solid var(--t-line);background:var(--t-off)}
+#cady-team .t-panel-foot .t-error{flex:1}
+#cady-team .t-sys{background:var(--t-off);border:1.5px solid var(--t-line);border-radius:12px;padding:14px 14px 2px;margin-bottom:12px}
+#cady-team .t-sys-h{font-weight:700;color:var(--t-ink);margin-bottom:10px}
+@media (max-width:900px){
+  #cady-team .t-wrap{padding:28px 16px 48px}
+  #cady-team h1{font-size:26px}
+  #cady-team .t-row.is-head{display:none}
+  #cady-team .t-row{grid-template-columns:1fr 1fr;gap:6px 12px;padding:14px 16px}
+  #cady-team .t-row .t-name{grid-column:1 / -1}
+  #cady-team .t-row .t-cell:nth-child(2){grid-column:1 / -1;white-space:normal}
+  #cady-team .t-row .t-actions{grid-column:1 / -1;justify-content:flex-start;margin-top:4px}
+  #cady-team .t-k{display:inline;font-size:12px;color:var(--t-muted);margin-right:6px}
+  #cady-team .t-two{grid-template-columns:1fr}
+  #cady-team .t-bar .t-select,#cady-team .t-bar .t-btn{flex:1 1 auto}
+}
+</style>
+<div id="cady-team">
+  <div class="t-wrap">
+    <p class="t-eyebrow">Team only</p>
+    <h1>Integrations list</h1>
+    <p class="t-lede">Add, edit or hide the apps on the integrations page. Hiding takes an app off the page without deleting it. Changes reach the public page within about 5 minutes.</p>
+    <div class="t-banner" hidden></div>
+    <div class="t-bar">
+      <label class="t-search"><span aria-hidden="true">&#128269;</span><input type="search" placeholder="Search by name, category or search words" aria-label="Search integrations"></label>
+      <select class="t-select" data-f="status" aria-label="Show">
+        <option value="">All</option>
+        <option value="live">On the page</option>
+        <option value="hidden">Hidden</option>
+      </select>
+      <select class="t-select" data-f="sort" aria-label="Sort">
+        <option value="az">Name A to Z</option>
+        <option value="new">Newest first</option>
+      </select>
+      <button type="button" class="t-btn is-primary" data-act="add"><span class="t-btn-plus" aria-hidden="true">+</span> Add integration</button>
+    </div>
+    <p class="t-count"></p>
+    <div class="t-list" role="table" aria-label="Integrations"></div>
+  </div>
+  <div class="t-overlay" hidden>
+    <form class="t-panel" role="dialog" aria-modal="true" aria-labelledby="t-panel-title" novalidate>
+      <div class="t-panel-head"><h2 id="t-panel-title">Add integration</h2><button type="button" class="t-x" data-act="close" aria-label="Close">&times;</button></div>
+      <div class="t-form"></div>
+      <div class="t-panel-foot"><p class="t-error" role="alert"></p><button type="button" class="t-btn" data-act="close">Cancel</button><button type="submit" class="t-btn is-primary">Save</button></div>
+    </form>
+  </div>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("cady-team");
+  if (!root || root.getAttribute("data-ready")) return;
+  root.setAttribute("data-ready", "1");
+  var CFG = window.CADY_TEAM || {};
+  var D = window.CADY_IX_DATA || {};
+  var LOGOS = window.CADY_IX_LOGOS || {};
+  var demo = !!CFG.demo || !CFG.endpoint;
+  var SYSTEMS = (D.systems || []).filter(function (s) { return s.status !== "hidden"; });
+  var CATS = D.categories || [];
+  var INDS = D.industries || [];
+  var TYPES = [["", "Not confirmed (shows \"Ask us\")"], ["Direct", "Direct: works directly"], ["Add-on", "Add-on: works with an add-on"], ["Custom", "Custom: custom setup"], ["Ask", "Ask: ask us"]];
+  var rows = [], editing = null, state = { q: "", status: "", sort: "az" };
+
+  function $(s) { return root.querySelector(s); }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function yes(v) { return v === true || /^(true|yes|1)$/i.test(String(v || "")); }
+  function banner(msg, isError) { var b = $(".t-banner"); b.hidden = !msg; b.textContent = msg || ""; b.classList.toggle("is-error", !!isError); }
+
+  /* ----- talking to the sheet (or a demo copy in this browser) ----- */
+  function fromBuiltIn() {
+    var T = { direct: "Direct", native: "Direct", "add-on": "Add-on", addon: "Add-on", middleware: "Add-on", custom: "Custom", ask: "Ask" };
+    return (D.integrations || []).map(function (it, i) {
+      var o = { "Name": it.name, "Category": it.category, "Description": it.desc || "", "Industries": (it.industries || []).join(", "),
+        "Featured": !!it.featured, "International": !!it.international, "Hide from page": false, "Logo": it.logo || "", "Search words": it.aka || "",
+        "Date added": it.added || "", "Source": it.source || "" };
+      SYSTEMS.forEach(function (s) {
+        var d = (it.details || {})[s.id] || {}, t = (it.systems || {})[s.id];
+        o[s.name] = t ? (T[String(t).toLowerCase()] || t) : "";
+        o[s.name + " note"] = d.note || "";
+        o[s.name + ": what you get"] = (d.gets || []).join("\n");
+        o[s.name + ": what you need"] = (d.needs || []).join("\n");
+      });
+      return { row: i + 2, data: o };
+    });
+  }
+  var demoRows = null;
+  function today() { var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+  function api(action, payload) {
+    if (demo) {
+      return new Promise(function (resolve) {
+        if (!demoRows) demoRows = fromBuiltIn();
+        if (action === "add") {
+          var d = payload.data;
+          if (!yes(d["Hide from page"]) && !d["Date added"]) d["Date added"] = today();
+          demoRows.push({ row: demoRows.length + 2, data: d });
+        } else if (action === "update") {
+          var r = demoRows.filter(function (x) { return x.row === payload.row; })[0];
+          Object.keys(payload.data).forEach(function (k) { r.data[k] = payload.data[k]; });
+          if (!yes(r.data["Hide from page"]) && !r.data["Date added"]) r.data["Date added"] = today();
+        }
+        setTimeout(function () { resolve({ rows: JSON.parse(JSON.stringify(demoRows)) }); }, 150);
+      });
+    }
+    var req = action === "list"
+      ? fetch(CFG.endpoint + (CFG.endpoint.indexOf("?") > -1 ? "&" : "?") + "key=" + encodeURIComponent(CFG.key || ""), { cache: "no-store" })
+      /* text/plain keeps the browser from sending a preflight request, which Google's web apps don't answer */
+      : fetch(CFG.endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(Object.assign({ key: CFG.key || "", action: action }, payload)) });
+    return req.then(function (r) { return r.json(); }).then(function (res) {
+      if (res.error) throw new Error(res.error);
+      return res;
+    });
+  }
+  function load() {
+    banner(demo ? "Demo mode: this page isn't connected to the sheet yet, so changes only last until you refresh." : "Loading the list…");
+    return api("list").then(function (res) { rows = res.rows; if (!demo) banner(""); render(); })
+      .catch(function (e) { banner("Couldn't load the list: " + e.message + " Check the connection settings, then refresh.", true); });
+  }
+
+  /* ----- the list ----- */
+  function badge(t) {
+    var k = String(t || "").toLowerCase().replace(/[^a-z]/g, "");
+    var map = { direct: ["b-direct", "Direct"], addon: ["b-addon", "Add-on"], custom: ["b-custom", "Custom"], ask: ["b-ask", "Ask"] };
+    var m = map[k];
+    return m ? '<span class="t-badge ' + m[0] + '">' + m[1] + "</span>" : '<span class="t-badge b-none">Ask us</span>';
+  }
+  function logoSrc(v) {
+    v = String(v || "").trim();
+    if (!v) return "";
+    if (/^(https?:)?\/\//.test(v) || v.charAt(0) === "/") return v;
+    return LOGOS[v] ? (CFG.assetBase || (D.settings && D.settings.assetBase) || "../wp-content/uploads/cady-integrations/") + LOGOS[v] : "";
+  }
+  function logoHtml(d) {
+    var src = logoSrc(d["Logo"]);
+    var ini = String(d["Name"] || "?").replace(/[^A-Za-z0-9 ]/g, " ").trim().split(/\s+/).slice(0, 2).map(function (w) { return w.charAt(0); }).join("").toUpperCase();
+    return '<span class="t-logo">' + (src ? '<img src="' + esc(src) + '" alt="" loading="lazy">' : esc(ini)) + "</span>";
+  }
+  function visible() {
+    var q = state.q.toLowerCase().trim();
+    var out = rows.filter(function (r) {
+      var d = r.data, hidden = yes(d["Hide from page"]);
+      if (state.status === "live" && hidden) return false;
+      if (state.status === "hidden" && !hidden) return false;
+      if (!q) return true;
+      return [d["Name"], d["Category"], d["Search words"], d["Industries"]].join(" ").toLowerCase().indexOf(q) > -1;
+    });
+    out.sort(function (a, b) {
+      if (state.sort === "new") { var c = String(b.data["Date added"] || "").localeCompare(String(a.data["Date added"] || "")); if (c) return c; }
+      return String(a.data["Name"]).localeCompare(String(b.data["Name"]));
+    });
+    return out;
+  }
+  function render() {
+    var list = visible(), live = rows.filter(function (r) { return !yes(r.data["Hide from page"]); }).length;
+    $(".t-count").textContent = "Showing " + list.length + " of " + rows.length + " · " + live + " on the page, " + (rows.length - live) + " hidden";
+    var head = '<div class="t-row is-head" role="row"><span>Name</span><span>Category</span>' +
+      SYSTEMS.slice(0, 2).map(function (s) { return "<span>" + esc(s.name) + "</span>"; }).join("") +
+      "<span>Date added</span><span>Status</span><span></span></div>";
+    if (!list.length) { $(".t-list").innerHTML = head + '<div class="t-empty">No integrations match. Try another search, or add it with the + button.</div>'; return; }
+    $(".t-list").innerHTML = head + list.map(function (r) {
+      var d = r.data, hidden = yes(d["Hide from page"]);
+      return '<div class="t-row' + (hidden ? " is-hidden" : "") + '" role="row" data-row="' + r.row + '">' +
+        '<div class="t-name">' + logoHtml(d) + "<span>" + esc(d["Name"]) + "</span></div>" +
+        '<div class="t-cell"><span class="t-k">Category</span>' + esc(d["Category"]) + "</div>" +
+        SYSTEMS.slice(0, 2).map(function (s) { return '<div class="t-cell"><span class="t-k">' + esc(s.name) + "</span>" + badge(d[s.name]) + "</div>"; }).join("") +
+        '<div class="t-cell"><span class="t-k">Added</span>' + (esc(d["Date added"]) || "–") + "</div>" +
+        '<div class="t-cell"><span class="t-status ' + (hidden ? "is-hidden" : "is-live") + '">' + (hidden ? "Hidden" : "On the page") + "</span></div>" +
+        '<div class="t-actions"><button type="button" data-act="edit">Edit</button><button type="button" data-act="toggle">' + (hidden ? "Show" : "Hide") + "</button></div>" +
+        "</div>";
+    }).join("");
+  }
+
+  /* ----- the add / edit panel ----- */
+  function opt(v, label, cur) { return '<option value="' + esc(v) + '"' + (String(cur) === v ? " selected" : "") + ">" + esc(label) + "</option>"; }
+  function field(label, html, hint) { return '<label class="t-field"><span class="t-label">' + label + "</span>" + html + (hint ? '<span class="t-hint">' + hint + "</span>" : "") + "</label>"; }
+  function input(name, val, extra) { return '<input class="t-input" name="' + esc(name) + '" value="' + esc(val) + '"' + (extra || "") + ">"; }
+  function area(name, val) { return '<textarea name="' + esc(name) + '">' + esc(val) + "</textarea>"; }
+  function check(name, val, label) { return '<label class="t-check"><input type="checkbox" name="' + esc(name) + '"' + (yes(val) ? " checked" : "") + "> " + label + "</label>"; }
+  function openPanel(r) {
+    editing = r;
+    var d = r ? r.data : {};
+    var inds = String(d["Industries"] || "").split(/\s*,\s*/);
+    $("#t-panel-title").textContent = r ? "Edit " + d["Name"] : "Add integration";
+    $(".t-form").innerHTML =
+      '<div class="t-group"><p class="t-group-h">Basics</p>' +
+        field("Name", input("Name", d["Name"] || "", ' required autocomplete="off"'), "The app name customers know.") +
+        field("Category", '<select name="Category" required>' + opt("", "Choose a category", d["Category"] || "") + CATS.map(function (c) { return opt(c, c, d["Category"] || ""); }).join("") + "</select>") +
+        field("Description", area("Description", d["Description"] || ""), "One plain sentence on what it does for the business, about 100 characters. Write it yourself.") +
+      "</div>" +
+      '<div class="t-group"><p class="t-group-h">Phone systems</p>' +
+        SYSTEMS.map(function (s) {
+          return '<div class="t-sys"><p class="t-sys-h">' + esc(s.name) + "</p>" +
+            field("How it connects", '<select name="' + esc(s.name) + '">' + TYPES.map(function (t) { return opt(t[0], t[1], d[s.name] || ""); }).join("") + "</select>", "Only set this when a source confirms it.") +
+            field("Note", input(s.name + " note", d[s.name + " note"] || ""), "Optional, e.g. an extra monthly fee.") +
+            '<div class="t-two">' +
+              field("What you get", area(s.name + ": what you get", d[s.name + ": what you get"] || ""), "One per line.") +
+              field("What you need", area(s.name + ": what you need", d[s.name + ": what you need"] || ""), "One per line.") +
+            "</div></div>";
+        }).join("") +
+        field("Source", input("Source", d["Source"] || "", ' type="url" placeholder="https://"'), "Link to the page that confirms the integration. Needed when a phone system above is set. Not shown on the page.") +
+      "</div>" +
+      '<div class="t-group"><p class="t-group-h">Extras</p>' +
+        '<div class="t-field"><span class="t-label">Logo</span><div class="t-logo-row"><span class="t-logo-prev">' + logoHtml(d) + "</span>" + input("Logo", d["Logo"] || "", ' placeholder="Image link, or a logo name already on the site"') + '</div><span class="t-hint">A square PNG or SVG works best. Upload it to the WordPress Media Library and paste its link. Leave blank for initials.</span></div>' +
+        '<div class="t-field"><span class="t-label">Industries</span><div class="t-checks">' + INDS.map(function (i) { return '<label class="t-check"><input type="checkbox" name="ind" value="' + esc(i) + '"' + (inds.indexOf(i) > -1 ? " checked" : "") + "> " + esc(i) + "</label>"; }).join("") + '</div><span class="t-hint">Only for apps made for an industry. Leave all unticked for general apps.</span></div>' +
+        field("Search words", input("Search words", d["Search words"] || ""), "Optional extra words people might search for.") +
+        '<div class="t-field"><div class="t-checks">' + check("Featured", d["Featured"], "Featured (well-known in the US)") + check("International", d["International"], "International (sold mainly outside the US)") + "</div></div>" +
+      "</div>" +
+      '<div class="t-group"><p class="t-group-h">On the page</p>' +
+        '<div class="t-field"><div class="t-checks">' + check("Hide from page", d["Hide from page"], "Hide from page") + '</div><span class="t-hint">Hidden apps stay on this list but don\'t show on the public page.</span></div>' +
+        field("Date added", input("Date added", d["Date added"] || "", ' type="date"'), "Filled in automatically the first time it's shown on the page.") +
+      "</div>";
+    $(".t-error").textContent = "";
+    $(".t-overlay").hidden = false;
+    document.documentElement.style.overflow = "hidden";
+    $('.t-form [name="Name"]').focus();
+  }
+  function closePanel() { $(".t-overlay").hidden = true; document.documentElement.style.overflow = ""; editing = null; }
+  function collect() {
+    var f = $(".t-panel"), d = {};
+    Array.prototype.forEach.call(f.querySelectorAll("input[name],select[name],textarea[name]"), function (el) {
+      if (el.name === "ind") return;
+      d[el.name] = el.type === "checkbox" ? el.checked : el.value.replace(/\r/g, "").trim();
+    });
+    d["Industries"] = Array.prototype.map.call(f.querySelectorAll('input[name="ind"]:checked'), function (el) { return el.value; }).join(", ");
+    return d;
+  }
+  function problem(d) {
+    if (!d["Name"]) return "Add a name.";
+    if (!d["Category"]) return "Choose a category.";
+    if (!d["Description"]) return "Add a short description.";
+    var taken = rows.some(function (r) { return r !== editing && String(r.data["Name"]).trim().toLowerCase() === d["Name"].toLowerCase(); });
+    if (taken) return d["Name"] + " is already on the list. Search for it and edit it instead.";
+    var set = SYSTEMS.some(function (s) { return /^(direct|add-on|custom)$/i.test(d[s.name] || ""); });
+    var wasSet = editing && SYSTEMS.some(function (s) { return String(editing.data[s.name] || "") !== String(d[s.name] || ""); });
+    if (set && !d["Source"] && (!editing || wasSet)) return "Add a source link that confirms how it connects.";
+    return "";
+  }
+  function save(e) {
+    e.preventDefault();
+    var d = collect(), err = problem(d);
+    if (err) { $(".t-error").textContent = err; return; }
+    var btn = $('.t-panel [type="submit"]');
+    btn.disabled = true; btn.textContent = "Saving…";
+    var req = editing ? api("update", { row: editing.row, name: editing.data["Name"], data: d }) : api("add", { data: d });
+    req.then(function (res) { rows = res.rows; closePanel(); render(); banner(demo ? "Demo mode: saved in this browser only." : "Saved. The public page updates within about 5 minutes."); })
+      .catch(function (x) { $(".t-error").textContent = x.message; })
+      .then(function () { btn.disabled = false; btn.textContent = "Save"; });
+  }
+  function toggle(r, btn) {
+    var hide = !yes(r.data["Hide from page"]);
+    btn.disabled = true; btn.textContent = "Saving…";
+    api("update", { row: r.row, name: r.data["Name"], data: { "Hide from page": hide } })
+      .then(function (res) { rows = res.rows; render(); banner((hide ? "Hidden: " : "Showing again: ") + r.data["Name"] + (demo ? " (demo, not saved)." : ". The public page updates within about 5 minutes.")); })
+      .catch(function (x) { banner(x.message, true); render(); });
+  }
+
+  /* ----- events ----- */
+  $(".t-search input").addEventListener("input", function (e) { state.q = e.target.value; render(); });
+  root.querySelectorAll(".t-bar select").forEach(function (s) { s.addEventListener("change", function () { state[s.getAttribute("data-f")] = s.value; render(); }); });
+  root.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-act]");
+    if (!b) return;
+    var act = b.getAttribute("data-act");
+    if (act === "add") return openPanel(null);
+    if (act === "close") return closePanel();
+    var rowEl = b.closest("[data-row]"), r = rowEl && rows.filter(function (x) { return x.row === +rowEl.getAttribute("data-row"); })[0];
+    if (!r) return;
+    if (act === "edit") openPanel(r);
+    if (act === "toggle") toggle(r, b);
+  });
+  $(".t-overlay").addEventListener("click", function (e) { if (e.target === e.currentTarget) closePanel(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !$(".t-overlay").hidden) closePanel(); });
+  $(".t-panel").addEventListener("submit", save);
+  $(".t-panel").addEventListener("input", function (e) {
+    if (e.target.name === "Logo" || e.target.name === "Name") $(".t-logo-prev").innerHTML = logoHtml({ "Logo": $('.t-form [name="Logo"]').value, "Name": $('.t-form [name="Name"]').value });
+  });
+  load();
+})();
+</script>
+</body>
+</html>
