@@ -27,7 +27,9 @@ cady-integrations/
 
 ## 1. Upload the folder
 
-Upload the whole `cady-integrations` folder to **`/wp-content/uploads/cady-integrations/`** on cadybt.com. Use SFTP or the host's file manager: WordPress's Media Library won't accept `.js` or `.css` files.
+Upload the `cady-integrations` folder to **`/wp-content/uploads/cady-integrations/`** on cadybt.com. Use SFTP or the host's file manager: WordPress's Media Library won't accept `.js` or `.css` files.
+
+You can leave the `divi/` folder off the server. It only holds the snippets you paste into Divi, so it doesn't need to be online.
 
 Check it worked: `https://cadybt.com/wp-content/uploads/cady-integrations/preview.html` should show the full page.
 
@@ -63,28 +65,35 @@ Each app and each pair is its own view, with its own link on the landing page:
 
 ## 5. Updating integrations later
 
-The list of integrations is one file: **`integrations.csv`** in this folder. The page reads it every time someone visits, so whatever is in the uploaded file is what visitors see.
+The list of integrations is a spreadsheet file, **`integrations.csv`**. Whatever is in the newest uploaded copy is what visitors see.
 
-To change the list:
+**Where the page looks for it, in order:**
+1. The newest file named `integrations….csv` in the WordPress **Media Library**. Uploading through **Media > Add New** works even though WordPress renames repeats to `integrations-1.csv`, `integrations-2.csv` and so on: the newest one wins.
+2. `integrations.csv` in this folder, if nothing suitable is in the Media Library.
+3. The backup list in `js/integrations-data.js`, so the page never shows up empty. That backup is a snapshot from setup and isn't updated when the CSV changes.
+
+**To change the list:**
 1. Open the private team page (section 6). Search, add, edit, or hide apps. Hiding takes an app off the page without deleting it.
 2. Click **Download updated file**.
-3. Upload the downloaded `integrations.csv` over the old one in `/wp-content/uploads/cady-integrations/` (SFTP or the host's file manager). The change is live straight away.
+3. In WordPress, go to **Media > Add New** and upload it. The change is live straight away.
 
-The file also opens in Excel if someone prefers that: one row per app, `TRUE` / `FALSE` for the tick boxes, and a **Date added** column showing when each app went on the page. Save it as **CSV UTF-8** and upload it the same way. Keep the column names as they are.
+**Starting from a spreadsheet:** on the team page, click **Open a spreadsheet** and choose an Excel (`.xlsx`) or CSV file. The team page checks it for problems (unknown categories, missing descriptions, typos in the Wildix or Mitel columns, duplicates) and lists anything to fix. Then download and upload as above. Someone can also save straight from Excel as **CSV UTF-8** and upload that. Keep the column names as they are. GUIDE.md explains each column.
 
 An AI assistant such as Claude can also edit the file: GUIDE.md has a ready-to-paste request and the rules it should follow.
 
-Don't upload it through the Media Library: it renames files that already exist, so the page would keep reading the old one.
-
-If `integrations.csv` is missing or can't be read, the page uses the backup list in `js/integrations-data.js`, so it never shows up empty. That backup is a snapshot from setup and isn't updated when the CSV changes.
-
-If a caching or optimization plugin combines scripts, exclude these files, or clear its cache after updating. If a caching plugin or CDN caches files in the uploads folder, clear it after uploading a new CSV.
+**Good to know:**
+- The Media Library lookup uses WordPress's standard REST API (`/wp-json/`). It's on by default, but some security plugins switch it off for visitors who aren't logged in. To check, open `https://cadybt.com/wp-json/wp/v2/media?search=integrations` while logged out: it should show a list, not an error. If it's blocked, upload the CSV over `integrations.csv` in this folder with SFTP instead. The page falls back to that copy automatically.
+- If WordPress refuses the upload ("Sorry, you are not allowed to upload this file type"), the host is blocking CSV files. Use the SFTP route above instead.
+- Old copies (`integrations-1.csv` and so on) can be deleted from the Media Library whenever you like. Keep the newest one.
+- The CSV is a public file, because the public page has to read it. Anyone with its address could see hidden apps and source links, so don't put private notes in it.
+- If a caching plugin or CDN caches the uploads folder, clear it after uploading a new CSV. If an optimization plugin combines scripts, exclude these files.
+- Anyone who can upload to the Media Library can change the list, which normally means Authors, Editors and Admins.
 
 ## 6. The private team page
 
-A page only Cady's staff can see, for managing the list: search, **+ Add integration**, **Edit**, **Hide / Show**, and **Download updated file**. It needs no plugin and no outside accounts: the WordPress login is what keeps it private.
+A page only Cady's staff can see, for managing the list: search, **+ Add integration**, **Edit**, **Hide / Show**, **Open a spreadsheet** and **Download updated file**. It needs no plugin and no outside accounts: the WordPress login is what keeps it private.
 
-1. Create a new page, e.g. `/integrations-team/`. In the page's publish settings set **Visibility: Private**, so only logged-in editors and admins can see it.
+1. Create a new page, e.g. `/integrations-team/`. In the page's publish settings set **Visibility: Private**, so only logged-in Editors and Admins can see it. Visitors who aren't logged in get "Page not found", and it stays out of menus and search engines.
 2. Add one full-width section with one **Code** module, and paste in `divi/team-page-module.html`.
 
 The team page only prepares the file. Nothing changes on the public page until the downloaded file is uploaded. If someone leaves the page with changes they haven't downloaded, the browser warns them first.
@@ -93,6 +102,6 @@ The team page only prepares the file. Nothing changes on the public page until t
 
 - Click Wildix, then Salesforce. The pairing should show a yellow **Works directly** label and logos for both. Press the browser's back button and confirm it returns to the app list.
 - Click **Book a call** and confirm it opens Cady's booking page.
-- On the team page, hide one app, download the file and upload it. Refresh the public page: the app should be gone. Then show it again the same way.
+- On the team page, hide one app, download the file and upload it under Media > Add New. Refresh the public page: the app should be gone. Then show it again the same way.
 - Log out and open the team page's address. WordPress should show "Page not found".
 - Check the page on a phone. Nothing should scroll sideways.

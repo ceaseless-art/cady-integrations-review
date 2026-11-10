@@ -1,28 +1,30 @@
 # Adding or changing an integration
 
-The integrations page shows whatever is in **`integrations.csv`** in the `cady-integrations` folder (`/wp-content/uploads/cady-integrations/integrations.csv`).
+The integrations page shows whatever is in the newest **`integrations.csv`** uploaded to the WordPress Media Library (or, if there isn't one, `integrations.csv` in the `cady-integrations` folder).
 
 ## The easy way: the team page
 
 1. Open the private team page on the website (README section 6).
 2. Search for an app, or click **+ Add integration**. Use **Edit** to change one and **Hide** to take one off the page. Nothing is ever deleted.
-3. Click **Download updated file**, then upload `integrations.csv` over the old copy using SFTP or the host's file manager. It's live straight away.
+3. Click **Download updated file**, then upload it in WordPress under **Media > Add New**. It's live straight away.
+
+To start from an Excel file instead, click **Open a spreadsheet** on the team page. It reads the file, lists anything that needs fixing, and then you download and upload as above.
 
 ## In Excel
 
-Open `integrations.csv` in Excel, make changes, then **File > Save As > CSV UTF-8** and upload it the same way. Keep the column names exactly as they are.
+Open `integrations.csv` in Excel, make changes, then **File > Save As > CSV UTF-8** and upload it under Media > Add New. Keep the column names exactly as they are, and keep "integrations" at the start of the file name.
 
 ## With Claude or another AI assistant
 
 `integrations.csv` is plain text, so an AI assistant can read and edit it directly.
 
-1. Download the current `integrations.csv` from the site, or from the team page's **Download updated file** button before making changes.
+1. Get the current file: on the team page, click **Download updated file** before making any changes.
 2. Give the assistant the file, this guide, and what you want changed. You can paste this in:
 
 > Here is integrations.csv, the list behind Cady's integrations page, and GUIDE.md, which explains each column. Please [add Pipedrive / mark Zendesk as hidden / update the HubSpot description...]. Rules: keep the header row and the column order exactly as they are. Only set the Wildix or Mitel column when there is a source link that confirms it, and put that link in the Source column. Write descriptions in your own words, about 100 characters. Use TRUE or FALSE for Featured, International and Hide from page. Use YYYY-MM-DD for Date added, and set it to today for new apps that should go live. To remove an app, set Hide from page to TRUE instead of deleting the row. Give me back the complete file as integrations.csv, and list what you changed.
 
 3. Read the list of changes it gives back. Open the returned file in Excel if you want to look it over.
-4. Upload the returned file over `integrations.csv` the usual way, then search for the change on the public page.
+4. Upload the returned file under Media > Add New, then search for the change on the public page.
 
 An assistant working in this project folder (for example Claude Code) can do the same thing on `src/data.html` and the build. See **Developers** below.
 

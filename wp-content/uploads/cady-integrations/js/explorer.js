@@ -485,19 +485,36 @@
     });
     return out.length ? out : null;
   }
+  /* Where the list comes from, in order:
+     1. the newest file named integrations*.csv in the WordPress Media Library (so staff can upload through Media > Add New;
+        WordPress renames repeats to integrations-1.csv, integrations-2.csv… and the newest one wins)
+     2. integrations.csv in the cady-integrations folder
+     3. the backup list in integrations-data.js */
+  function getText(url) {
+    return fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); });
+  }
+  function newestMediaCsv(S) {
+    if (S.mediaLibrary === false) return Promise.reject("off");
+    var api = (S.wpApi || "/wp-json/") + "wp/v2/media?search=integrations&mime_type=text/csv&orderby=date&order=desc&per_page=20&_fields=source_url";
+    return fetch(api, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }).then(function (items) {
+      var hit = (items || []).filter(function (m) { return /\/integrations(-\d+)?\.csv(\?|$)/i.test(m.source_url || ""); })[0];
+      if (!hit) throw "none";
+      return getText(hit.source_url);
+    });
+  }
   function start() {
     var D = window.CADY_IX_DATA, S = (D && D.settings) || {};
+    if (!D || !window.fetch) return init();
     var file = S.listFile === undefined ? "integrations.csv" : S.listFile;
-    if (!D || !file || !window.fetch) return init();
-    var url = /^(https?:|\/)/.test(file) ? file : (S.assetBase || SCRIPT_BASE) + file;
+    var url = file && (/^(https?:|\/)/.test(file) ? file : (S.assetBase || SCRIPT_BASE) + file);
     var done = false;
     var finish = function () { if (!done) { done = true; init(); } };
+    var use = function (text) { var list = fromCsv(text, D); if (!list) throw "empty"; if (!done) D.integrations = list; };
     /* never hold the explorer back for long */
     setTimeout(finish, 3000);
-    /* no-cache: always check for a newly uploaded file */
-    fetch(url, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (text) {
-      var list = fromCsv(text, D);
-      if (list && !done) D.integrations = list;
+    newestMediaCsv(S).then(use).catch(function () {
+      if (!url) throw "no file";
+      return getText(url).then(use);
     }).catch(function () {}).then(finish);
   }
   /* wait for the whole page so a per-page setting (window.CADY_IX) and the logos below are picked up */
