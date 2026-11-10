@@ -5,7 +5,7 @@ window.CADY_IX_DATA = {
     contactUrl: "https://cadybt.com/contact-us/",
     /* Cady's booking page (e.g. a HubSpot Meetings or Calendly link). Not set yet: while this is "",
        the "Book a call" buttons show but don't go anywhere. */
-    bookingUrl: "",
+    bookingUrl: "https://meetings-na2.hubspot.com/mitel?uuid=d8d0d29b-8a1f-4cf4-90a4-812beee74997",
     phone: "800-347-3886",
     /* Which phone system is selected when no page setting is given: a system id below, or "all". */
     defaultSystem: "all",
