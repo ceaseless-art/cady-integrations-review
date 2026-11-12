@@ -17,6 +17,9 @@
     all("[data-book]").forEach(function (a) { a.href = book; if (S.bookingUrl) { a.target = "_blank"; a.rel = "noopener"; } });
     var phone = S.phone || "800-347-3886";
     all("[data-phone]").forEach(function (a) { a.href = "tel:" + phone.replace(/[^0-9+]/g, ""); a.textContent = "or call " + phone; });
+    /* Call now buttons: on phones they dial; on computers the number is shown so people can dial it */
+    var wide = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    all("[data-call]").forEach(function (a) { a.href = "tel:" + phone.replace(/[^0-9+]/g, ""); a.textContent = wide ? "Call " + phone : "Call now"; a.setAttribute("aria-label", "Call Cady at " + phone); });
     all("[data-count-integrations]").forEach(function (el) { el.textContent = (D.integrations || []).length; });
     function slug(n) { return String(n).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
     function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
