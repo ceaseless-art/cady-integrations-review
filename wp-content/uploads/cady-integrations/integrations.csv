@@ -10,9 +10,13 @@ Click to dial, with calls logged automatically
 Handle SMS, chat and email from the same panel
 Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
 Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
-HubSpot,CRM & Sales,Direct,,"Dial from any HubSpot contact, see who's calling in a pop-up, and log calls and meetings automatically.",,TRUE,FALSE,FALSE,hubspot,hub spot marketing,,"Call any HubSpot contact or company with one click
+HubSpot,CRM & Sales,Direct,Add-on,"Dial from any HubSpot contact, see who's calling in a pop-up, and log calls and meetings automatically.",,TRUE,FALSE,FALSE,hubspot,hub spot marketing,,"Call any HubSpot contact or company with one click
 Pop-up on every call shows the contact, with call controls
-Calls and conferences with HubSpot contacts logged automatically",A HubSpot account,,,,2026-11-10,
+Calls and conferences with HubSpot contacts logged automatically",A HubSpot account,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find and create contacts
+Create deals and tickets
+Check ticket status
+Add notes and update contacts","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A HubSpot account with API access",2026-11-10,https://library.talkative.tools/vendors/hubspot
 Microsoft Dynamics 365 CRM,CRM & Sales,Add-on,Direct,Recognizes callers from your Dynamics 365 records and opens their details as the phone rings.,,TRUE,FALSE,FALSE,dynamics-365,dynamics crm d365 microsoft,Connects through the TelephoneIntegration add-on from mscrm-addons.com.,"Looks up callers in Dynamics 365 and shows who they are
 Automatic pop-up on incoming and outgoing calls
 Dial from any number field, search or the command bar
@@ -82,11 +86,14 @@ Click to call from your browser or other apps
 Your own custom Act! fields shown in the pop-up
 Call notes and 90-day call history; cloud or self-hosted Act!","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
 An Act! account (cloud or self-hosted)",,,,2026-11-10,
-Pipedrive,CRM & Sales,Add-on,,"Caller pop-ups, click to call, and every call logged to the right Pipedrive contact.",,FALSE,FALSE,FALSE,pipedrive,pipe drive,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the contact's details on incoming and outgoing calls
+Pipedrive,CRM & Sales,Add-on,Add-on,"Caller pop-ups, click to call, and every call logged to the right Pipedrive contact.",,FALSE,FALSE,FALSE,pipedrive,pipe drive,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the contact's details on incoming and outgoing calls
 Click to call, plus search Pipedrive contacts anytime
 Every call logged to the right Pipedrive contact
 Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
-A Pipedrive account",,,,2026-11-10,
+A Pipedrive account","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find and create people
+Create deals and activities
+Add notes","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Pipedrive account with API access",2026-11-10,https://library.talkative.tools/vendors/pipedrive
 Bullhorn,CRM & Sales,Add-on,,"Recruiters see the candidate or client as the phone rings, with click to call and call notes.",Recruiting & Staffing,FALSE,FALSE,FALSE,bullhorn,recruiting staffing ats,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with candidate or client details on every call
 Click to call, plus search Bullhorn contacts anytime
 Flip through results when a number matches several records
@@ -97,11 +104,15 @@ Click to call, plus search ConnectWise contacts anytime
 Every call logged to the client's record
 Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
 A ConnectWise account",,,,2026-11-10,
-HaloPSA,CRM & Sales,Add-on,,"Caller pop-ups, click to call, and calls logged to the client's record in HaloPSA.",IT & Managed Services,FALSE,FALSE,FALSE,halopsa,halo psa msp help desk ticketing,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
+HaloPSA,CRM & Sales,Add-on,Add-on,"Caller pop-ups, click to call, and calls logged to the client's record in HaloPSA.",IT & Managed Services,FALSE,FALSE,FALSE,halopsa,halo psa msp help desk ticketing,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the client's details on incoming and outgoing calls
 Click to call, plus search HaloPSA contacts anytime
 Every call logged to the client's record
 Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
-A HaloPSA account",,,,2026-11-10,
+A HaloPSA account","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create tickets
+Check ticket status
+Add notes
+Change priority","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A HaloPSA account with API access",2026-11-10,https://library.talkative.tools/vendors/halopsa
 Freshdesk,CRM & Sales,Add-on,Direct,"Customer pop-ups from Freshdesk, click to call, plus call notes and 90-day call history.",,FALSE,FALSE,FALSE,freshdesk,freshworks help desk helpdesk support tickets,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the customer's details on incoming and outgoing calls
 Click to call from Freshdesk, your browser or other apps
 Your own custom Freshdesk fields shown in the pop-up
@@ -111,11 +122,15 @@ Click to dial, with calls logged automatically
 Handle SMS, chat and email from the same panel
 Works with Mitel interaction recording","Mitel MiContact Center Business (9.2+) or Enterprise (9.4+)
 Mitel Open Integration Gateway (OIG) or CloudLink APIs",2026-11-10,
-Freshservice,CRM & Sales,Add-on,,"IT teams see who's calling from Freshservice, with click to call and call notes.",IT & Managed Services,FALSE,FALSE,FALSE,freshservice,freshworks it service desk itsm help desk,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the caller's details on incoming and outgoing calls
+Freshservice,CRM & Sales,Add-on,Add-on,"IT teams see who's calling from Freshservice, with click to call and call notes.",IT & Managed Services,FALSE,FALSE,FALSE,freshservice,freshworks it service desk itsm help desk,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the caller's details on incoming and outgoing calls
 Click to call from Freshservice, your browser or other apps
 Custom fields shown, with multiple matches easy to browse
 Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
-A Freshservice account",,,,2026-11-10,
+A Freshservice account","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create IT tickets
+Check ticket status
+Add notes
+Mark tickets urgent","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Freshservice account with API access",2026-11-10,https://library.talkative.tools/vendors/freshservice
 ServiceNow,CRM & Sales,Add-on,Direct,"Caller pop-ups from ServiceNow, click to call, plus call notes and 90-day call history.",IT & Managed Services,FALSE,FALSE,FALSE,servicenow,service now itsm help desk,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with the caller's details on incoming and outgoing calls
 Click to call from ServiceNow, your browser or other apps
 Custom fields shown, with multiple matches easy to browse
@@ -171,32 +186,43 @@ Call history inside the CRM
 Set your availability status from vtenext
 Wildix's Collaboration app built into the CRM home page",,,,,2026-11-10,
 Web CRM One 2.0,CRM & Sales,Direct,,Connects calls to customer records in Web CRM One.,,FALSE,TRUE,FALSE,,,,Listed by Wildix as a compatible web-based CRM,,,,,2026-11-10,
-Microsoft Outlook & Office 365,Productivity & Collaboration,Direct,,"Import contacts, click to call from Outlook, see who's calling, and route calls by your calendar.",,TRUE,FALSE,FALSE,outlook,microsoft 365 m365 o365 office outlook calendar,,"Import contacts from Outlook, Exchange or Office 365
+Microsoft Outlook & Office 365,Productivity & Collaboration,Direct,Add-on,"Import contacts, click to call from Outlook, see who's calling, and route calls by your calendar.",,TRUE,FALSE,FALSE,outlook,microsoft 365 m365 o365 office outlook calendar,,"Import contacts from Outlook, Exchange or Office 365
 Click to call from Outlook; see caller names from your contacts
 Calendar sync shows colleagues when you're busy and routes calls
-Set up Wildix conferences from Outlook",Wildix's Windows phone driver (TAPI) for click to call,,,,2026-11-10,
-Microsoft Teams,Productivity & Collaboration,Direct,,"Make and take business calls right inside Microsoft Teams, using your Wildix phone system.",,TRUE,FALSE,FALSE,teams,teams4wildix ms teams microsoft 365,Listed by Wildix as teams4Wildix.,"Make and take internal and external calls inside Teams
+Set up Wildix conferences from Outlook",Wildix's Windows phone driver (TAPI) for click to call,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Check Outlook availability
+Create calendar events
+Draft and send emails","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Microsoft Outlook & Office 365 account with API access",2026-11-10,https://library.talkative.tools/vendors/microsoft
+Microsoft Teams,Productivity & Collaboration,Direct,Add-on,"Make and take business calls right inside Microsoft Teams, using your Wildix phone system.",,TRUE,FALSE,FALSE,teams,teams4wildix ms teams microsoft 365,Listed by Wildix as teams4Wildix.,"Make and take internal and external calls inside Teams
 Queues, voicemail, transfers, phone menus and fax/SMS in Teams
 Control your Wildix desk phone, wireless handset or mobile app
 No extra Microsoft calling licenses needed for the standard setup","Wildix UC-Essential, UC-Business or UC-Premium license per Teams user
 Wildix's built-in CLASSOUND calling service turned on
 A current Wildix system version
-Teams dialpad calling needs extra Microsoft licenses and a fee",,,,2026-11-10,
+Teams dialpad calling needs extra Microsoft licenses and a fee","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Post messages to Teams channels,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Microsoft Teams account with API access",2026-11-10,https://library.talkative.tools/vendors/microsoft
 Microsoft Exchange,Productivity & Collaboration,Direct,,"Click to call from Exchange, sync the company directory, and set call handling from your calendar.",,TRUE,FALSE,FALSE,exchange,exchange server email calendar,,"Click to call from Exchange, with calls handled by Wildix
 Import and sync the company directory
 Call handling adjusts automatically to your Outlook calendar",A Microsoft Exchange server,,,,2026-11-10,
-Google Workspace & Chrome,Productivity & Collaboration,Direct,,"Sign in with Google, import contacts, click to call from Chrome, and sync meetings with Google Calendar.",,TRUE,FALSE,FALSE,google-workspace,google gmail calendar chromebook android g suite,,"Sign in with your Google account
+Google Workspace & Chrome,Productivity & Collaboration,Direct,Add-on,"Sign in with Google, import contacts, click to call from Chrome, and sync meetings with Google Calendar.",,TRUE,FALSE,FALSE,google-workspace,google gmail calendar chromebook android g suite,,"Sign in with your Google account
 Import users and contacts from Google
 Click to call from Chrome, plus a Chrome extension and app
-Conference scheduling synced with Google Calendar",A Google account,,,,2026-11-10,
-Calendly,Productivity & Collaboration,Direct,,Customers book a time through Calendly and the meeting runs on Wildix video conferencing.,,TRUE,FALSE,FALSE,calendly,scheduling booking appointments,,"Add a Wildix video meeting room link to Calendly bookings
+Conference scheduling synced with Google Calendar",A Google account,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Check Google Calendar availability
+Create calendar events
+Add rows to Google Sheets","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Google Workspace & Chrome account with API access",2026-11-10,https://library.talkative.tools/vendors/google
+Calendly,Productivity & Collaboration,Direct,Add-on,Customers book a time through Calendly and the meeting runs on Wildix video conferencing.,,TRUE,FALSE,FALSE,calendly,scheduling booking appointments,,"Add a Wildix video meeting room link to Calendly bookings
 Guests get the meeting link in their booking confirmation","A Calendly account
-Wildix UC-Business license or higher",,,,2026-11-10,
-WhatsApp Business,Productivity & Collaboration,Direct,,Answer and start WhatsApp chats with customers from the same app your team uses for calls.,,FALSE,FALSE,FALSE,whatsapp-business,whatsapp messaging chat text,Works with the Wildix x-bees platform.,"Reply to incoming WhatsApp chats from x-bees
+Wildix UC-Business license or higher","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Check available times
+Book meetings
+Look up a booked meeting","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Calendly account with API access",2026-11-10,https://library.talkative.tools/vendors/calendly
+WhatsApp Business,Productivity & Collaboration,Direct,Add-on,Answer and start WhatsApp chats with customers from the same app your team uses for calls.,,FALSE,FALSE,FALSE,whatsapp-business,whatsapp messaging chat text,Works with the Wildix x-bees platform.,"Reply to incoming WhatsApp chats from x-bees
 Start WhatsApp chats and use message templates in x-bees
 Send customers to one agent or a group of agents","x-bees Standard plan or higher
 A Wildix CLASSOUND phone number
-A verified WhatsApp Business Manager account",,,,2026-11-10,
+A verified WhatsApp Business Manager account","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Send WhatsApp text and template messages,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A WhatsApp Business account with API access",2026-11-10,https://library.talkative.tools/vendors/whatsapp
 Citrix,Productivity & Collaboration,Direct,,Run the Wildix calling app inside Citrix virtual desktops so remote staff can call securely.,,FALSE,FALSE,FALSE,citrix,virtual desktop vdi remote,,"Calls, chat, presence and headset support inside Citrix desktops
 Fax printer, chat conferences and screen sharing
 Shared phonebooks, receptionist console and encryption
@@ -206,16 +232,20 @@ IBM Notes & Connections,Productivity & Collaboration,Direct,,"Click to call, cli
 See colleagues' availability status in Notes and Connections
 Import contacts and users from Domino into Wildix",IBM Domino with Notes or Connections,,,,2026-11-10,
 Kerio Connect,Productivity & Collaboration,Direct,,Click to call from the Kerio Connect email and calendar client.,,FALSE,FALSE,FALSE,,email,,Click to call from the Kerio Connect client,,,,,2026-11-10,
-Monday.com,Productivity & Collaboration,Add-on,,"Caller pop-ups from your monday.com boards, hotkey dialing, and calls logged automatically.",,FALSE,FALSE,FALSE,monday-com,monday work management,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with details from your monday.com boards on calls
+Monday.com,Productivity & Collaboration,Add-on,Add-on,"Caller pop-ups from your monday.com boards, hotkey dialing, and calls logged automatically.",,FALSE,FALSE,FALSE,monday-com,monday work management,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Pop-up with details from your monday.com boards on calls
 Select a number and press a hotkey to dial it
 Every call logged to the right record
 Call notes and 90-day call history shared with your team","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
-A monday.com account",,,,2026-11-10,
-Zapier,Productivity & Collaboration,Add-on,,"Use call events, like an answered call, to trigger actions in thousands of other apps.",,FALSE,FALSE,FALSE,zapier,automation workflow zaps,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Use call events, like an answered call, to trigger Zaps
+A monday.com account","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create items
+Add updates to items","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Monday.com account with API access",2026-11-10,https://library.talkative.tools/vendors/monday
+Zapier,Productivity & Collaboration,Add-on,Add-on,"Use call events, like an answered call, to trigger actions in thousands of other apps.",,FALSE,FALSE,FALSE,zapier,automation workflow zaps,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Use call events, like an answered call, to trigger Zaps
 Connect your phone system to over 3,000 apps
 Example: write call details to a Google Sheet automatically
 Example: create a new contact after a call","Wildix Bubble (a small desktop app that links Wildix to your software) on each computer
-A Zapier account",,,,2026-11-10,
+A Zapier account","Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Trigger Zaps
+Send data to a Zap","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Zapier account with API access",2026-11-10,https://library.talkative.tools/vendors/zapier
 Microsoft Power Automate,Productivity & Collaboration,Add-on,,"Build automated workflows that start from phone events, like logging an answered call.",,FALSE,FALSE,FALSE,microsoft-power-automate,power automate flow automation microsoft,"Works through Wildix Bubble, a small desktop app that connects Wildix calls to your other software.","Start flows from call events, like an answered call
 Connect your phone system to hundreds of apps
 Example: write call details to a spreadsheet automatically
@@ -711,3 +741,159 @@ Zendelity Command Center,Other,,Direct,"Turns alerts and procedures into guided,
 Real-time task visibility
 Escalations by email, SMS and voice
 Audit-ready reporting",Mitel Workflow Studio,2026-11-10,
+ActiveCampaign,CRM & Sales,,Add-on,"Your AI assistant finds ActiveCampaign contacts, updates them, and adds notes, tags and deals.",,FALSE,FALSE,FALSE,,email marketing crm automation,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find a contact by email
+Create or update contacts
+Add notes and tags
+Create deals","Mitel MiContact Center with Talkative's AI chat or voice assistant
+An ActiveCampaign account with API access",2026-11-12,https://library.talkative.tools/vendors/activecampaign
+Brevo,CRM & Sales,,Add-on,Add or update Brevo contacts and send transactional emails and texts during a chat or call.,,FALSE,FALSE,FALSE,brevo,sendinblue email marketing sms,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Add or update contacts
+Send transactional emails
+Send transactional texts","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Brevo account with API access",2026-11-12,https://library.talkative.tools/vendors/brevo
+Copper,CRM & Sales,,Add-on,"Find and create Copper people, leads and opportunities, and log notes and tasks.",,FALSE,FALSE,FALSE,,copper crm google workspace,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find a person by email
+Create people, leads and opportunities
+Add notes and tasks","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Copper account with API access",2026-11-12,https://library.talkative.tools/vendors/copper
+Freshworks CRM,CRM & Sales,,Add-on,"Find and create Freshworks CRM contacts and deals, and log notes and tasks from a conversation.",,FALSE,FALSE,FALSE,,freshsales freshworks,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find a contact by email
+Create contacts and deals
+Add notes and tasks
+Update a contact's phone number","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Freshworks CRM account with API access",2026-11-12,https://library.talkative.tools/vendors/freshworks-crm
+HighLevel,CRM & Sales,,Add-on,"Find and create HighLevel contacts and opportunities, and add notes, tags and tasks.",,FALSE,FALSE,FALSE,,gohighlevel ghl agency,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find a contact by email
+Create contacts and opportunities
+Add notes, tags and tasks
+Update a contact's phone number","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A HighLevel account with API access",2026-11-12,https://library.talkative.tools/vendors/highlevel
+Keap,CRM & Sales,,Add-on,"Find and create Keap contacts, and add notes, tags and follow-up tasks.",,FALSE,FALSE,FALSE,,infusionsoft,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Find a contact by email
+Create contacts
+Add notes, tags and tasks","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Keap account with API access",2026-11-12,https://library.talkative.tools/vendors/keap
+Help Scout,CRM & Sales,,Add-on,"Open Help Scout conversations, check their status and add notes for your team.",,FALSE,FALSE,FALSE,help-scout,help desk support tickets,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create conversations
+Check conversation status
+Add notes
+Update status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Help Scout account with API access",2026-11-12,https://library.talkative.tools/vendors/help-scout
+Intercom,CRM & Sales,,Add-on,"Create Intercom conversations and tickets, check their status and add notes.",,FALSE,FALSE,FALSE,intercom,help desk support chat tickets,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create conversations and tickets
+Check status
+Add notes","Mitel MiContact Center with Talkative's AI chat or voice assistant
+An Intercom account with API access",2026-11-12,https://library.talkative.tools/vendors/intercom
+Zammad,CRM & Sales,,Add-on,"Create Zammad tickets, check their status, add notes and change priority.",,FALSE,FALSE,FALSE,,help desk tickets open source,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create tickets
+Check ticket status
+Add notes
+Change priority","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Zammad account with API access",2026-11-12,https://library.talkative.tools/vendors/zammad
+Acuity Scheduling,Productivity & Collaboration,,Add-on,Check open dates and times and book Acuity appointments while the customer is on the line.,,FALSE,FALSE,FALSE,,squarespace appointments booking,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Check available dates and times
+Book appointments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+An Acuity Scheduling account with API access",2026-11-12,https://library.talkative.tools/vendors/acuity-scheduling
+Cal.com,Productivity & Collaboration,,Add-on,"Find open slots, book meetings and reschedule Cal.com bookings during a chat or call.",,FALSE,FALSE,FALSE,cal-com,calcom booking scheduling,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Check available slots
+Book and reschedule meetings
+Look up a booking","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Cal.com account with API access",2026-11-12,https://library.talkative.tools/vendors/cal-com
+Airtable,Productivity & Collaboration,,Add-on,"Create, find and update Airtable records from a conversation.",,FALSE,FALSE,FALSE,airtable,database spreadsheet records,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create records
+Find a record by email
+Update records","Mitel MiContact Center with Talkative's AI chat or voice assistant
+An Airtable account with API access",2026-11-12,https://library.talkative.tools/vendors/airtable
+Baserow,Productivity & Collaboration,,Add-on,"Create, find and update Baserow rows from a conversation.",,FALSE,FALSE,FALSE,baserow,database records no code,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create rows
+Find a row by email
+Update a row's status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Baserow account with API access",2026-11-12,https://library.talkative.tools/vendors/baserow
+NocoDB,Productivity & Collaboration,,Add-on,"Create, find and update NocoDB records from a conversation.",,FALSE,FALSE,FALSE,,database records no code,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create records
+Find a record by email
+Update a record's status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A NocoDB account with API access",2026-11-12,https://library.talkative.tools/vendors/nocodb
+Notion,Productivity & Collaboration,,Add-on,"Add pages to Notion databases, append notes to pages and leave comments.",,FALSE,FALSE,FALSE,notion,notes wiki docs database,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create database pages
+Append text to a page
+Add comments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Notion account with API access",2026-11-12,https://library.talkative.tools/vendors/notion
+Asana,Productivity & Collaboration,,Add-on,"Create Asana tasks, check their status and add comments.",,FALSE,FALSE,FALSE,asana,tasks projects,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create tasks
+Check task status
+Add comments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+An Asana account with API access",2026-11-12,https://library.talkative.tools/vendors/asana
+ClickUp,Productivity & Collaboration,,Add-on,"Create ClickUp tasks, check and update their status, and add comments.",,FALSE,FALSE,FALSE,clickup,tasks projects,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create tasks
+Check and update status
+Add comments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A ClickUp account with API access",2026-11-12,https://library.talkative.tools/vendors/clickup
+Trello,Productivity & Collaboration,,Add-on,"Create Trello cards, check their status, move them between lists and add comments.",,FALSE,FALSE,FALSE,trello,boards cards tasks,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create cards
+Check status
+Move cards between lists
+Add comments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Trello account with API access",2026-11-12,https://library.talkative.tools/vendors/trello
+Linear,Productivity & Collaboration,,Add-on,"Create Linear issues, check their status and add comments.",,FALSE,FALSE,FALSE,linear,issues bugs engineering,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create issues
+Check issue status
+Add comments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Linear account with API access",2026-11-12,https://library.talkative.tools/vendors/linear
+Jira,Productivity & Collaboration,,Add-on,"Create Jira issues, check their status, add comments and move them to fixed.",,FALSE,FALSE,FALSE,jira,atlassian issues bugs tickets,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create issues
+Check issue status
+Add comments
+Move issues to a fixed status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Jira account with API access",2026-11-12,https://library.talkative.tools/vendors/jira
+Slack,Productivity & Collaboration,,Add-on,Post messages to Slack channels and reply in threads to keep your team in the loop.,,FALSE,FALSE,FALSE,slack,chat team messages,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Post channel messages
+Reply in threads","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Slack account with API access",2026-11-12,https://library.talkative.tools/vendors/slack
+Discord,Productivity & Collaboration,,Add-on,Post messages to Discord channels.,,FALSE,FALSE,FALSE,discord,chat community messages,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Post channel messages,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Discord account with API access",2026-11-12,https://library.talkative.tools/vendors/discord
+Telegram,Productivity & Collaboration,,Add-on,Send Telegram messages from a conversation.,,FALSE,FALSE,FALSE,telegram,messages chat,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Send messages,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Telegram account with API access",2026-11-12,https://library.talkative.tools/vendors/telegram
+Make,Productivity & Collaboration,,Add-on,"Start Make scenarios and send them data, so one conversation can kick off automations in other apps.",,FALSE,FALSE,FALSE,make,integromat automation workflows,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Trigger scenarios
+Send data to a scenario","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Make account with API access",2026-11-12,https://library.talkative.tools/vendors/make
+n8n,Productivity & Collaboration,,Add-on,"Start n8n workflows and send them data, so one conversation can kick off automations in other apps.",,FALSE,FALSE,FALSE,n8n,automation workflows,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Trigger workflows
+Send data to a workflow","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A n8n account with API access",2026-11-12,https://library.talkative.tools/vendors/n8n
+PagerDuty,Other,,Add-on,"Raise, check and acknowledge PagerDuty incidents and add notes.",,FALSE,FALSE,FALSE,pagerduty,incident on call alerts,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create incidents and trigger alerts
+Check incident status
+Acknowledge incidents
+Add notes","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A PagerDuty account with API access",2026-11-12,https://library.talkative.tools/vendors/pagerduty
+Chargebee,Billing & E-commerce,,Add-on,"Look up Chargebee subscriptions and invoices, create customers, pause subscriptions and add comments.",,FALSE,FALSE,FALSE,,subscriptions billing invoices,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Look up subscriptions and invoices
+Create customers
+Pause subscriptions
+Add comments","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Chargebee account with API access",2026-11-12,https://library.talkative.tools/vendors/chargebee
+PayPal,Billing & E-commerce,,Add-on,Create and send PayPal invoices and look up orders and invoices.,,FALSE,FALSE,FALSE,paypal,payments invoices,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create and send invoices
+Look up invoices
+Look up orders","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A PayPal account with API access",2026-11-12,https://library.talkative.tools/vendors/paypal
+QuickBooks,Billing & E-commerce,,Add-on,Create QuickBooks customers and invoices and look up an invoice by number.,,FALSE,FALSE,FALSE,quickbooks,intuit accounting invoices,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create customers
+Create invoices
+Look up an invoice by number","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A QuickBooks account with API access",2026-11-12,https://library.talkative.tools/vendors/quickbooks
+Stripe,Billing & E-commerce,,Add-on,"Create Stripe customers, invoices and payment links, and look up invoices.",,FALSE,FALSE,FALSE,stripe,payments invoices billing,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create customers
+Create, finalize and send invoices
+Create payment links
+Look up invoices","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Stripe account with API access",2026-11-12,https://library.talkative.tools/vendors/stripe
+Xero,Billing & E-commerce,,Add-on,"Create Xero contacts and draft invoices, and look up contacts and invoices.",,FALSE,FALSE,FALSE,xero,accounting invoices,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Create contacts
+Create draft invoices
+Look up contacts and invoices","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Xero account with API access",2026-11-12,https://library.talkative.tools/vendors/xero
+Shopify,Billing & E-commerce,,Add-on,"Check Shopify order status and tracking, and create draft orders.",,FALSE,FALSE,FALSE,shopify,ecommerce store orders,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Check order status
+Check order tracking
+Create draft orders","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Shopify account with API access",2026-11-12,https://library.talkative.tools/vendors/shopify
+WooCommerce,Billing & E-commerce,,Add-on,Look up WooCommerce orders and add order notes.,,FALSE,FALSE,FALSE,woocommerce,wordpress ecommerce store orders,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Look up orders
+Add order notes","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A WooCommerce account with API access",2026-11-12,https://library.talkative.tools/vendors/woocommerce
+Twilio,Other,,Add-on,Send texts and WhatsApp messages through Twilio and check delivery.,,FALSE,FALSE,FALSE,twilio,sms text whatsapp,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Send texts
+Send WhatsApp messages
+Check message status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Twilio account with API access",2026-11-12,https://library.talkative.tools/vendors/twilio
+Vonage,Other,,Add-on,Send texts through Vonage.,,FALSE,FALSE,FALSE,vonage,sms text nexmo,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Send texts,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Vonage account with API access",2026-11-12,https://library.talkative.tools/vendors/vonage
+Plivo,Other,,Add-on,Send texts through Plivo and check delivery.,,FALSE,FALSE,FALSE,,sms text,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Send texts
+Check message status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Plivo account with API access",2026-11-12,https://library.talkative.tools/vendors/plivo
+MessageBird (Bird),Other,,Add-on,Send texts through Bird (formerly MessageBird) and check delivery.,,FALSE,FALSE,FALSE,,bird sms text,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.","Send texts
+Check message status","Mitel MiContact Center with Talkative's AI chat or voice assistant
+A MessageBird (Bird) account with API access",2026-11-12,https://library.talkative.tools/vendors/messagebird
+SendGrid,Other,,Add-on,Send emails through SendGrid from a conversation.,,FALSE,FALSE,FALSE,sendgrid,twilio email,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Send emails,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A SendGrid account with API access",2026-11-12,https://library.talkative.tools/vendors/sendgrid
+Postmark,Other,,Add-on,Send emails through Postmark from a conversation.,,FALSE,FALSE,FALSE,,email transactional,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Send emails,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Postmark account with API access",2026-11-12,https://library.talkative.tools/vendors/postmark
+Bitly,Other,,Add-on,Shorten links before they're sent to a customer.,,FALSE,FALSE,FALSE,bitly,short links url,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Shorten links,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A Bitly account with API access",2026-11-12,https://library.talkative.tools/vendors/bitly
+DeepL,Other,,Add-on,Translate text so your AI assistant can help customers in other languages.,,FALSE,FALSE,FALSE,deepl,translation languages,,,,"Works through Talkative's AI chat and voice assistants, which connect to your Mitel contact center.",Translate text,"Mitel MiContact Center with Talkative's AI chat or voice assistant
+A DeepL account with API access",2026-11-12,https://library.talkative.tools/vendors/deepl
+Epic,Healthcare & Nurse Call,,Custom,"Connects your Mitel phone system with Epic, the health record system many hospitals and clinics run on.",Healthcare,TRUE,FALSE,FALSE,,epic systems ehr emr mychart hospital,,,,,,,2026-11-12,"Confirmed by Mitel, Nov 2026"
+Oracle Health (Cerner),Healthcare & Nurse Call,,Custom,"Connects your Mitel phone system with Oracle Health, formerly Cerner, the hospital health record system.",Healthcare,TRUE,FALSE,FALSE,,cerner millennium ehr emr hospital,,,,,,,2026-11-12,"Confirmed by Mitel, Nov 2026"
+Veradigm (Allscripts),Healthcare & Nurse Call,,Custom,"Connects your Mitel phone system with Veradigm, formerly Allscripts, the health record system for practices.",Healthcare,TRUE,FALSE,FALSE,,allscripts ehr emr practice clinic,,,,,,,2026-11-12,"Confirmed by Mitel, Nov 2026"
